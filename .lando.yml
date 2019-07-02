@@ -1,0 +1,25 @@
+name: collagelabs
+proxy:
+  server:
+    - localhost:3000
+
+services:
+  server:
+    type: node
+    run_as_root:
+      - bundle install --path vendor/bundle
+    run:
+      - yarn install
+    moreHttpPorts:
+      - '3000'
+    overrides:
+      image: collagelabs/collagelabs.github.io:latest
+      build:
+        context: .
+        dockerfile: Dockerfile
+      ports:
+       - '3000'
+
+tooling:
+  yarn:
+    service: server

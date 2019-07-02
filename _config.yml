@@ -6,7 +6,7 @@
 title: Super-website
 email: your-email@example.com
 description: A super website made with love
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 theme_color: '#c0ffee'
 twitter_username: sandochee
@@ -27,6 +27,7 @@ social:
 languages: ["en"]
 ampdir: amp
 netlify_cms: true
+encoding: utf-8
 
 ### Google webmaster tools, Google Analytics, Doorbell and Cookie consent uncomment and put the API key
 #webmaster_verifications:
@@ -52,6 +53,8 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - Dockerfile
+  - Makefile
   - node_modules
   - vendor
   - _src
