@@ -4,6 +4,6 @@ module.exports = ({ file, options, env }) => ({
   plugins: {
     'postcss-import': {},
     autoprefixer: {},
-    cssnano: env === 'production' ? {} : false,
+    cssnano: env === 'prod' ? {} : false,
   },
 });

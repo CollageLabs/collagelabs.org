@@ -11,14 +11,12 @@ services:
     run:
       - yarn install
     moreHttpPorts:
-      - '3000'
+      - 3000
     overrides:
       image: collagelabs/collagelabs.github.io:latest
       build:
         context: .
         dockerfile: Dockerfile
-      ports:
-       - '3000'
 
 tooling:
   yarn:
