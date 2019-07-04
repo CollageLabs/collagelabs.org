@@ -1,0 +1,84 @@
+                <aside id="sidebar">
+                    <h2 class="hide">Sidebar</h2>
+                    <div class="ad_sidebar">
+                        <ins class="adsbygoogle" data-ad-client="ca-pub-6592430305679345" data-ad-slot="2153189944" data-ad-format="auto"></ins>
+                    </div>
+                    <ul>
+                        <li class="coffee">
+                            <a href="https://www.paypal.me/martinezfaneyth" title="(opens new window)" target="_blank" rel="nofollow">
+                                Buy me a Coffee!
+                            </a>
+                        </li>
+                        <li class="simple">
+                            <form id="feedburner_form" action="http://feedburner.google.com/fb/a/mailverify" method="post">
+                                <label for="feedburner_mail">E-mail</label>
+                                <input type="text" id="feedburner_mail" name="email" placeholder="E-mail" />
+                                <input type="submit" id="feedburner_button" value="Suscribe" />
+                                <input type="hidden" id="feedburner_uri" name="uri" value="BlogHuntingBears" />
+                                <input type="hidden" id="feedburner_loc" name="loc" value="en_US" />
+                                <span>By pressing "Suscribe", you will be able to recieve a bulletin containing all the articles of the day, directly to your e-mail inbox.</span>
+                            </form>
+                        </li>
+                        {% if page.layout == 'post' %}
+                        <li class="list">
+                            <h3>LATEST</h3>
+                            <ul>
+                                {% for last_post in site.posts offset: 0 limit: 10 %}
+                                <li>
+                                    <a href="{{ site.url }}{{ last_post.url }}" title='Permanent link to "{{ last_post.title }}"'>
+                                        {{ last_post.title }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        {% else %}
+                        <li class="list">
+                            <h3>TRENDING</h3>
+                            <ul id="poparts"></ul>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </aside>
+                <aside id="sidebar">
+                    <h2 class="hide">Sidebar</h2>
+                    <div class="ad_sidebar">
+                        <ins class="adsbygoogle" data-ad-client="ca-pub-6592430305679345" data-ad-slot="2153189944" data-ad-format="auto"></ins>
+                    </div>
+                    <ul>
+                        <li class="coffee">
+                            <a href="https://www.paypal.me/martinezfaneyth" title="(opens new window)" target="_blank" rel="nofollow">
+                                Buy me a Coffee!
+                            </a>
+                        </li>
+                        <li class="simple">
+                            <form id="feedburner_form" action="http://feedburner.google.com/fb/a/mailverify" method="post">
+                                <label for="feedburner_mail">E-mail</label>
+                                <input type="text" id="feedburner_mail" name="email" placeholder="E-mail" />
+                                <input type="submit" id="feedburner_button" value="Suscribe" />
+                                <input type="hidden" id="feedburner_uri" name="uri" value="BlogHuntingBears" />
+                                <input type="hidden" id="feedburner_loc" name="loc" value="en_US" />
+                                <span>By pressing "Suscribe", you will be able to recieve a bulletin containing all the articles of the day, directly to your e-mail inbox.</span>
+                            </form>
+                        </li>
+                        {% if page.layout == 'post' %}
+                        <li class="list">
+                            <h3>LATEST</h3>
+                            <ul>
+                                {% for last_post in site.posts offset: 0 limit: 10 %}
+                                <li>
+                                    <a href="{{ site.url }}{{ last_post.url }}" title='Permanent link to "{{ last_post.title }}"'>
+                                        {{ last_post.title }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        {% else %}
+                        <li class="list">
+                            <h3>TRENDING</h3>
+                            <ul id="poparts"></ul>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </aside>

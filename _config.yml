@@ -8,11 +8,11 @@ email: your-email@example.com
 description: A super website made with love
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-theme_color: '#c0ffee'
+theme_color: 'black-translucent'
 twitter_username: sandochee
 github_username:  sandoche
 author: Sandoche Adittane
-logo: assets/images/large-logo.png
+logo: assets/images/large-logo.svg
 twitter:
   username: sandochee
 social:
@@ -49,7 +49,6 @@ plugins:
   - jekyll-multiple-languages-plugin
   - amp-jekyll
 
-### Exclude from processing.
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -68,4 +67,4 @@ exclude:
   - config
   - optimization-fix
   - optimization-fix-this-file-is-ignored.js
-  - icon.png
+  - icon.svg

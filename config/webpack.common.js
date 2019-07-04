@@ -11,11 +11,11 @@ module.exports = {
   },
   plugins: [
     new FaviconsWebpackPlugin({
-      logo: './icon.png',
+      logo: './icon.svg',
     }),
     new HtmlWebpackPlugin({
-      template: './_src/template/default.html',
-      filename: '../_layouts/default.html',
+      template: './_src/template/frontpage.html',
+      filename: '../_layouts/frontpage.html',
     }),
     new ExtractTextPlugin('[name].css'),
     new CopyWebpackPlugin([{

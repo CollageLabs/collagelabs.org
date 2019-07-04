@@ -1,0 +1,11 @@
+@media print {
+
+    body * {
+        display: none !important;
+    }
+
+    body:after {
+        content: "Don't waste paper, trees will thank you by providing you with oxygen.";
+    }
+
+}

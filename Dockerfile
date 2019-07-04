@@ -16,4 +16,3 @@ RUN gem install bundler
 
 RUN useradd -ms /bin/bash node
 RUN echo "node ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/node
-

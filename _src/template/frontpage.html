@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+  <html lang="{{ page.lang | default: site.lang | default: 'en' }}" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#{% if page.layout == 'post' or page.layout == 'page' %} article: http://ogp.me/ns/article#{% endif %} dcterms: http://purl.org/dc/terms/#">
+  <head>
+    {% include head.html %}
+  </head>
+  <body itemscope="" itemtype="http://schema.org/Blog">
+    <meta itemprop="name" content="{{ site.name }}" />
+    <meta itemprop="url" content="{{ head_url }}" />
+    <meta itemprop="headline" content="{{ head_title }}" />
+    <meta itemprop="description about" content="{{ head_description }}" />
+    <meta itemprop="keywords" content="{{ head_keywords }}" />
+    <meta itemprop="image" content="{{ page.image }}" />
+    <meta itemprop="inLanguage" content="en" />
+    <div id="container">
+        <header>
+            <div id="logo">
+                <a href="{{ site_url }}" title="{{ site.app_name }}">
+                    <span class="hide">{{ site.name }}</span>
+                </a>
+            </div>
+            <div id="heading">
+                <h1 class="title">
+                    <a href="{{ site_url }}" title="{{ site.app_name }}">
+                        {{ site.name }}
+                    </a>
+                </h1>
+            </div>
+            <nav id="topicsbar" role="navigation">
+                <ul role="menubar">
+                    {%- for topic in site.categories | limit:7 -%}
+                    {%- capture topic_slug -%}
+                    {{ topic | first | downcase | replace: 'ñ', 'n' | replace: 'á', 'a' | replace: 'é', 'e' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' | replace: ' ', '-' | replace: '.', '' | uri_escape }}
+                    {%- endcapture -%}
+                    <li class="topic" role="menuitem">
+                        <a href="{{ site_url }}/{{ topic_slug }}/" title='List all posts under the category "{{ topic | first }}".' rel="tag">
+                            <span class="text">{{ topic | first | upcase }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <nav id="socialbar" role="navigation">
+                <ul role="menubar">
+                    <li class="twitter" role="menuitem">
+                        <a href="http://twitter.com/{{ site.blog.twitter }}" title="Twitter Profile (opens new window)" target="_blank">
+                            <span class="sprite"></span>
+                            <span class="hide">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="facebook" role="menuitem">
+                        <a href="http://facebook.com/{{ site.blog.facebook }}" title="Facebook Profile (opens new window)" target="_blank">
+                            <span class="sprite"></span>
+                            <span class="hide">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="instagram" role="menuitem">
+                        <a href="http://instagram.com/{{ site.blog.instagram }}" title="Instagram Profile (opens new window)" target="_blank">
+                            <span class="sprite"></span>
+                            <span class="hide">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="googleplus" role="menuitem">
+                        <a href="http://plus.google.com/+{{ site.blog.googleplus }}" title="Google+ Profile (opens new window)" target="_blank">
+                            <span class="sprite"></span>
+                            <span class="hide">Google+</span>
+                        </a>
+                    </li>
+                    <li class="search" role="menuitem">
+                        <a href="#" title="Search">
+                            <span class="sprite"></span>
+                            <span class="hide">Search</span>
+                        </a>
+                    </li>
+                    <li class="login" role="menuitem">
+                        <a href="#" title="Login">
+                            <span class="sprite"></span>
+                            <span class="hide">Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="search_dialog">
+            <span class="tip1"></span>
+            <span class="tip2"></span>
+            <label for="search_input">Search</label>
+            <input type="text" class="search_input" name="search_input"
+                   placeholder="Start typing to begin search"
+                   autocomplete="off" disabled="disabled" />
+            <h3 class="info"></h3>
+            <div class="search_results">
+                <ul class="search_results_body"></ul>
+            </div>
+        </div>
+        <div id="login_dialog">
+            <span class="tip1"></span>
+            <span class="tip2"></span>
+            <h3>Social login</h3>
+        </div>
+        {%- unless site.develop -%}
+        <div class="ad_header">
+            <ins class="adsbygoogle"
+                 data-ad-client="ca-pub-6592430305679345"
+                 data-ad-slot="3930106743" data-ad-format="horizontal"></ins>
+        </div>
+        {%- endunless -%}
+        <section id="featured">
+          {%- for post in paginator.posts limit:5 -%}
+
+          {%- capture article_style -%}
+              {%- if forloop.index == 1 -%}
+                  big
+              {%- else -%}
+                  small
+              {%- endif -%}
+          {%- endcapture -%}
+
+          {% include frontpage_article.html %}
+
+          {%- if forloop.index == 1 or forloop.index == 3 or forloop.index == 4 -%}
+          <div class="space"></div>
+          {%- endif -%}
+          {%- endfor -%}
+      </section>
+      <main id="content" role="main">
+          {% for post in paginator.posts offset: 5 %}
+          {% assign article_style = 'preview' %}
+
+          {% if forloop.index == 3 %}
+          <div class="ad_frontpage">
+              <ins class="adsbygoogle" data-ad-client="ca-pub-6592430305679345" data-ad-slot="5791960741" data-ad-format="horizontal"></ins>
+          </div>
+          {% endif %}
+
+          {% include frontpage-article.html %}
+
+          {% endfor %}
+          <nav class="pagination">
+              <span class="left">
+                  {% if paginator.previous_page %}
+                  {% if paginator.previous_page == 1 %}
+                  <a href="{{ site_url }}" title="Frontpage">
+                      <span class="sprite"></span>
+                      <span class="hide">Frontpage</span>
+                  </a>
+                  {% else %}
+                  <a href="{{ site_url }}/page/{{ paginator.previous_page }}/" title="Previous page">
+                      <span class="sprite"></span>
+                      <span class="hide">Previous page</span>
+                  </a>
+                  {% endif %}
+                  {% endif %}
+              </span>
+              <span class="spacer">&nbsp;</span>
+              <span class="right">
+                  {% if paginator.next_page %}
+                  <a href="{{ site_url }}/page/{{ paginator.next_page }}/" title="Next page">
+                      <span class="sprite"></span>
+                      <span class="hide">Next page</span>
+                  </a>
+                  {% endif %}
+              </span>
+          </nav>
+      </main>
+
+{% include sidebar.html %}
+{% include footer.html %}
+{% include scripts.html %}
+
+  </body>
+</html>

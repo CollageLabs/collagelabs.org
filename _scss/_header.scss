@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: content-box;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+img {
+    border: 0
+}
+
+table,
+tr,
+td {
+    vertical-align: top;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 1em;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+input, button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1em;
+    text-align: left;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2.6em;
+}
+
+h2 {
+    font-size: 2.4em;
+}
+
+h3 {
+    font-size: 2.2em;
+}
+
+h4 {
+    font-size: 1.8em;
+}
+
+#container {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5%;
+    width: 90%;
+}
+
+#container > header {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+#logo {
+    float: left;
+    width: 5%;
+}
+
+#logo > a {
+    display: block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin: 5px auto;
+    background-image: url('{{ static_url }}/static/img/site/sprite.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+#logo > a > .hide {
+    display: none;
+}
+
+#heading {
+    float: left;
+    width: 8%;
+    height: 50px;
+    padding: 5px 7% 5px 0;
+}
+
+#heading > .title {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 25px;
+    font-size: 1.6em;
+    letter-spacing: -1px;
+}
+
+#topicsbar {
+    float: left;
+    width: 55%;
+}
+
+#topicsbar > ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+#topicsbar > ul > li {
+    float: left;
+}
+
+#topicsbar > ul > li > a {
+    display: inline-block;
+    vertical-align: top;
+    height: 50px;
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+#topicsbar > ul > li > a:hover {
+    background-color: rgb(226, 230, 227);
+}
+
+#topicsbar > ul > li > a > .text {
+    display: inline-block;
+    vertical-align: top;
+    height: 30px;
+    padding: 10px;
+    line-height: 30px;
+}
+
+
+#socialbar {
+    float: left;
+    width: 25%;
+}
+
+#socialbar > ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+#socialbar > ul > li {
+    float: left;
+    width: 16.333%;
+}
+
+#socialbar > ul > li.search {
+    margin: 0 0 0 2%;
+}
+
+#socialbar > ul > li > a {
+    float: left;
+    width: 100%;
+    margin: 5px 0;
+    box-shadow: 0 -6px 0 rgba(255, 255, 255, 0.3) inset,
+                0 -5px 0 rgba(0, 0, 0, 0.3) inset,
+                -1px 0 0 rgba(0, 0, 0, 0.3) inset,
+                1px 1px 0 rgba(0, 0, 0, 0.3) inset;
+    background-color: rgb(171, 183, 183);
+    background-image: radial-gradient(ellipse closest-side at 50% 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.0));
+    transition: background-color 0.4s ease-out;
+}
+
+#socialbar > ul > li.twitter > a,
+#socialbar > ul > li.search > a {
+    border-radius: 5px 0 0 5px;
+}
+
+#socialbar > ul > li.googleplus > a,
+#socialbar > ul > li.login > a {
+    border-radius: 0 5px 5px 0;
+}
+
+#socialbar > ul > li > a > .hide {
+    display: none;
+}
+
+#socialbar > ul > li > a:active,
+#socialbar > ul > li.search > a.active,
+#socialbar > ul > li.login > a.active {
+    margin: 11px 0 0 0;
+    box-shadow: 0 -44px 0 rgba(0, 0, 0, 0.3) inset;
+    background-color: rgb(141, 158, 158);
+}
+
+#socialbar > ul > li.twitter > a:hover {
+    background-color: rgb(86, 195, 234);
+}
+
+#socialbar > ul > li.facebook > a:hover {
+    background-color: rgb(114, 157, 204);
+}
+
+#socialbar > ul > li.instagram > a:hover {
+    background-color: rgb(148, 124, 176);
+}
+
+#socialbar > ul > li.googleplus > a:hover {
+    background-color: rgb(221, 148, 137);
+}
+
+#socialbar > ul > li.search > a:hover,
+#socialbar > ul > li.login > a:hover {
+    background-color: rgb(141, 158, 158);
+}
+
+#socialbar > ul > li > a > .sprite {
+    display: block;
+    width: 50px;
+    height: 30px;
+    margin: 7px auto 13px auto;
+    background-image: url('{{ static_url }}/static/img/site/sprite.svg');
+    background-repeat: no-repeat;
+}
+
+#socialbar > ul > li.twitter > a > .sprite {
+    background-position: -300px 0;
+}
+
+#socialbar > ul > li.facebook > a > .sprite {
+    background-position: -350px 0;
+}
+
+#socialbar > ul > li.instagram > a > .sprite {
+    background-position: -400px 0;
+}
+
+#socialbar > ul > li.googleplus > a > .sprite {
+    background-position: -450px 0;
+}
+
+#socialbar > ul > li.search > a > .sprite {
+    background-position: -500px 0;
+}
+
+#socialbar > ul > li.login > a > .sprite {
+    background-position: -500px 0;
+}
+
+#socialbar > ul > li > a:active > .sprite,
+#socialbar > ul > li.search > a.active > .sprite,
+#socialbar > ul > li.login > a.active > .sprite {
+    margin: 7px auto;
+}

@@ -1,0 +1,70 @@
+                    {%- capture processed_date -%}
+                        {{ post.date | date: "%B %-d, %Y" }}
+                    {%- endcapture -%}
+
+                    {%- capture escaped_title_twitter -%}
+                        {{ post.title | prepend: 'Reading "' | append: '"' | url_escape | cgi_escape }}
+                    {%- endcapture -%}
+
+                    {%- capture escaped_uri -%}
+                        {{ site_url | append: post.url | url_escape | cgi_escape }}
+                    {%- endcapture -%}
+
+                    <article class="{{ article_style }}" id="post-{{ post.article_id }}" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
+                        <div class="bg">
+                            <span class="category">
+                                {%- capture category -%}
+                                    {{- post.categories | first -}}
+                                {%- endcapture -%}
+
+                                {%- capture cat_slug -%}
+                                    {{- category | downcase | replace: 'ñ', 'n' | replace: 'á', 'a' | replace: 'é', 'e' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' | replace: ' ', '-' | replace: '.', '' | replace: '/', '' | uri_escape -}}
+                                {%- endcapture -%}
+
+                                <a href="{{ site_url }}/{{ cat_slug }}/" title='List all posts under the category "{{ category }}"' rel="tag">
+                                    {{ category }}
+                                </a>
+                            </span>
+                            <ul class="socialbar">
+                                <li class="reactions">
+                                    <span data-ident="{{ post.article_id }}">Reactions</span>
+                                </li>
+                                <li class="share">
+                                    <button type="button" data-ident="{{ post.article_id }}">Share</button>
+                                </li>
+                            </ul>
+                            <ul class="socialpop">
+                                <li class="twitter">
+                                    <a href="http://twitter.com/intent/tweet?counturl={{ escaped_uri }}&amp;lang=es&amp;text={{ escaped_title_twitter }}&amp;url={{ escaped_uri }}&amp;via={{ site.blog.twitter }}&amp;related={{ site.author.twitter }}" title="(abre nueva ventana)" target="_blank" rel="nofollow">
+                                        <span class="sprite"></span>
+                                        <span class="hide">Twitter</span>
+                                    </a>
+                                </li>
+                                <li class="facebook">
+                                    <a href="http://facebook.com/sharer/sharer.php?u={{ escaped_uri }}" title="(abre nueva ventana)" target="_blank" rel="nofollow">
+                                        <span class="sprite"></span>
+                                        <span class="hide">Facebook</span>
+                                    </a>
+                                </li>
+                                <li class="googleplus">
+                                    <a href="http://plus.google.com/share?url={{ escaped_uri }}" title="(abre nueva ventana)" target="_blank" rel="nofollow">
+                                        <span class="sprite"></span>
+                                        <span class="hide">Google+</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="data">
+                            <a href="{{ site_url }}{{ post.url }}" rel="bookmark" title='Permanent link to "{{ post.title }}"' itemprop="url">
+                                <h2 class="header" itemprop="headline">
+                                    {{ post.title }}
+                                </h2>
+                                <span class="description" itemprop="description">
+                                    {{ post.description }}
+                                </span>
+                                <span class="description" itemprop="description">
+                                    Published <time class="datetime" datetime="{{ post.date | date_to_xmlschema }}" itemprop="dateCreated"> {{ processed_date }}</time>.
+                                </span>
+                            </a>
+                        </div>
+                    </article>

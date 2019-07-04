@@ -1,0 +1,13 @@
+sudo: required
+services: docker
+dist: trusty
+group: edge
+branches:
+    only:
+        - develop
+        - /^greenkeeper/.*$/
+before_script:
+    - curl -sLO https://github.com/lando/lando/releases/download/v3.0.0-rc.17/lando-v3.0.0-rc.17.deb && dpkg -i lando-v3.0.0-rc.17.deb
+script:
+    - lando start
+    - lando yarn run build:pwa

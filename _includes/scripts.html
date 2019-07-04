@@ -1,3 +1,21 @@
+
+{%- if page.layout == 'frontpage' -%}
+<style type="text/css">
+{%- for post in paginator.posts -%}
+  #post-{{ post.article_id }} > .bg {background-image: url('{{ static_url }}{{ post.image }}')}
+{% endfor %}
+</style>
+{%- endif -%}
+
+
+{% if site.netlify_cms %}
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{% endif %}
+
+{% if ((jekyll.environment == 'production' or jekyll.environment == 'pwa') and site.google_analytics) %}
+{% include google-analytics.html %}
+{% endif %}
+
 {% if jekyll.environment == 'pwa' %}
 {% include service-worker.html %}
 {% endif %}

@@ -1,5 +1,67 @@
-<footer class="footer">
-  <div class="footer__container">
-      {% t footer.love %}
-  </div>
+<footer>
+  <nav>
+      <ul>
+          <li class="portafolio">
+              <a href="{{ site.url }}/portfolio/" title="See all the work of {{ site.author.name }}">
+                  Portfolio
+              </a>
+          </li>
+          <li class="acerca">
+              <a href="{{ site.url }}/about/" title="About {{ site.author.name }}">
+                  About
+              </a>
+          </li>
+          <li class="twitter">
+              <a href="http://twitter.com/{{ site.blog.twitter }}" title="Twitter Profile (opens new window)" target="_blank" rel="nofollow">
+                  Twitter
+              </a>
+          </li>
+          <li class="facebook">
+              <a href="http://facebook.com/{{ site.blog.facebook }}" title="Facebook Profile (opens new window)" target="_blank" rel="nofollow">
+                  Facebook
+              </a>
+          </li>
+          <li class="googleplus">
+              <a href="http://plus.google.com/+{{ site.blog.googleplus }}" title="Google+ Profile (opens new window)" target="_blank" rel="nofollow">
+                  Google+
+              </a>
+          </li>
+          <li class="rss">
+              <a href="http://feeds.feedburner.com/{{ site.blog.feed }}" title="Read our RSS in your favorite feed reader (opens new window)" target="_blank" rel="nofollow">
+                  RSS
+              </a>
+          </li>
+      </ul>
+  </nav>
+  <span class="license">
+      <span class="icon">
+          <span class="sprite"></span>
+      </span>
+      <span class="text">
+          The content of this blog is distributed under a Creative Commons license of type <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" title="(opens new window)" target="_blank" rel="license nofollow" itemprop="license"><em>Attribution - Non Commercial - Share Alike</em></a>. The code parts are distributed under the <a href="http://www.gnu.org/licenses/gpl-3.0-standalone.html" title="(opens new window)" target="_blank" rel="license nofollow" itemprop="license"><em>GPLv3</em></a> license.
+      </span>
+  </span>
+  <span class="info">
+      <span class="icon">
+          <span class="sprite"></span>
+      </span>
+      <span class="text">
+          This blog follows the <a href="http://validator.w3.org/check?uri=referer&amp;charset=utf-8&amp;doctype=HTML5" title="(opens new window)" target="_blank" rel="nofollow"><em>HTML5</em></a> and <a href="http://validator.w3.org/check?uri=referer&amp;charset=utf-8&amp;doctype=HTML5" title="(opens new window)" target="_blank" rel="nofollow"><em>CSS3</em></a> standards. It is made with dedication, using: <a href="http://jekyllrb.com" title="(opens new window)" target="_blank" rel="nofollow"><em>Jekyll</em></a>, <a href="http://pages.github.com" title="(opens new window)" target="_blank" rel="nofollow"><em>Github Pages</em></a>, <a href="http://modernizr.com" title="(opens new window)" target="_blank" rel="nofollow"><em>Modernizr.js</em></a>, <a href="http://jquery.com" title="(opens new window)" target="_blank" rel="nofollow"><em>jQuery.js</em></a>, <a href="http://momentjs.com" title="(opens new window)" target="_blank" rel="nofollow"><em>Moment.js</em></a>, <a href="https://github.com/scottjehl/Respond" title="(opens new window)" target="_blank" rel="nofollow"><em>Respond.js</em></a> and <a href="http://svgjs.com" title="(opens new window)" target="_blank" rel="nofollow"><em>SVG.js</em></a>.
+      </span>
+  </span>
 </footer>
+</div>
+{% if page.layout == 'post' %}
+<div id="modal-container">
+<div id="modal-overlay">
+  <div id="modal-vertical-offset">
+      <div id="modal">
+          <div id="modal-close">
+              <span class="sprite"></span>
+          </div>
+          <div id="modal-content"></div>
+      </div>
+  </div>
+</div>
+</div>
+{% endif %}
