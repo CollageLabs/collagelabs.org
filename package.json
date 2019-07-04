@@ -4,7 +4,7 @@
   "description": "Collage Labs website",
   "author": "Luis Alejandro Martínez Faneyth <luis@luisalejandro.org>",
   "repository": "CollageLabs/collagelabs.org",
-  "license": "GPL-3",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "start": "npm run-script clean:project && webpack --env=dev --progress --profile --colors && concurrently \"webpack-dev-server --env=dev\" \"bundle exec jekyll serve\"",
     "build:optim": "npm run-script clean:project && cross-env NODE_ENV=production webpack --env=prod --progress --profile --colors && webpack --env=optim  --progress --profile --colors && cross-env JEKYLL_ENV=production bundle exec jekyll build",
