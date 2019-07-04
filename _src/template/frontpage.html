@@ -27,7 +27,7 @@
             </div>
             <nav id="topicsbar" role="navigation">
                 <ul role="menubar">
-                    {%- for topic in site.categories | limit:7 -%}
+                    {%- for topic in site.categories limit:7 -%}
                     {%- capture topic_slug -%}
                     {{ topic | first | downcase | replace: 'ñ', 'n' | replace: 'á', 'a' | replace: 'é', 'e' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' | replace: ' ', '-' | replace: '.', '' | uri_escape }}
                     {%- endcapture -%}
