@@ -72,7 +72,7 @@ The following tools should be installed before starting:
 5. Run `npm start` to start the development server (or use `npm start`).
 
 ## Quick deployment
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sandoche/Jekyll-webpack-boilerplate)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sandoche/Jekyll-webpack-boilerplate) [![Greenkeeper badge](https://badges.greenkeeper.io/CollageLabs/collagelabs.org.svg)](https://greenkeeper.io/)
 
 Here is a demo of the Netlify build: https://dazzling-swartz-9738b5.netlify.com
 
