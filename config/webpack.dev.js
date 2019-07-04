@@ -1,11 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const Merge = require('webpack-merge');
-const CommonConfig = require('./webpack.common.js');
 const path = require('path');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const webpack = require('webpack');
+const Merge = require('webpack-merge');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const CommonConfig = require('./webpack.common.js');
 
 module.exports = Merge(CommonConfig, {
+  mode: 'development',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve('assets'),

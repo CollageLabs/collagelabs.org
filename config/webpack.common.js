@@ -1,23 +1,25 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const WebappWebpackPlugin = require('webapp-webpack-plugin');
 
 module.exports = {
   entry: {
     app: './_src/index.js',
   },
   plugins: [
-    new FaviconsWebpackPlugin({
-      logo: './icon.svg',
-    }),
     new HtmlWebpackPlugin({
       template: './_src/template/frontpage.html',
       filename: '../_layouts/frontpage.html',
     }),
-    new ExtractTextPlugin('[name].css'),
+    new WebappWebpackPlugin({
+      logo: './icon.svg',
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
     new CopyWebpackPlugin([{
       from: path.resolve('_images'),
       to: 'images/',
@@ -37,21 +39,25 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            { loader: 'css-loader', options: { importLoaders: 1 } },
-            {
-              loader: 'postcss-loader',
-              options: {
-                config: {
-                  path: 'config/postcss.config.js',
-                },
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          // }, {
+          //   loader: MiniCssExtractPlugin.loader,
+          }, {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: 'config/postcss.config.js',
               },
             },
-            { loader: 'sass-loader' },
-          ],
-        }),
+          }, {
+            loader: 'sass-loader',
+          },
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,

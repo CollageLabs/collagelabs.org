@@ -1,6 +1,10 @@
 
 SHELL = bash -e
 
+image:
+
+	docker build --rm -t collagelabs/collagelabs.github.io:latest .
+
 start:
 
 	lando start
@@ -20,3 +24,7 @@ destroy:
 	docker network prune -f
 	docker volume prune -f
 	lando --clear
+
+clean:
+
+	rm -rf node_modules Gemfile.lock yarn.lock vendor .bundle

@@ -1,10 +1,6 @@
 ---
 layout: frontpage
 tags:
-- gnu
-- linux
-- free software
-- open source
+- company
 - technology
-- society
 ---
