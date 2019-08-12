@@ -1,5 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -7,70 +7,81 @@ const WebappWebpackPlugin = require('webapp-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './_src/index.js',
+    app: './_src/index.js'
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      d3: 'd3'
+    }),
     new HtmlWebpackPlugin({
-      template: './_src/template/frontpage.html',
-      filename: '../_layouts/frontpage.html',
+      template: './_src/template/default.html',
+      filename: '../_layouts/default.html'
     }),
     new WebappWebpackPlugin({
       logo: './icon.svg',
+      prefix: 'icons/'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].css'
     }),
     new CopyWebpackPlugin([{
       from: path.resolve('_images'),
-      to: 'images/',
-    }]),
+      to: 'images/'
+    }])
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env'],
-          },
-        },
-      },
-      {
+          loader: 'babel-loader'
+        }
+      }, {
         test: /\.(css|scss)$/,
         use: [
           {
+            loader: MiniCssExtractPlugin.loader
+          }, {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
-            },
-          // }, {
-          //   loader: MiniCssExtractPlugin.loader,
+              importLoaders: 2
+            }
           }, {
             loader: 'postcss-loader',
             options: {
               config: {
-                path: 'config/postcss.config.js',
-              },
-            },
+                path: 'config/postcss.config.js'
+              }
+            }
           }, {
-            loader: 'sass-loader',
+            loader: 'sass-loader'
+          }
+        ]
+      }, {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-sprite-loader'
           },
-        ],
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
+          {
+            loader: 'svg-transform-loader'
+          },
+          {
+            loader: 'svgo-loader'
+          }
+        ]
+      }, {
+        test: /\.(jpe?g|png|gif)$/,
         use: [
-          'file-loader',
-        ],
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+          'file-loader'
+        ]
+      }, {
+        test: /\.(woff|woff2)$/,
         use: [
-          'file-loader',
-        ],
-      },
-    ],
-  },
+          'url-loader'
+        ]
+      }
+    ]
+  }
 };

@@ -1,4 +1,3 @@
-module.exports = function getWebpackConfig(env) {
-  // eslint-disable-next-line global-require, import/no-dynamic-require
+module.exports = function getWebpackConfig (env) {
   return require(`./config/webpack.${env}.js`);
 };

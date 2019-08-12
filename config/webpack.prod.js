@@ -1,40 +1,47 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const Merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CommonConfig = require('./webpack.common.js');
 
 module.exports = Merge(CommonConfig, {
   mode: 'production',
   output: {
-    filename: '[name]-[hash].bundle.js',
+    filename: '[name]-[hash].js',
     path: path.resolve('assets'),
-    publicPath: '/assets/',
+    publicPath: '/assets/'
   },
   plugins: [
-    new CleanWebpackPlugin({ verbose: true }),
+    new MiniCssExtractPlugin({
+      filename: '[name]-[hash].css'
+    }),
+    new CleanWebpackPlugin({
+      verbose: true
+    }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
-      debug: false,
+      debug: false
     }),
-    new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i
+    })
   ],
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
         uglifyOptions: {
           output: {
-            comments: false,
+            comments: false
           },
           mangle: {
-            keep_fnames: true,
+            keep_fnames: true
           },
-          ie8: false,
-        },
-      }),
-    ],
-  },
+          ie8: false
+        }
+      })
+    ]
+  }
 });

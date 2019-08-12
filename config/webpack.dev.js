@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
 const webpack = require('webpack');
 const Merge = require('webpack-merge');
@@ -8,39 +7,45 @@ const CommonConfig = require('./webpack.common.js');
 module.exports = Merge(CommonConfig, {
   mode: 'development',
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].js',
     path: path.resolve('assets'),
-    publicPath: '/assets/',
+    publicPath: '/assets/'
   },
   devtool: 'inline-source-map',
   plugins: [
-    new BrowserSyncPlugin(
-      {
-        host: 'localhost',
-        port: 3000,
-        proxy: 'http://localhost:8080',
-        files: ['_site', '_src'],
+    new BrowserSyncPlugin({
+      host: '0.0.0.0',
+      port: 5000,
+      proxy: {
+        target: 'http://localhost:4000',
+        ws: true
       },
-      {
-        reload: false,
-      },
-    ),
-    new webpack.HotModuleReplacementPlugin(),
+      files: ['_site', '_src'],
+      ui: false
+    }, {
+      reload: false
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-      },
-    ],
-  },
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.js$/,
+  //       enforce: 'pre',
+  //       exclude: /node_modules/,
+  //       loader: 'eslint-loader'
+  //     }
+  //   ]
+  // },
   devServer: {
-    contentBase: [
-      path.resolve('_site'),
-    ],
+    proxy: {
+      '/': {
+        target: 'http://localhost:3000'
+      }
+    },
+    disableHostCheck: true,
+    port: 4000,
     hot: true,
-  },
+    sockPort: 5000
+  }
 });

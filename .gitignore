@@ -10,6 +10,3 @@ yarn.lock
 vendor
 Gemfile.lock
 .bundle
-
-# editors
-.idea
