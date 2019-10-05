@@ -17,8 +17,14 @@ Current version: 0.1.0
 
 * Install a git client.
 * Clone the repository at `https://gitlab.com/CollageLabs/internal/collagelabs.org.git`.
+
+        git clone https://gitlab.com/CollageLabs/internal/collagelabs.org.git
+
 * Open a terminal and navigate to the newly created folder.
 * Change to the `develop` branch.
+
+        git branch develop
+
 * Execute the following command to create the docker image (first time only):
 
         make image
