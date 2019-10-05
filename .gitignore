@@ -10,3 +10,4 @@ yarn.lock
 vendor
 Gemfile.lock
 .bundle
+core
