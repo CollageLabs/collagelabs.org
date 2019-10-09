@@ -110,57 +110,74 @@ layout: default
   </section>
   <section id="blog" class="blog section">
     <center><h1 class="title gray-divider">Blog</h1></center>
-    <div class="multiple-items d-flex">
-      <div class="blog-card">
-        <div class="blog-mask"></div>
-        <img src="/assets/images/blog-1.jpg" alt="">
-        <div class="blog-content-normal">
-          <span>Category</span>
-          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+    <div class="slick">
+      <div class="prev"></div>
+      <div class="next"></div>
+      <div class="multiple-items">
+        <div class="blog-card">
+          <div class="blog-mask"></div>
+          <img src="/assets/images/blog-1.jpg" alt="">
+          <div class="blog-content-normal">
+            <span>Category</span>
+            <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+          </div>
+          <div class="blog-content-hover">
+            <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+            <span>Category</span>
+            <button type="submit" class="btn btn-custom">Read more</button>
+          </div>
         </div>
-        <div class="blog-content-hover">
-          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
-          <span>Category</span>
-          <button type="submit" class="btn btn-custom">Read more</button>
+        <div class="blog-card">
+          <div class="blog-mask"></div>
+          <img src="/assets/images/blog-2.jpg" alt="">
+          <div class="blog-content-normal">
+            <span>Category</span>
+            <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+          </div>
+          <div class="blog-content-hover">
+            <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+            <span>Category</span>
+            <button type="submit" class="btn btn-custom">Read more</button>
+          </div>
         </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-mask"></div>
-        <img src="/assets/images/blog-2.jpg" alt="">
-        <div class="blog-content-normal">
-          <span>Category</span>
-          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+        <div class="blog-card">
+          <div class="blog-mask"></div>
+          <img src="/assets/images/blog-3.jpg" alt="">
+          <div class="blog-content-normal">
+            <span>Category</span>
+            <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+          </div>
+          <div class="blog-content-hover">
+            <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+            <span>Category</span>
+            <button type="submit" class="btn btn-custom">Read more</button>
+          </div>
         </div>
-        <div class="blog-content-hover">
-          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
-          <span>Category</span>
-          <button type="submit" class="btn btn-custom">Read more</button>
+        <div class="blog-card">
+          <div class="blog-mask"></div>
+          <img src="/assets/images/blog-4.jpg" alt="">
+          <div class="blog-content-normal">
+            <span>Category</span>
+            <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+          </div>
+          <div class="blog-content-hover">
+            <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+            <span>Category</span>
+            <button type="submit" class="btn btn-custom">Read more</button>
+          </div>
         </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-mask"></div>
-        <img src="/assets/images/blog-3.jpg" alt="">
-        <div class="blog-content-normal">
-          <span>Category</span>
-          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
-        </div>
-        <div class="blog-content-hover">
-          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
-          <span>Category</span>
-          <button type="submit" class="btn btn-custom">Read more</button>
-        </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-mask"></div>
-        <img src="/assets/images/blog-4.jpg" alt="">
-        <div class="blog-content-normal">
-          <span>Category</span>
-          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
-        </div>
-        <div class="blog-content-hover">
-          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
-          <span>Category</span>
-          <button type="submit" class="btn btn-custom">Read more</button>
+        <div class="blog-card">
+          <div class="blog-mask"></div>
+          <img src="/assets/images/blog-1.jpg" alt="">
+          <div class="blog-content-normal">
+            <span>Category</span>
+            <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+          </div>
+          <div class="blog-content-hover">
+            <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+            <span>Category</span>
+            <button type="submit" class="btn btn-custom">Read more</button>
+          </div>
         </div>
       </div>
     </div>
@@ -179,7 +196,7 @@ layout: default
               <label>Email</label>
               <input type="email" class="form-control">
             </div>
-            <button type="submit" class="btn btn-3d float-right">Send</button>
+            <button type="submit" class="btn btn-3d float-right d-none d-lg-block">Send</button>
           </form>
         </div>
         <div class="col-lg-8">
@@ -187,6 +204,9 @@ layout: default
             <label>Message</label>
             <textarea class="form-control"></textarea>
           </div>
+        </div>
+        <div class="col-lg-12 d-block d-lg-none">
+          <button type="submit" class="btn btn-3d float-right">Send</button>
         </div>
       </div>
     </div>
@@ -214,7 +234,7 @@ layout: default
               </ul>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 d-none d-lg-block">
             <!-- SnapWidget -->
             <script src="https://snapwidget.com/js/snapwidget.js"></script>
             <iframe src="https://snapwidget.com/embed/745338" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
@@ -223,8 +243,9 @@ layout: default
       </div>
     </div>
   </footer>
-  <div class="credits">
-    <span>Developed by <a href="#" target="blank">@paolavrgs</a> | Designed by <a href="https://siendocristina.com/" target="blank">Cristina Reyes</a></span>
+  <div class="credits text-center">
+    <span>Developed by <a href="#" target="blank">@paolavrgs</a></span>
+    <span> | Designed by <a href="https://siendocristina.com/" target="blank">Cristina Reyes</a></span>
   </div>
   <!-- <section class="d-flex flex-xl-row justify-content-center mb-5 pb-5">
     <div id="chart" class="col col-xl-4"></div>

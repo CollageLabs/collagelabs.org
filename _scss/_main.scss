@@ -125,6 +125,98 @@
   }
 }
 
+.navbar {
+
+  .navbar-toggler {
+    border-color: transparent;
+    color: $primary;
+
+    &:focus, &:visited {
+      outline: none;
+    }
+  }
+
+  .nav-item {
+    padding: 0 20px;
+
+    &.active {
+      .nav-link::before {
+        opacity: 1;
+        bottom: -5px;
+        transition: all ease-in-out .3s;
+      }
+    }
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    position: relative;
+    color: $primary;
+
+    @include respond-to(xs) {
+      text-align: center;
+    }
+
+    &::before {
+      @include pseudo();
+      background-image: url('/assets/images/subrayadonavbar.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      bottom: -15px;
+      height: 8px;
+      left: 50%;
+      opacity: 0;
+      transform: translateX(-50%);
+      transition: all ease-in-out .3s;
+      width: 110%;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        bottom: -5px;
+        transition: all ease-in-out .3s;
+      }
+    }
+  }
+}
+
+.banner-home {
+  @include bg(cover, no-repeat, center);
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  
+  .banner-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 50%;
+    padding: 0 30px;
+    @include respond-to(xs) {
+      width: 100%;
+    }
+
+    h1 {
+      color: $primary;
+      font-size: 45px;
+      @include respond-to(xs) {
+        font-size: 35px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      color: $primary;
+      @include respond-to(xs) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
 .services {
   padding-bottom: 0;
 }
@@ -138,10 +230,26 @@
     grid-template-columns: 100%;
   }
 
+  @include respond-to(sm) {
+    grid-template-columns: 100%;
+  }
+
+  @include respond-to(md) {
+    grid-template-columns: 100%;
+  }
+
   .service-grid-item {
     height: 500px;
 
     @include respond-to(xs) {
+      height: auto;
+    }
+
+    @include respond-to(sm) {
+      height: auto;
+    }
+
+    @include respond-to(md) {
       height: auto;
     }
 
@@ -151,12 +259,28 @@
       @include respond-to(xs) {
         order: unset;
       }
+
+      @include respond-to(sm) {
+        order: unset;
+      }
+
+      @include respond-to(md) {
+        order: unset;
+      }
     }
     &.service-grid-right {
       order: 2;
       text-align: right;
 
       @include respond-to(xs) {
+        order: unset;
+      }
+
+      @include respond-to(sm) {
+        order: unset;
+      }
+
+      @include respond-to(md) {
         order: unset;
       }
     }
@@ -209,7 +333,15 @@
     grid-gap: 3% 2%;
     
     @include respond-to(xs) {
-      grid-template-columns: 100%;
+      display: unset;
+    }
+
+    @include respond-to(sm) {
+      display: unset;
+    }
+
+    @include respond-to(md) {
+      display: unset;
     }
   }
 
@@ -223,6 +355,19 @@
     @include respond-to(xs) {
       height: auto;
       padding: 20px;
+      margin-bottom: 6%;
+    }
+
+    @include respond-to(sm) {
+      height: auto;
+      padding: 20px;
+      margin-bottom: 6%;
+    }
+
+    @include respond-to(md) {
+      height: auto;
+      padding: 20px;
+      margin-bottom: 6%;
     }
 
     &:hover {
@@ -259,10 +404,6 @@
       }
     }
   }
-}
-
-.blog {
-  overflow: hidden;
 }
 
 .blog-card {
@@ -411,6 +552,10 @@
     width: 100%;
     height: 100%;
     padding: 50px;
+
+    @include respond-to(xs) {
+      padding: 20px;
+    }
   }
 
   .footer-text {
@@ -427,6 +572,10 @@
     padding-left: 0;
     color: $white;
     font-weight: 600;
+
+    ul {
+      padding-left: 0;
+    }
 
     li {
       list-style: none;
@@ -456,8 +605,36 @@
   color: $white;
   font-size: 15px;
 
+  span {
+    margin-right: 5px;
+  }
+
   a {
     color: $white;
     font-weight: 600;
+  }
+}
+
+.slick {
+  position: relative;
+
+  .prev, .next {
+    background-image: url('/assets/images/flechablanca.svg');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .prev {
+    transform: rotate(180deg);
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
   }
 }

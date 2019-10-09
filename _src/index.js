@@ -16,9 +16,3 @@ import '../_images/sprite/facebook.svg';
 import '../_images/sprite/twitter.svg';
 import '../_images/sprite/icoemail.svg';
 import '../_images/sprite/icophone.svg';
-
-$('.multiple-items').slick({
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 1
-});
