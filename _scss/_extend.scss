@@ -289,7 +289,6 @@
 .btn-3d,
 .btn-3d:focus {
   margin: 5px 0;
-  height: 55px;
   padding-top: 7px;
   padding-bottom: 13px;
   border-radius: 7px 0 7px 0;
@@ -304,11 +303,17 @@
 
 .btn-3d:active {
   margin: 10px 0 0 0;
-  height: 50px;
   box-shadow: 0 -54px 0 rgba(0, 0, 0, 0.3) inset;
   background-color: rgb(141, 158, 158);
 }
 
 .btn-3d:hover {
   background-color: rgb(141, 158, 158);
+}
+
+.btn-red {
+  background-color: $secondary;
+  color: $white;
+  font-family: 'Montserrat';
+  font-weight: 600;
 }

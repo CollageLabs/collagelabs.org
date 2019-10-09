@@ -1,68 +1,232 @@
 ---
 layout: default
 ---
-
-  <header class="frontpage">
-    <nav id="navbar" role="navigation" class="navbar navbar-light navbar-expand-xl sticky-top d-flex flex-row px-5">
-      <div class="d-flex flex-column flex-xl-row w-100">
-        <div class="d-flex flex-row col col-xl-1 p-0">
-          <a class="navbar-brand"  href="{{ site.url }}">
-            <svg class="logo"><use xlink:href="#brand"></use></svg>
-          </a>
-          <button class="navbar-toggler my-auto" type="button"
-                  data-toggle="collapse" data-target="#topicsbar"
-                  aria-controls="topicsbar" aria-expanded="false"
-                  aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div id="topicsbar" class="navbar-collapse collapse d-flex justify-content-end col col-xl-8 ml-auto">
-          <ul role="menubar" class="list-unstyled d-flex flex-xl-row m-0">
-            <li role="menuitem" class="topic">
-              <a href="#services" title='Services'>
-                <span class="text">Services</span>
-              </a>
-            </li>
-            <li role="menuitem" class="topic">
-              <a href="/blog/" title='Blog'>
-                <span class="text">Blog</span>
-              </a>
-            </li>
-            <li role="menuitem" class="topic">
-              <a href="#open-source" title='Open Source'>
-                <span class="text">Open Source</span>
-              </a>
-            </li>
-            <li role="menuitem" class="topic">
-              <a href="#contact" title='Contact'>
-                <span class="text">Contact</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand"  href="{{ site.url }}">
+        <svg class="logo"><use xlink:href="#brand"></use></svg>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topicsbar" aria-controls="topicsbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="topicsbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#open-sources">Open Source</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <div class="d-flex flex-xl-row justify-content-end">
-      <div class="col col-xl-5 mt-100px pt-100px mb-50px pb-50px px-5">
-        <h1 class="text-outer-space pb-3">
-          <strong class="font-weight-600">We are prepared</strong> to take your project to the <strong class="font-weight-600">next level</strong>
-        </h1>
-        <div class="font-size-1-25em text-outer-space">
-          Allow us to mix our skills on 
-          <span class="badge badge-light-yellow">IT</span>, 
-          <span class="badge badge-light-yellow">Web</span>, 
-          <span class="badge badge-light-yellow">Android</span> and 
-          <span class="badge badge-light-yellow">ERP</span> 
-          with your ideas. Let's build the future together.
-        </div>
-        <div class="h-170px py-50px">
-          <a class="btn btn-lg btn-3d" href="#contact">Learn more</a>
+    </div>
+  </nav>
+  <section class="banner-home" style="background-image: url('/assets/images/bg-frontpage.jpg')">
+    <div class="banner-content">
+      <h1>Lorem ipsum dolor sit amet, consectetuer adipi</h1>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          Aenean commodo ligula eget dolor. Aenean massa</p>
+      <a class="btn btn-3d" href="#contact">Learn more</a>
+    </div>
+  </section>
+  <section id="services" class="services section">
+    <center><h1 class="title gray-divider">Our Services</h1></center>
+    <div class="service-grid-container">
+      <div class="service-grid-item service-grid-right">
+        <img src="/assets/images/service-1.jpg" alt="Lorem ipsum dolor">
+      </div>
+      <div class="service-grid-item service-grid-left">
+        <div class="service-content">
+          <span>Lorem ipsum dolor</span>
+          <h2>Aenean commodo ligula eget
+              dolor lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+          <a href="#" class="link-arrow right">Learn more</a>
         </div>
       </div>
     </div>
-  </header>
-
-  <section class="d-flex flex-xl-row justify-content-center mb-5 pb-5">
+    <div class="service-grid-container">
+      <div class="service-grid-item service-grid-left">
+        <img src="/assets/images/service-2.jpg" alt="Lorem ipsum dolor">
+      </div>
+      <div class="service-grid-item service-grid-right">
+        <div class="service-content">
+          <span>Lorem ipsum dolor</span>
+          <h2>Aenean commodo ligula eget
+              dolor lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+          <a href="#" class="link-arrow left">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="open-source" class="open-source section">
+    <center><h1 class="title color-white white-divider">Open source</h1></center>
+    <div class="container">
+      <div class="open-source-grid-container">
+        <div class="open-source-card">
+          <div class="open-source-card-top">
+            <svg><use xlink:href="#Dockershelf"></use></svg>
+            <h3>Dockershelf</h3>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+          <a href="#" class="link text-right">Learn more</a>
+        </div>
+        <div class="open-source-card">
+          <div class="open-source-card-top">
+            <svg><use xlink:href="#PyPIContents"></use></svg>
+            <h3>PyPIContents</h3>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+          <a href="#" class="link text-right">Learn more</a>
+        </div>
+        <div class="open-source-card">
+          <div class="open-source-card-top">
+            <svg><use xlink:href="#PipSalaBim"></use></svg>
+            <h3>Pip Sala Bim</h3>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+          <a href="#" class="link text-right">Learn more</a>
+        </div>
+        <div class="open-source-card">
+          <div class="open-source-card-top">
+            <svg><use xlink:href="#CanaimaKueka"></use></svg>
+            <h3>Canaima Kueka</h3>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+          <a href="#" class="link text-right">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="blog" class="blog section">
+    <center><h1 class="title gray-divider">Blog</h1></center>
+    <div class="multiple-items d-flex">
+      <div class="blog-card">
+        <div class="blog-mask"></div>
+        <img src="/assets/images/blog-1.jpg" alt="">
+        <div class="blog-content-normal">
+          <span>Category</span>
+          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+        </div>
+        <div class="blog-content-hover">
+          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+          <span>Category</span>
+          <button type="submit" class="btn btn-custom">Read more</button>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-mask"></div>
+        <img src="/assets/images/blog-2.jpg" alt="">
+        <div class="blog-content-normal">
+          <span>Category</span>
+          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+        </div>
+        <div class="blog-content-hover">
+          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+          <span>Category</span>
+          <button type="submit" class="btn btn-custom">Read more</button>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-mask"></div>
+        <img src="/assets/images/blog-3.jpg" alt="">
+        <div class="blog-content-normal">
+          <span>Category</span>
+          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+        </div>
+        <div class="blog-content-hover">
+          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+          <span>Category</span>
+          <button type="submit" class="btn btn-custom">Read more</button>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-mask"></div>
+        <img src="/assets/images/blog-4.jpg" alt="">
+        <div class="blog-content-normal">
+          <span>Category</span>
+          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+        </div>
+        <div class="blog-content-hover">
+          <h3>Lorem ipsum dolor sit amet, consectetuer</h3>
+          <span>Category</span>
+          <button type="submit" class="btn btn-custom">Read more</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact section">
+    <center><h1 class="title gray-divider">Contact us</h1></center>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <form>
+            <div class="form-group custom-form-box">
+              <label>Name</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group custom-form-box">
+              <label>Email</label>
+              <input type="email" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-3d float-right">Send</button>
+          </form>
+        </div>
+        <div class="col-lg-8">
+          <div class="form-group custom-form-box">
+            <label>Message</label>
+            <textarea class="form-control"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-mask">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-text">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoqueus ut, imperdiet a, venenatis vitae, justo.</p>
+              <div class="footer-schedule">
+                <span>Lorem ipsum dolor</span>
+                <p>Monday to Saturday
+                    8:00 - 18:00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-contact">
+              <ul>
+                <li><svg><use xlink:href="#icophone"></use></svg>+55 555 5555 5555</li>
+                <li><svg><use xlink:href="#icoemail"></use></svg><a href="mailto:hello@collagelabs-com">hello@collagelabs.com</a></li>
+                <li><svg><use xlink:href="#instagram"></use></svg><svg><use xlink:href="#facebook"></use></svg><svg><use xlink:href="#twitter"></use></svg>@collagelabs</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <!-- SnapWidget -->
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+            <iframe src="https://snapwidget.com/embed/745338" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="credits">
+    <span>Developed by <a href="#" target="blank">@paolavrgs</a> | Designed by <a href="https://siendocristina.com/" target="blank">Cristina Reyes</a></span>
+  </div>
+  <!-- <section class="d-flex flex-xl-row justify-content-center mb-5 pb-5">
     <div id="chart" class="col col-xl-4"></div>
     <div class="col col-xl-4">
       <h2 class="display-5">
@@ -72,4 +236,4 @@ layout: default
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi tellus, tristique congue sem nec, sodales eleifend diam. Nunc scelerisque tincidunt lorem. Nulla ac enim pulvinar leo varius vulputate quis id magna. Morbi eget nisl ac velit porttitor tempus. Nam at neque mi. Maecenas et urna at ante imperdiet venenatis sed id ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
       </div>
     </div>
-  </section>
+  </section> -->

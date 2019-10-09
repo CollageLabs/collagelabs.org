@@ -3,6 +3,8 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "cookieconsent/build/cookieconsent.min.css";
 
+@import "../_scss/variables";
+@import "../_scss/mixins";
 @import "../_scss/extend";
 @import "../_scss/fonts";
 @import "../_scss/print";
@@ -16,3 +18,4 @@
 @import "../_scss/page";
 @import "../_scss/highlight";
 @import "../_scss/ads";
+@import "../_scss/main";

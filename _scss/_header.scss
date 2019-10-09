@@ -13,111 +13,34 @@ h1 {
     width: 100%;
 }
 
-#container > header {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
-    margin: 0 0 10px 0;
-}
-
-header.frontpage {
-    background-image: url('/assets/images/bg-frontpage.jpg');
-    background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: 45% 0%;
-    background-size: 110%;
-    // background-size: contain;
-    background-position: top center;
-
-}
-
 #navbar {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.4s ease-out;
+  background-color: #fff;
+  transition: background-color 0.4s ease-out;
 }
 
 #navbar.scrolled {
-    background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .logo {
-    height: 50px;
-    width: 105px;
+  height: 50px;
+  width: 105px;
 }
-
-// #logo > a > .hide {
-//     display: none;
-// }
-
-// #heading {
-//     float: left;
-//     width: 8%;
-//     height: 50px;
-//     padding: 5px 7% 5px 0;
-// }
-
-// #heading > .title {
-//     display: inline-block;
-//     vertical-align: top;
-//     margin:0;
-//     width: 100%;
-//     font-size: 1.6em;
-//     letter-spacing: -1px;
-// }
-
-// #topicsbar {
-//     // float: right;
-//     // width: 55%;
-// }
-
-// #topicsbar > ul {
-//     display: inline-block;
-//     vertical-align: top;
-//     width: 100%;
-// }
-
-// #topicsbar > ul > li {
-//     float: right;
-// }
-
-#topicsbar > ul > li > a {
-    display: inline-block;
-    vertical-align: top;
-    height: 50px;
-    width: 100%;
-    margin: 5px 0;
-    border-radius: 5px;
-    color: #000000;
-}
-
-#topicsbar > ul > li > a:hover {
-    background-color: rgb(226, 230, 227);
-}
-
-#topicsbar > ul > li > a > .text {
-    display: inline-block;
-    vertical-align: top;
-    height: 30px;
-    padding: 10px;
-    line-height: 30px;
-    text-transform: uppercase;
-}
-
 
 #socialbar {
-    float: left;
-    width: 25%;
+  float: left;
+  width: 25%;
 }
 
 #socialbar > ul {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
 }
 
 #socialbar > ul > li {
-    float: left;
-    width: 16.333%;
+  float: left;
+  width: 16.333%;
 }
 
 #socialbar > ul > li.search {
@@ -217,4 +140,78 @@ header.frontpage {
 #socialbar > ul > li.search > a.active > .sprite,
 #socialbar > ul > li.login > a.active > .sprite {
     margin: 7px auto;
+}
+
+// =====
+.navbar {
+  .nav-item {
+    padding: 0 20px;
+
+    &.active {
+      .nav-link::before {
+        opacity: 1;
+        bottom: -5px;
+        transition: all ease-in-out .3s;
+      }
+    }
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    position: relative;
+    color: $primary;
+
+    @include respond-to(xs) {
+      text-align: center;
+    }
+
+    &::before {
+      @include pseudo();
+      background-image: url('/assets/images/subrayadonavbar.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      bottom: -15px;
+      height: 8px;
+      left: 50%;
+      opacity: 0;
+      transform: translateX(-50%);
+      transition: all ease-in-out .3s;
+      width: 110%;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        bottom: -5px;
+        transition: all ease-in-out .3s;
+      }
+    }
+  }
+}
+
+.banner-home {
+  @include bg(cover, no-repeat, center);
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  
+  .banner-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 50%;
+    padding: 0 30px;
+
+    h1 {
+      color: $primary;
+      font-size: 45px;
+    }
+
+    p {
+      font-size: 20px;
+      color: $primary;
+    }
+  }
 }
