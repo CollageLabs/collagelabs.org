@@ -1,0 +1,15 @@
+// Medias querys
+$breakpoints: (
+  'xs': "(min-width: 0px) and (max-width: 575px)",
+  'sm': "(min-width: 576px) and (max-width: 767px)",
+  'md': "(min-width: 768px) and (max-width: 991px)",
+  'lg': "(min-width: 992px) and (max-width: 1199px)",
+  'xl': "(min-width: 1200px)",
+) !default;
+
+$primary: #405761;
+$secondary: #e5616b;
+$dark-bg: #505859;
+$white: #fff;
+
+$mont: 'Montserrat', sans-serif;

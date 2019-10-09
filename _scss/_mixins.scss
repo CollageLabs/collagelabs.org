@@ -1,0 +1,64 @@
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  } @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. ' +
+      'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin orientation($position) {
+  @if $position == landscape {
+    @media only screen and (orientation:landscape) { @content; }
+  } @else if $position == portrait {
+    @media only screen and (orientation : portrait) { @content; }
+  }
+}
+
+@mixin pseudo($pos: absolute, $content: ''){
+  content: $content;
+  position: $pos;
+}
+
+@mixin truncate($height, $lines) {
+  max-height: $height;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin bg($size, $repeat, $pos) {
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $pos;
+}
+
+@mixin font($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin flexcenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease;
+    -o-transition:      all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: 		all $transition ease;
+    transition:         all $transition ease;
+}
