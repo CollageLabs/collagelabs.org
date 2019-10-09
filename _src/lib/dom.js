@@ -14,7 +14,5 @@
       return false;
     });
 
-
-
   });
 }(window.jQuery));

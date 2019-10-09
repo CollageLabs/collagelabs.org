@@ -11,7 +11,10 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      d3: 'd3'
+      d3: 'd3',
+      $: "jquery",
+      jQuery: "jquery",
+      'window.jQuery': "jquery"
     }),
     new HtmlWebpackPlugin({
       template: './_src/template/default.html',
@@ -34,9 +37,19 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use: [
+          {
+            loader: 'babel-loader'
+          }
+        ]
+      }, {
+        test: require.resolve("jquery"),
+        use: [
+          {
+            loader: "expose-loader",
+            options: "$"
+          }
+        ]
       }, {
         test: /\.(css|scss)$/,
         use: [

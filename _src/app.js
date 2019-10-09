@@ -4,5 +4,5 @@ import 'jquery/src/jquery';
 import 'bootstrap';
 import 'cookieconsent';
 import 'slick-carousel';
-import './lib/dom.js';
 import './lib/chart.js';
+import './lib/dom.js';
