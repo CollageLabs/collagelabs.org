@@ -14,5 +14,6 @@ import '../_images/sprite/CanaimaKueka.svg';
 import '../_images/sprite/instagram.svg';
 import '../_images/sprite/facebook.svg';
 import '../_images/sprite/twitter.svg';
+import '../_images/sprite/whatsapp.svg';
 import '../_images/sprite/icoemail.svg';
 import '../_images/sprite/icophone.svg';

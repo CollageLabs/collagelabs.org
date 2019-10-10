@@ -119,13 +119,22 @@
   @extend .btn-custom;
   background-color: $secondary;
   color: $white;
+  transition-property: box-shadow, transform;
+  transition: all ease-in-out .3s;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 
   &:hover {
     color: $white;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    transition: all ease-in-out .3s;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 
 .navbar {
+  background-color: $white;
 
   .navbar-toggler {
     border-color: transparent;
@@ -157,6 +166,16 @@
       text-align: center;
     }
 
+    &.active {
+      color: $primary;
+
+      &::before {
+        opacity: 1;
+        bottom: -5px;
+        transition: all ease-in-out .3s;
+      }
+    }
+
     &::before {
       @include pseudo();
       background-image: url('/assets/images/subrayadonavbar.svg');
@@ -182,7 +201,7 @@
 }
 
 .banner-home {
-  @include bg(cover, no-repeat, center);
+  @include bg(cover, no-repeat, right);
   width: 100%;
   height: 90vh;
   display: flex;
@@ -202,16 +221,25 @@
     h1 {
       color: $primary;
       font-size: 45px;
+      margin-bottom: 40px;
+
+      span {
+        font-weight: 600;
+      }
+
       @include respond-to(xs) {
         font-size: 35px;
+        margin-bottom: 20px;
       }
     }
 
     p {
       font-size: 20px;
       color: $primary;
+      margin-bottom: 40px;
       @include respond-to(xs) {
         font-size: 15px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -352,6 +380,10 @@
     height: 420px;
     padding: 30px 50px;
     transition: all ease-in-out .3s;
+    transition-property: box-shadow, transform;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
     @include respond-to(xs) {
       height: auto;
       padding: 20px;
@@ -372,8 +404,11 @@
 
     &:hover {
       background-color: #6c7777;
+      box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
       transition: all ease-in-out .3s;
-      box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+      z-index: 1;
     }
 
     .link {
@@ -422,7 +457,9 @@
   width: 25%;
   height: 450px;
   position: relative;
+  transition-property: box-shadow, transform;
   transition: all ease-in-out .3s;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 
   @include respond-to(xs) {
     width: 100%;
@@ -435,7 +472,9 @@
   }
 
   &:hover {
-    box-shadow: 0 0 47.5px 1.5px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    transition: all ease-in-out .3s;
+    -webkit-transform: scale(1.05);
     transform: scale(1.05);
     z-index: 1;
     transition: all ease-in-out .3s;
@@ -457,6 +496,7 @@
 
   .blog-content-normal {
     position: absolute;
+    width: 100%;
     bottom: 0;
     left: 0;
     padding: 20px;
@@ -481,6 +521,7 @@
   .blog-content-hover {
     position: absolute;
     height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
     padding: 30px 20px;
@@ -532,11 +573,11 @@
   input {
     padding: 10px 20px;
     height: unset;
-    border: 2px solid #d8d7d2;
+    border: 2px solid #d8d7d2 !important;
 
     &:focus, &:active {
       box-shadow: none;
-      border-color: $secondary;
+      border-color: $secondary !important;
     }
   }
 
@@ -639,14 +680,63 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    transition: all ease-in-out .3s;
+
+    &:hover {
+      cursor: pointer;
+      transition: all ease-in-out .3s;
+    }
   }
   
   .prev {
-    transform: rotate(180deg);
-    left: 10px;
+    transform: rotate(180deg) translateY(50%);
+    left: 15px;
+
+    &:hover {
+      transform: rotate(180deg) translateY(50%) translateX(5px);
+    }
   }
 
   .next {
-    right: 10px;
+    right: 15px;
+
+    &:hover {
+      transform: translateY(-50%) translateX(5px);
+    }
+  }
+}
+
+#mc_embed_signup {
+  div#mce-responses {
+    margin: 0 !important;
+
+    @include respond-to(xs) {
+      text-align: center !important;
+      width: 100% !important;
+      margin: 10px !important;
+    }
+  }
+
+  div.response {
+    margin: 0;
+    padding: 0;
+    @include respond-to(xs) {
+      width: 100% !important;
+    }
+  }
+
+  #mce-success-response {
+    font-weight: 600;
+    font-family: $mont;
+    padding: 0;
+    margin: 0;
+  }
+
+  #mce-error-response {
+    font-weight: 600;
+    font-family: $mont;
+    padding: 0;
+    margin: 0;
+    color: $secondary;
   }
 }
