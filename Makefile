@@ -8,7 +8,7 @@ image:
 start:
 
 	lando start
-	lando yarn run start
+	lando yarn run serve:dev
 
 stop:
 
@@ -27,4 +27,4 @@ destroy:
 
 clean:
 
-	rm -rf node_modules Gemfile.lock yarn.lock vendor .bundle
+	rm -rf node_modules Gemfile.lock yarn.lock vendor .bundle assets _site yarn-error.log

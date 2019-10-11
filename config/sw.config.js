@@ -4,12 +4,12 @@ module.exports = {
     '_site/**.html',
     '_site/**/**.html',
     '_site/assets/images/**.*',
-    '_site/assets/**.js',
+    '_site/assets/**.js'
   ],
   stripPrefix: '_site/',
   runtimeCaching: [{
     urlPattern: '/',
-    handler: 'networkFirst',
+    handler: 'networkFirst'
   }],
-  root: '_site',
+  root: '_site'
 };

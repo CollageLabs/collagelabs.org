@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html lang="{{ page.lang | default: site.lang | default: 'en' }}" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#{% if page.layout == 'post' or page.layout == 'page' %} article: http://ogp.me/ns/article#{% endif %} dc: http://purl.org/dc/terms#">
+  <head>
+    {% include head.html %}
+  </head>
+  <body itemscope="" itemtype="http://schema.org/Blog">
+    <meta itemprop="name" content="{{ site.name }}" />
+    <meta itemprop="url" content="{{ head_url }}" />
+    <meta itemprop="headline" content="{{ head_title }}" />
+    <meta itemprop="description about" content="{{ head_description }}" />
+    <meta itemprop="keywords" content="{{ head_keywords }}" />
+    <meta itemprop="image" content="{{ page.image }}" />
+    <meta itemprop="inLanguage" content="en" />
+
+    <div id="container">
+        {{ content }}
+    </div>
+
+    {% if page.layout == 'post' %}
+    <div id="modal-container">
+    <div id="modal-overlay">
+    <div id="modal-vertical-offset">
+        <div id="modal">
+            <div id="modal-close">
+                <span class="sprite"></span>
+            </div>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+    </div>
+    </div>
+    {% endif %}
+
+    {% include scripts.html %}
+  </body>
+</html>

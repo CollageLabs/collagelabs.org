@@ -1,118 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-    box-sizing: content-box;
-}
-
-a,
-a:hover,
-a:visited,
-a:active {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
-img {
-    border: 0
-}
-
-table,
-tr,
-td {
-    vertical-align: top;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-}
-
-:focus {
-    outline: 0;
-}
-
-ins {
-    text-decoration: none;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-form {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-}
-
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 100%;
-    font-weight: 300;
-    line-height: 1em;
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-}
-
-input, button {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-}
-
-button {
-    cursor: pointer;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    line-height: 1em;
-    text-align: left;
     font-weight: 300;
 }
 
 h1 {
-    font-size: 2.6em;
-}
-
-h2 {
-    font-size: 2.4em;
-}
-
-h3 {
-    font-size: 2.2em;
-}
-
-h4 {
-    font-size: 1.8em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
 }
 
 #container {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 5%;
-    width: 90%;
+    margin: 0;
+    width: 100%;
 }
 
 #container > header {
@@ -122,56 +20,65 @@ h4 {
     margin: 0 0 10px 0;
 }
 
-#logo {
-    float: left;
-    width: 5%;
-}
-
-#logo > a {
-    display: block;
-    vertical-align: top;
-    width: 50px;
-    height: 50px;
-    margin: 5px auto;
-    background-image: url('{{ static_url }}/static/img/site/sprite.svg');
-    background-position: 0 0;
+header.frontpage {
+    background-image: url('/assets/images/bg-frontpage.jpg');
     background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: 45% 0%;
+    background-size: 110%;
+    // background-size: contain;
+    background-position: top center;
+
 }
 
-#logo > a > .hide {
-    display: none;
+#navbar {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.4s ease-out;
 }
 
-#heading {
-    float: left;
-    width: 8%;
+#navbar.scrolled {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.logo {
     height: 50px;
-    padding: 5px 7% 5px 0;
+    width: 105px;
 }
 
-#heading > .title {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
-    height: 25px;
-    font-size: 1.6em;
-    letter-spacing: -1px;
-}
+// #logo > a > .hide {
+//     display: none;
+// }
 
-#topicsbar {
-    float: left;
-    width: 55%;
-}
+// #heading {
+//     float: left;
+//     width: 8%;
+//     height: 50px;
+//     padding: 5px 7% 5px 0;
+// }
 
-#topicsbar > ul {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
-}
+// #heading > .title {
+//     display: inline-block;
+//     vertical-align: top;
+//     margin:0;
+//     width: 100%;
+//     font-size: 1.6em;
+//     letter-spacing: -1px;
+// }
 
-#topicsbar > ul > li {
-    float: left;
-}
+// #topicsbar {
+//     // float: right;
+//     // width: 55%;
+// }
+
+// #topicsbar > ul {
+//     display: inline-block;
+//     vertical-align: top;
+//     width: 100%;
+// }
+
+// #topicsbar > ul > li {
+//     float: right;
+// }
 
 #topicsbar > ul > li > a {
     display: inline-block;
@@ -180,6 +87,7 @@ h4 {
     width: 100%;
     margin: 5px 0;
     border-radius: 5px;
+    color: #000000;
 }
 
 #topicsbar > ul > li > a:hover {
@@ -192,6 +100,7 @@ h4 {
     height: 30px;
     padding: 10px;
     line-height: 30px;
+    text-transform: uppercase;
 }
 
 
@@ -276,7 +185,7 @@ h4 {
     width: 50px;
     height: 30px;
     margin: 7px auto 13px auto;
-    background-image: url('{{ static_url }}/static/img/site/sprite.svg');
+    background-image: url('/assets/images/sprite.svg');
     background-repeat: no-repeat;
 }
 

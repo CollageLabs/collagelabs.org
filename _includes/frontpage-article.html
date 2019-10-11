@@ -7,7 +7,7 @@
                     {%- endcapture -%}
 
                     {%- capture escaped_uri -%}
-                        {{ site_url | append: post.url | url_escape | cgi_escape }}
+                        {{ site.url | append: post.url | url_escape | cgi_escape }}
                     {%- endcapture -%}
 
                     <article class="{{ article_style }}" id="post-{{ post.article_id }}" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
@@ -21,7 +21,7 @@
                                     {{- category | downcase | replace: 'ñ', 'n' | replace: 'á', 'a' | replace: 'é', 'e' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' | replace: ' ', '-' | replace: '.', '' | replace: '/', '' | uri_escape -}}
                                 {%- endcapture -%}
 
-                                <a href="{{ site_url }}/{{ cat_slug }}/" title='List all posts under the category "{{ category }}"' rel="tag">
+                                <a href="{{ site.url }}/{{ cat_slug }}/" title='List all posts under the category "{{ category }}"' rel="tag">
                                     {{ category }}
                                 </a>
                             </span>
@@ -55,7 +55,7 @@
                             </ul>
                         </div>
                         <div class="data">
-                            <a href="{{ site_url }}{{ post.url }}" rel="bookmark" title='Permanent link to "{{ post.title }}"' itemprop="url">
+                            <a href="{{ site.url }}{{ post.url }}" rel="bookmark" title='Permanent link to "{{ post.title }}"' itemprop="url">
                                 <h2 class="header" itemprop="headline">
                                     {{ post.title }}
                                 </h2>

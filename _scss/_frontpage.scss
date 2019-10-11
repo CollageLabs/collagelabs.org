@@ -128,7 +128,7 @@
 #featured > article > .bg > .socialbar > .share > button,
 #content > .preview > .bg > .socialbar > .share > button {
     padding: 3px 5px 7px 28px;
-    background-image: url('{{ static_url }}/static/img/site/sprite.svg');
+    background-image: url('/assets/images/sprite.svg');
     background-repeat: no-repeat;
 
 }
@@ -205,7 +205,7 @@
     vertical-align: top;
     width: 60px;
     height: 60px;
-    background-image: url('{{ static_url }}/static/img/site/sprite.svg');
+    background-image: url('/assets/images/sprite.svg');
     background-repeat: no-repeat;
 }
 

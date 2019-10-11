@@ -25,7 +25,10 @@
     width: 100%;
     margin: 5px 0;
     padding: 0 0 5px 0;
-    box-shadow: 0 -6px 0 rgba(255, 255, 255, 0.2) inset, 0 -5px 0 rgba(0, 0, 0, 0.1) inset, -1px 0 0 rgba(0, 0, 0, 0.06) inset, 1px 1px 0 rgba(0, 0, 0, 0.06) inset;
+    box-shadow: 0 -6px 0 rgba(255, 255, 255, 0.2) inset,
+                0 -5px 0 rgba(0, 0, 0, 0.1) inset,
+                -1px 0 0 rgba(0, 0, 0, 0.06) inset,
+                1px 1px 0 rgba(0, 0, 0, 0.06) inset;
     border-radius: 5px;
     background-color: rgb(193, 190, 182);
     background-image: radial-gradient(ellipse closest-side at 50% 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.0));
@@ -53,7 +56,7 @@
     width: 40px;
     height: 30px;
     margin: 20px auto;
-    background-image: url('{{ static_url }}/static/img/site/sprite.svg');
+    background-image: url('/assets/images/sprite.svg');
     background-repeat: no-repeat;
 }
 
@@ -132,7 +135,7 @@
     display: block;
     width: 140px;
     margin: 0 auto;
-    background-image: url('{{ static_url }}/static/img/site/sprite.svg');
+    background-image: url('/assets/images/sprite.svg');
     background-repeat: no-repeat;
 }
 
