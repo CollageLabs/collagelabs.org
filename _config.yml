@@ -1,50 +1,70 @@
-### Welcome to Jekyll Webpack Boilerplate
-#
-# This config file contains the config of your webpages
-# You may also want to update /config/webpack.pwa.js in case you want to generate a Progressive Web App
+name: 'Collage Labs'
+app_name: 'Collage Labs'
+title: A blog about Free Software and Society
+description: A blog about Free Software and Society.
+author:
+  name: 'Luis Alejandro Martínez Faneyth'
+  first_name: 'Luis Alejandro'
+  last_name: 'Martínez Faneyth'
+  email: 'luis@luisalejandro.org'
+  github: 'LuisAlejandro'
+  twitter: 'LuisAlejandro'
+  facebook: 'martinez.faneyth'
+  paypal: 'martinezfaneyth'
+blog:
+  twitter: 'HuntingBearsWeb'
+  facebook: 'HuntingBearsWeb'
+  instagram: 'HuntingBearsWeb'
+  googleplus: 'HuntingBearsVE'
+  feed: 'HuntingBearsWeb'
 
-title: Super-website
-email: your-email@example.com
-description: A super website made with love
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-theme_color: 'black-translucent'
-twitter_username: sandochee
-github_username:  sandoche
-author: Sandoche Adittane
-logo: assets/images/large-logo.svg
-twitter:
-  username: sandochee
-social:
-  name: Sandoche Adittane
-  links:
-    - https://twitter.com/sandochee
-    - https://www.facebook.com/sandoche
-    - https://www.linkedin.com/in/sandoche
-    - https://plus.google.com/+SandocheADITTANE
-    - https://github.com/sandoche
+google_analytics: id
+webmaster_verifications:
+  google: 1234
+  bing: 1234
+  alexa: 1234
+  yandex: 1234
+  baidu: 1234
+
+facebook:
+  - app_id: 409501159152943
+  - admins: 870375116
+  - profile_id: 870375116
+  - publisher: 156686441067299
 
 ampdir: amp
-netlify_cms: true
-repository: CollageLabs/collagelabs.org
+port: 3000
 
-### Google webmaster tools, Google Analytics, Doorbell and Cookie consent uncomment and put the API key
-#webmaster_verifications:
-#  google: verification_code
-#google_analytics: id
-#doorbell:
-#  id: doorbell_id
-#  appKey: doorbell_appKey
+lang: en
+lang_locale: en_US
 
-#cookie_consent: true
+collections_dir: collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:categories/:year/:month/:day/:title/
 
-### Build settings
+pagination:
+  per_page: 20
+  permalink: '/page/:num/'
+
+autopages:
+  categories: 
+    layouts: 
+      - 'category.html'
+    title: 'Posts in category :cat'
+    permalink: '/blog/category/:cat'
+  tags:
+    layouts: 
+      - 'tag.html'
+    title: 'Posts tagged with :tag'
+    permalink: '/blog/tag/:tag'
+
 markdown: kramdown
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  - jekyll-paginate-v2
   - amp-jekyll
+  - octopress-minify-html
 
 exclude:
   - Gemfile
@@ -53,8 +73,6 @@ exclude:
   - Makefile
   - node_modules
   - vendor
-  - _src
-  - _images
   - LICENSE
   - package.json
   - README.md
@@ -65,3 +83,5 @@ exclude:
   - optimization-fix
   - optimization-fix-this-file-is-ignored.js
   - icon.svg
+  - HISTORY.md
+  - MAINTAINER.md

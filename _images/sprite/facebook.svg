@@ -1,0 +1,21 @@
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1"
+   width="746.66669"
+   height="496"
+   id="svg2"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="sprite.svg"
+   inkscape:export-filename="/home/huntingbears/Desarrollo/luisalejandro.github.io/static/img/site/sprite.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><g xmlns="http://www.w3.org/2000/svg" id="g4961" transform="matrix(0.99756585,0,0,0.99926891,0.89467639,0.02192695)">
+    <path d="M 382.31812,1.5740441 V 6.117618 h -2.65859 q -1.45611,0 -1.9634,0.6204498 -0.50729,0.6204383 -0.50729,1.8613365 V 11.85435 h 4.96016 l -0.65758,5.097201 h -4.30257 v 13.048455 h -5.18563 V 16.942009 h -4.32135 v -5.0972 h 4.32135 V 8.0934992 q 0,-3.1976857 1.76611,-4.9635597 1.76615,-1.7658883 4.68776,-1.7658883 2.48949,0 3.86103,0.2099929 z" id="fa-facebook-3" inkscape:connector-curvature="0" style="fill:#505050;fill-opacity:1;stroke:none;stroke-width:0.19829106;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <path d="M 382.31813,0.38787921 V 4.9314533 h -2.65859 q -1.45611,0 -1.96339,0.6204493 -0.5073,0.6204386 -0.5073,1.8613372 v 3.2549452 h 4.96017 l -0.6576,5.097202 h -4.30257 v 13.048451 h -5.18563 V 15.755845 h -4.32135 v -5.097202 h 4.32135 V 6.907334 q 0,-3.1976849 1.76611,-4.9635599 1.76615,-1.76588759 4.68776,-1.76588759 2.48949,0 3.86104,0.2099927 z" id="fa-facebook-3-9" inkscape:connector-curvature="0" style="fill:#ffffff;fill-opacity:1;stroke:#505050;stroke-width:0.40000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+  </g></svg>

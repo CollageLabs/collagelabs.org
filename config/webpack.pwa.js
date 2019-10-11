@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
 const Merge = require('webpack-merge');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
@@ -19,9 +18,9 @@ module.exports = Merge(ProdConfig, {
       icons: [
         {
           src: path.resolve('icon.svg'),
-          sizes: [96, 128, 192, 256, 384, 512],
-        },
-      ],
-    }),
-  ],
+          sizes: [96, 128, 192, 256, 384, 512]
+        }
+      ]
+    })
+  ]
 });

@@ -138,7 +138,7 @@
     width: 40px;
     height: 30px;
     margin: 0 auto;
-    background-image: url('{{ static_url }}/static/img/site/sprite.svg');
+    background-image: url('/assets/images/sprite.svg');
     background-repeat: no-repeat;
 }
 
@@ -652,7 +652,7 @@
     right: -40px;
     width: 30px;
     height: 30px;
-    background-image: url('{{ static_url }}/static/img/site/sprite.svg');
+    background-image: url('/assets/images/sprite.svg');
     background-repeat: no-repeat;
     background-position: -585px -30px;
     cursor: pointer;
