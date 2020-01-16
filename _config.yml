@@ -1,7 +1,7 @@
 name: 'Collage Labs'
 app_name: 'Collage Labs'
-title: A blog about Free Software and Society
-description: A blog about Free Software and Society.
+title: We put the world together for you.
+description: We put the world together for you.
 author:
   name: 'Luis Alejandro Martínez Faneyth'
   first_name: 'Luis Alejandro'
@@ -12,11 +12,9 @@ author:
   facebook: 'martinez.faneyth'
   paypal: 'martinezfaneyth'
 blog:
-  twitter: 'HuntingBearsWeb'
-  facebook: 'HuntingBearsWeb'
-  instagram: 'HuntingBearsWeb'
-  googleplus: 'HuntingBearsVE'
-  feed: 'HuntingBearsWeb'
+  twitter: 'CollageLabs'
+  facebook: 'CollageLabs'
+  instagram: 'collagelabsco'
 
 google_analytics: id
 webmaster_verifications:
@@ -49,13 +47,13 @@ pagination:
   permalink: '/page/:num/'
 
 autopages:
-  categories: 
-    layouts: 
+  categories:
+    layouts:
       - 'category.html'
     title: 'Posts in category :cat'
     permalink: '/blog/category/:cat'
   tags:
-    layouts: 
+    layouts:
       - 'tag.html'
     title: 'Posts tagged with :tag'
     permalink: '/blog/tag/:tag'

@@ -161,6 +161,7 @@
     text-transform: uppercase;
     position: relative;
     color: $primary;
+    font-size: 20px;
 
     @include respond-to(xs) {
       text-align: center;
@@ -296,6 +297,7 @@
         order: unset;
       }
     }
+
     &.service-grid-right {
       order: 2;
       text-align: right;
@@ -326,6 +328,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     @include respond-to(xs) {
       padding: 30px 20px;
       text-align: left;
@@ -343,7 +346,12 @@
     }
 
     p {
-      font-size: 15px;
+      font-size: 20px;
+
+      b, strong {
+        font-weight: bold;
+      }
+
       @include respond-to(xs) {
         display: none;
       }
@@ -352,7 +360,7 @@
 }
 
 .open-source {
-  background-color: $dark-bg;
+  background-color: $primary-dark;
 
   .open-source-grid-container {
     display: grid;
@@ -599,8 +607,8 @@
   @include bg(cover, no-repeat, center);
 
   .footer-mask {
-    background: rgb(80,88,89);
-    background: linear-gradient(180deg, rgba(80,88,89,1) 30%, rgba(80,88,89,0) 100%);
+    background: rgb(80, 88, 89);
+    background: linear-gradient(180deg, rgba(80, 88, 89, 1) 40%, rgba(80, 88, 89, 0.6) 100%);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -654,7 +662,7 @@
   padding: 15px;
   display: flex;
   justify-content: center;
-  background-color: $primary;
+  background-color: $primary-dark;
   color: $white;
   font-size: 15px;
 
