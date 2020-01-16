@@ -77,7 +77,8 @@
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.1.0",
-    "webpack-pwa-manifest": "^4.1.1"
+    "webpack-pwa-manifest": "^4.1.1",
+    "yarn": "^1.21.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
