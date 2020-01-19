@@ -1,23 +1,27 @@
 <section id="contact" class="contact section">
   <center><h1 class="title gray-divider">Contact us</h1></center>
   <div id="mc_embed_signup" class="container">
-    <form action="https://huntingbears.us12.list-manage.com/subscribe/post?u=9ff78d57d8046b4bed4a4fa73&amp;id=d34a79f498" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <form action="https://huntingbears.us12.list-manage.com/subscribe/post?u=9ff78d57d8046b4bed4a4fa73&amp;id=d34a79f498"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+          class="validate" target="_blank">
       <div class="row">
         <div class="col-lg-4">
           <div class="form-group custom-form-box">
             <label for="mce-NAME">Name</label>
-            <input value="" name="NAME" type="text" class="form-control" id="mce-NAME">
+            <input name="NAME" type="text" class="form-control" id="mce-NAME">
           </div>
           <div class="form-group custom-form-box">
             <label for="mce-EMAIL">Email</label>
-            <input value="" name="EMAIL" type="email" class="form-control" id="mce-EMAIL">
+            <input name="EMAIL" type="email" class="form-control" id="mce-EMAIL"
+                   title="The domain portion of the email address is invalid (the portion after the @)."
+                   pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
           </div>
           <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-custom-red float-right d-none d-lg-block">Send</button>
         </div>
         <div class="col-lg-8">
           <div class="form-group custom-form-box">
             <label for="mce-MESSAGE">Message</label>
-            <textarea value="" name="MESSAGE" class="form-control" id="mce-MESSAGE"></textarea>
+            <textarea name="MESSAGE" class="form-control" id="mce-MESSAGE"></textarea>
           </div>
         </div>
         <div id="mce-responses" class="clear">
@@ -29,19 +33,5 @@
         </div>
       </div>
     </form>
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-    <script type='text/javascript'>
-      (function($){
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[1] = 'NAME';
-        ftypes[1] = 'text';
-        fnames[0] = 'EMAIL';
-        ftypes[0] = 'email';
-        fnames[2] = 'MESSAGE';
-        ftypes[2]='text';
-      }(jQuery));
-      var $mcj = jQuery.noConflict(true);
-    </script>
   </div>
 </section>
