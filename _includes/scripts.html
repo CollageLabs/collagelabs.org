@@ -7,11 +7,10 @@
 {%- endif -%}
 
 {%- if (jekyll.environment == 'production' or jekyll.environment == 'pwa') -%}
-<!-- <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {%- include google-analytics.html -%}
-{%- endif -%}
 {%- include cookie-consent.html -%}
+{%- endif -%}
 
 {%- if jekyll.environment == 'pwa' -%}
 {%- include service-worker.html -%}

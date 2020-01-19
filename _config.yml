@@ -1,7 +1,7 @@
 name: 'Collage Labs'
 app_name: 'Collage Labs'
 title: Web, Mobile, ERP & IT Solutions
-description: Web, Mobile, ERP & IT Solutions
+description: Collage Labs is building software for multiple digital agencies across the globe. Our team provides personal, professional and friendly service which carefully considers your business goals and requirements.
 author:
   name: 'Luis Alejandro Martínez Faneyth'
   first_name: 'Luis Alejandro'
@@ -18,17 +18,17 @@ blog:
 
 google_analytics: UA-156513215-1
 webmaster_verifications:
-  google: 1234
-  bing: 1234
-  alexa: 1234
-  yandex: 1234
-  baidu: 1234
+  google: ""
+  bing: ""
+  alexa: ""
+  yandex: ""
+  baidu: ""
 
 facebook:
-  - app_id: 409501159152943
-  - admins: 870375116
-  - profile_id: 870375116
-  - publisher: 156686441067299
+  - app_id: ""
+  - admins: ""
+  - profile_id: ""
+  - publisher: ""
 
 ampdir: amp
 port: 3000

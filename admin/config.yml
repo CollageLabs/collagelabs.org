@@ -10,8 +10,8 @@ public_folder: "assets/images"
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "_i18n/en/_posts"
-    create: true 
+    folder: "collection/_posts"
+    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
