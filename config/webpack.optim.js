@@ -1,4 +1,5 @@
 const path = require('path');
+const glob = require('glob');
 const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
 
 module.exports = {
@@ -7,14 +8,25 @@ module.exports = {
   output: {
     filename: 'optimization-fix-this-file-is-ignored.js'
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
   plugins: [
     new HtmlCriticalWebpackPlugin({
-      base: path.resolve('_layouts'),
-      src: 'default.html',
-      dest: '_layouts/default.html',
-      css: ['assets/app.css'],
+      base: path.resolve('_site'),
+      src: 'index.html',
+      dest: 'index.html',
+      css: glob.sync('_site/assets/*.css'),
       inline: true,
-      minify: true
+      minify: true,
+      extract: true,
+      width: 1300,
+      height: 900
     })
   ]
 };

@@ -1,17 +1,17 @@
 {%- if page.layout == 'frontpage' -%}
-<style type="text/css">
+<!-- <style type="text/css">
 {%- for post in paginator.posts -%}
   #post-{{ post.article_id }} > .bg {background-image: url('{{ site.static_url }}{{ post.image }}')}
 {% endfor %}
-</style>
+</style> -->
 {%- endif -%}
 
 {%- if (jekyll.environment == 'production' or jekyll.environment == 'pwa') -%}
-<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {%- include google-analytics.html -%}
-{%- include cookie-consent.html -%}
 {%- endif -%}
+{%- include cookie-consent.html -%}
 
 {%- if jekyll.environment == 'pwa' -%}
 {%- include service-worker.html -%}

@@ -16,9 +16,9 @@
     "jekyll:pwa": "cross-env JEKYLL_ENV=pwa bundle exec jekyll build --config=_config.yml,_config.production.yml",
     "sw": "sw-precache --config=config/sw.config.js --verbose",
     "build": "yarn run clean:project && yarn run webpack:prod && yarn run jekyll:prod",
-    "build:optim": "yarn run clean:project && yarn run webpack:prod && yarn run webpack:optim && yarn run jekyll:prod",
+    "build:optim": "yarn run clean:project && yarn run webpack:prod && yarn run jekyll:prod && yarn run webpack:optim",
     "build:pwa": "yarn run clean:project && yarn run webpack:pwa && yarn run jekyll:pwa && yarn run sw",
-    "build:pwa:optim": "yarn run clean:project && yarn run webpack:pwa && yarn run webpack:optim && yarn run jekyll:pwa && yarn run sw",
+    "build:pwa:optim": "yarn run clean:project && yarn run webpack:pwa && yarn run jekyll:pwa && yarn run webpack:optim && yarn run sw",
     "serve:dist": "yarn run build:pwa:optim && http-server _site",
     "serve:dev": "yarn run clean:project && yarn run webpack:dev && yarn run jekyll:dev"
   },
@@ -53,6 +53,7 @@
     "html-critical-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.12.0",
+    "imagemin-mozjpeg": "^8.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.5.3",
@@ -89,6 +90,7 @@
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
     "popper.js": "^1.15.0",
+    "puppeteer": "^2.0.0",
     "slick-carousel": "^1.8.1"
   }
 }

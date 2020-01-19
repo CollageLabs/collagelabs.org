@@ -2,6 +2,7 @@ FROM dockershelf/node:12
 LABEL maintainer "Luis Alejandro Martínez Faneyth <luis@luisalejandro.org>"
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
 
 RUN apt-get update && \
     apt-get install gnupg git sudo libpng-dev libpng-dev build-essential ruby2.5 ruby2.5-dev

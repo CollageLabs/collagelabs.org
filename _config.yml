@@ -1,7 +1,7 @@
 name: 'Collage Labs'
 app_name: 'Collage Labs'
-title: We put the world together for you.
-description: We put the world together for you.
+title: Web, Mobile, ERP & IT Solutions
+description: Web, Mobile, ERP & IT Solutions
 author:
   name: 'Luis Alejandro Martínez Faneyth'
   first_name: 'Luis Alejandro'
@@ -16,7 +16,7 @@ blog:
   facebook: 'CollageLabs'
   instagram: 'collagelabsco'
 
-google_analytics: id
+google_analytics: UA-156513215-1
 webmaster_verifications:
   google: 1234
   bing: 1234

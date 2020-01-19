@@ -3,7 +3,7 @@
 {%- when 'blog' -%}
     {{ site.name }} Blog
 {%- when 'frontpage' -%}
-    {{ site.name }}
+    {{ site.name }} - {{ site.description }}
 {%- else -%}
     {{ page.title }}
 {%- endcase -%}
@@ -46,6 +46,8 @@
     {%- else -%}
         index, follow, noodp, noydir
     {%- endif -%}
+{%- when 'frontpage' -%}
+    index, follow, noodp, noydir
 {%- when 'post' -%}
     index, follow, noodp, noydir
 {%- when 'page' -%}
@@ -117,7 +119,7 @@
 <meta name="dc.type" content="{{ page.layout }}" />
 <meta name="dc.identifier" content="{{ page.article_id }}" />
 <meta name="dc.source" content="{{ head_url }}" />
-<meta name="dc.publisher" content="huntingbears" />
+<meta name="dc.publisher" content="Collage Labs" />
 
 <!-- Open Graph, Facebook, Twitter & Google+ Social Tags  -->
 {%- if head_og_type == 'article' or head_og_type == 'website' -%}
@@ -164,6 +166,6 @@
 
 {%- if (jekyll.environment == 'production' or jekyll.environment == 'pwa') -%}
 <link rel="preload" href="https://www.googletagmanager.com/gtag/js" as="script" type="text/javascript" />
-<link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" as="script" type="text/javascript" />
+<!-- <link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" as="script" type="text/javascript" /> -->
 <link rel="preload" href="https://identity.netlify.com/v1/netlify-identity-widget.js" as="script" type="text/javascript" />
 {%- endif -%}

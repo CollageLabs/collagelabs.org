@@ -27,3 +27,5 @@ services:
 tooling:
   yarn:
     service: server
+  bash:
+    service: server

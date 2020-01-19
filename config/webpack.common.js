@@ -24,9 +24,6 @@ module.exports = {
       logo: './icon.svg',
       prefix: 'icons/'
     }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css'
-    }),
     new CopyWebpackPlugin([{
       from: path.resolve('_images'),
       to: 'images/'

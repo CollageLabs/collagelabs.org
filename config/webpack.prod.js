@@ -2,6 +2,7 @@ const Merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -26,7 +27,13 @@ module.exports = Merge(CommonConfig, {
       debug: false
     }),
     new ImageminPlugin({
-      test: /\.(jpe?g|png|gif|svg)$/i
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      plugins: [
+        ImageminMozjpeg({
+          quality: 80,
+          progressive: true
+        })
+      ]
     })
   ],
   optimization: {

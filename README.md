@@ -41,4 +41,4 @@ Current version: 0.1.0
 
 ![Banner](https://rawcdn.githack.com/CollageLabs/collagelabs.org/57557046050b6515823f6c4ac819debcee40b346/_images/promo-open-source.svg)
 
-> Blog [collagelabs.org](http://collagelabs.org/blog) · GitHub [@CollageLabs](https://github.com/CollageLabs) · Twitter [@CollageLabs](https://twitter.com/CollageLabs)
+> Web [collagelabs.org](http://collagelabs.org/) · GitHub [@CollageLabs](https://github.com/CollageLabs) · Twitter [@CollageLabs](https://twitter.com/CollageLabs)
