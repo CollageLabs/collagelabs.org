@@ -3,13 +3,11 @@ app_name: 'Collage Labs'
 title: Web, Mobile, ERP & IT Solutions
 description: Collage Labs is building software for multiple digital agencies across the globe. Our team provides personal, professional and friendly service which carefully considers your business goals and requirements.
 author:
-  name: 'Luis Alejandro Martínez Faneyth'
-  first_name: 'Luis Alejandro'
-  last_name: 'Martínez Faneyth'
-  email: 'luis@luisalejandro.org'
-  github: 'LuisAlejandro'
-  twitter: 'LuisAlejandro'
-  facebook: 'martinez.faneyth'
+  name: 'Collage Labs'
+  email: 'contact@collagelabs.org'
+  github: 'CollageLabs'
+  twitter: 'CollageLabs'
+  facebook: 'CollageLabs'
   paypal: 'martinezfaneyth'
 blog:
   twitter: 'CollageLabs'

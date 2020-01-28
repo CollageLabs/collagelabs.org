@@ -741,21 +741,16 @@
     }
   }
 
-  #mce-success-response {
-    font-weight: 600;
-    font-family: $mont;
-    padding: 0;
-    margin: 0;
-    display: none;
+  .success-message {
+    color: green;
+    font-style: italic;
+    margin-bottom: 1em;
   }
   
-  #mce-error-response {
-    font-weight: 600;
-    font-family: $mont;
-    padding: 0;
-    margin: 0;
-    color: $secondary;
-    display: none;
+  .error-message {
+    color: red;
+    font-style: italic;
+    margin-bottom: 1em;
   }
 }
 
