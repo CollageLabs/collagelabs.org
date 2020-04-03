@@ -25,6 +25,10 @@ destroy:
 	docker volume prune -f
 	lando --clear
 
+console:
+
+	lando bash
+
 clean:
 
 	rm -rf node_modules Gemfile.lock yarn.lock vendor .bundle assets _site yarn-error.log
