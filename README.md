@@ -2,7 +2,13 @@
 
 ---
 
-[![](https://img.shields.io/github/release/CollageLabs/collagelabs.org.svg)](https://github.com/CollageLabs/collagelabs.org/releases) [![](https://img.shields.io/travis/CollageLabs/collagelabs.org.svg)](https://travis-ci.org/CollageLabs/collagelabs.org) [![](https://img.shields.io/github/issues-raw/CollageLabs/collagelabs.org/in%20progress.svg?label=in%20progress)](https://github.com/CollageLabs/collagelabs.org/issues?q=is%3Aissue+is%3Aopen+label%3A%22in+progress%22) [![](https://badges.gitter.im/CollageLabs/collagelabs.org.svg)](https://gitter.im/CollageLabs/collagelabs.org) [![](https://cla-assistant.io/readme/badge/CollageLabs/collagelabs.org)](https://cla-assistant.io/CollageLabs/collagelabs.org)
+[![Github releases](https://img.shields.io/github/release/CollageLabs/collagelabs.org.svg)](https://github.com/CollageLabs/collagelabs.org/releases)
+[![Github issues](https://img.shields.io/github/issues/CollageLabs/collagelabs.org)](https://github.com/CollageLabs/collagelabs.org/issues?q=is%3Aopen)
+[![Travis CI](https://img.shields.io/travis/CollageLabs/collagelabs.org.svg)](https://travis-ci.com/CollageLabs/collagelabs.org)
+[![Codeclimate](https://codeclimate.com/github/CollageLabs/collagelabs.org/badges/gpa.svg)](https://codeclimate.com/github/CollageLabs/collagelabs.org)
+[![David](https://david-dm.org/CollageLabs/collagelabs.org/dev-status.svg)](https://david-dm.org/CollageLabs/collagelabs.org)
+[![Snyk](https://snyk.io/test/github/CollageLabs/collagelabs.org/badge.svg)](https://snyk.io/test/github/CollageLabs/collagelabs.org)
+[![CLA Assistant](https://cla-assistant.io/readme/badge/CollageLabs/collagelabs.org)](https://cla-assistant.io/CollageLabs/collagelabs.org)
 
 Current version: 0.1.0
 
