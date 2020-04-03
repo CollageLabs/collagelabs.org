@@ -1,11 +1,13 @@
 sudo: required
 services: docker
-dist: xenial
+dist: bionic
+group: edge
 language: minimal
 branches:
     only:
         - develop
-        - /^greenkeeper/.*$/
+        - /^snyk-fix.*$/
+        - /^dependabot/.*$/
 cache:
     directories:
         - node_modules
@@ -16,3 +18,4 @@ before_script:
 script:
     - lando start
     - lando yarn run build:pwa
+    - lando yarn cache dir
