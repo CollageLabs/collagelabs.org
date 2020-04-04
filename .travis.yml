@@ -10,9 +10,10 @@ branches:
         - /^dependabot.*$/
 cache:
     directories:
-        - "$HOME/.cache/yarn"
         - node_modules
         - vendor
+        - "$HOME/.cache/yarn"
+        - "$HOME/.cache/bundler"
 before_script:
     - curl -sLO https://github.com/lando/lando/releases/download/v3.0.0-rc.17/lando-v3.0.0-rc.17.deb && sudo dpkg -i lando-v3.0.0-rc.17.deb
     - rm lando-v3.0.0-rc.17.deb

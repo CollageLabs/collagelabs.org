@@ -9,3 +9,4 @@ yarn-error.log
 vendor
 .bundle
 core
+*.lock
