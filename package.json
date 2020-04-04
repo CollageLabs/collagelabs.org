@@ -87,7 +87,7 @@
     "@fortawesome/fontawesome-free": "5.9.0",
     "bootstrap": "4.3.1",
     "cookieconsent": "3.1.1",
-    "d3": "5.9.7",
+    "d3": "5.15.1",
     "expose-loader": "0.7.5",
     "jquery": "3.4.1",
     "normalize.css": "8.0.1",
