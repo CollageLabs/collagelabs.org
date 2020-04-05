@@ -2,9 +2,16 @@
   "name": "collagelabs.org",
   "version": "0.1.1",
   "description": "Collage Labs website",
-  "author": "Luis Alejandro Martínez Faneyth <luis@collagelabs.org>",
-  "repository": "CollageLabs/collagelabs.org",
+  "author": "Luis Alejandro Martínez Faneyth <luis@luisalejandro.org>",
   "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CollageLabs/collagelabs.org.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CollageLabs/collagelabs.org/issues"
+  },
+  "homepage": "https://github.com/CollageLabs/collagelabs.org#readme",
   "scripts": {
     "clean:project": "rimraf ./_site ./assets",
     "webpack:dev": "webpack --env=dev --progress --profile --colors",
