@@ -236,8 +236,8 @@ window.submitMailChimpForm = function (form) {
 
 // Listen to all blur events
 document.addEventListener('blur', function (event) {
-
   // Only run if the field is in a form to be validated
+  if (event.target.tagName.toUpperCase() != 'INPUT' || event.target.tagName.toUpperCase() != 'TEXTAREA') return;
   if (!event.target.form.classList.contains('validate')) return;
 
   // Validate the field
@@ -255,38 +255,38 @@ document.addEventListener('blur', function (event) {
 }, true);
 
 
-// Check all fields on submit
-document.addEventListener('submit', function (event) {
+// // Check all fields on submit
+// document.addEventListener('submit', function (event) {
 
-  // Only run on forms flagged for validation
-  if (!event.target.classList.contains('validate')) return;
+//   // Only run on forms flagged for validation
+//   if (!event.target.classList.contains('validate')) return;
 
-  // Prevent form from submitting
-  event.preventDefault();
+//   // Prevent form from submitting
+//   event.preventDefault();
 
-  // Get all of the form elements
-  var fields = event.target.elements;
+//   // Get all of the form elements
+//   var fields = event.target.elements;
 
-  // Validate each field
-  // Store the first field with an error to a variable so we can bring it into focus later
-  var error, hasErrors;
-  for (var i = 0; i < fields.length; i++) {
-    error = hasError(fields[i]);
-    if (error) {
-      showError(fields[i], error);
-      if (!hasErrors) {
-        hasErrors = fields[i];
-      }
-    }
-  }
+//   // Validate each field
+//   // Store the first field with an error to a variable so we can bring it into focus later
+//   var error, hasErrors;
+//   for (var i = 0; i < fields.length; i++) {
+//     error = hasError(fields[i]);
+//     if (error) {
+//       showError(fields[i], error);
+//       if (!hasErrors) {
+//         hasErrors = fields[i];
+//       }
+//     }
+//   }
 
-  // If there are errrors, don't submit form and focus on first element with error
-  if (hasErrors) {
-    hasErrors.focus();
-  }
+//   // If there are errrors, don't submit form and focus on first element with error
+//   if (hasErrors) {
+//     hasErrors.focus();
+//   }
 
-  // Otherwise, let the form submit normally
-  // You could also bolt in an Ajax form submit process here
-  submitMailChimpForm(event.target);
+//   // Otherwise, let the form submit normally
+//   // You could also bolt in an Ajax form submit process here
+//   submitMailChimpForm(event.target);
 
-}, false);
+// }, false);
