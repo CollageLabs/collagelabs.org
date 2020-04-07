@@ -1,6 +1,7 @@
 [build]
   publish = "_site/"
-  command = "npm run build:pwa:optim"
+  functions = "./functions"
+  command = "npm run build:pwa:optim && npm run build:lambda"
 
 [[headers]]
   for = "/*"

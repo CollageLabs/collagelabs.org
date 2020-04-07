@@ -1,13 +1,5 @@
-
-// Add the novalidate attribute when the JS loads
-var forms = document.querySelectorAll('.validate');
-for (var i = 0; i < forms.length; i++) {
-  forms[i].setAttribute('novalidate', true);
-}
-
-
 // Validate the field
-var hasError = function (field) {
+window.hasErrorContactForm = function (field) {
 
   // Don't validate submits, buttons, file and reset inputs, and disabled fields
   if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') return;
@@ -68,7 +60,7 @@ var hasError = function (field) {
 
 
 // Show an error message
-var showError = function (field, error) {
+window.showErrorContactForm = function (field, error) {
 
   // Add error class to field
   field.classList.add('error');
@@ -126,7 +118,7 @@ var showError = function (field, error) {
 
 
 // Remove the error message
-var removeError = function (field) {
+window.removeErrorContactForm = function (field) {
 
   // Remove error class to field
   field.classList.remove('error');
@@ -148,7 +140,6 @@ var removeError = function (field) {
   // Get field id or name
   var id = field.id || field.name;
   if (!id) return;
-  
 
   // Check if an error message is in the DOM
   var message = field.form.querySelector('.error-message#error-for-' + id + '');
@@ -163,7 +154,7 @@ var removeError = function (field) {
 
 // Serialize the form data into a query string
 // Forked and modified from https://stackoverflow.com/a/30153391/1293256
-var serialize = function (form) {
+window.serializeContactForm = function (form) {
   
   // Setup our serialized data
   var serialized = '';
@@ -187,7 +178,7 @@ var serialize = function (form) {
 };
 
 // Display the form status
-window.displayMailChimpStatus = function (data) {
+window.displayContactFormStatus = function (data) {
   // Get the status message content area
   var mcStatus = document.querySelector('.mc-status');
   if (!mcStatus) return;
@@ -209,84 +200,28 @@ window.displayMailChimpStatus = function (data) {
 };
 
 // Submit the form
-window.submitMailChimpForm = function (form) {
+window.submitContactForm = function (form) {
 
   // Get the Submit URL
   var url = form.getAttribute('action');
-  url = url.replace('/post?u=', '/post-json?u=');
-  url += serialize(form) + '&c=displayMailChimpStatus';
-
-  // Create script with url and callback (if specified)
-  var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
-  var script = window.document.createElement( 'script' );
-  script.src = url;
+  var email = document.getElementById('form-email').value;
+  var name = document.getElementById('form-name').value;
+  var message = document.getElementById('form-message').value;
 
   // Create a global variable for the status container
   window.mcStatus = form.querySelector('.mc-status');
 
-  // Insert script tag into the DOM (append to <head>)
-  ref.parentNode.insertBefore( script, ref );
-
-  // After the script is loaded (and executed), remove it
-  script.onload = function () {
-    this.remove();
-  };
+  fetch(url, {
+    method: 'post',
+    body: JSON.stringify({
+      email: email,
+      name: name,
+      message: message,
+    })
+  }).then(function(response) {
+    return response.json();
+  }).then(function(data) {
+    displayContactFormStatus(data);
+  });
 
 };
-
-// Listen to all blur events
-document.addEventListener('blur', function (event) {
-  // Only run if the field is in a form to be validated
-  if (event.target.tagName.toUpperCase() != 'INPUT' || event.target.tagName.toUpperCase() != 'TEXTAREA') return;
-  if (!event.target.form.classList.contains('validate')) return;
-
-  // Validate the field
-  var error = hasError(event.target);
-  
-  // If there's an error, show it
-  if (error) {
-    showError(event.target, error);
-    return;
-  }
-
-  // Otherwise, remove any existing error message
-  removeError(event.target);
-
-}, true);
-
-
-// // Check all fields on submit
-// document.addEventListener('submit', function (event) {
-
-//   // Only run on forms flagged for validation
-//   if (!event.target.classList.contains('validate')) return;
-
-//   // Prevent form from submitting
-//   event.preventDefault();
-
-//   // Get all of the form elements
-//   var fields = event.target.elements;
-
-//   // Validate each field
-//   // Store the first field with an error to a variable so we can bring it into focus later
-//   var error, hasErrors;
-//   for (var i = 0; i < fields.length; i++) {
-//     error = hasError(fields[i]);
-//     if (error) {
-//       showError(fields[i], error);
-//       if (!hasErrors) {
-//         hasErrors = fields[i];
-//       }
-//     }
-//   }
-
-//   // If there are errrors, don't submit form and focus on first element with error
-//   if (hasErrors) {
-//     hasErrors.focus();
-//   }
-
-//   // Otherwise, let the form submit normally
-//   // You could also bolt in an Ajax form submit process here
-//   submitMailChimpForm(event.target);
-
-// }, false);

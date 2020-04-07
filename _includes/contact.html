@@ -1,44 +1,9 @@
 <section id="contact" class="contact section">
   <h1 class="title gray-divider">Contact us</h1>
-  <!-- <div id="mc_embed_signup" class="container">
-    <form action="https://huntingbears.us12.list-manage.com/subscribe/post?u=9ff78d57d8046b4bed4a4fa73&amp;id=d34a79f498"
-          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-          class="validate" target="_blank">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="form-group custom-form-box">
-            <label for="mce-NAME">Name</label>
-            <input name="NAME" type="text" class="form-control" id="mce-NAME" required>
-          </div>
-          <div class="form-group custom-form-box">
-            <label for="mce-EMAIL">Email</label>
-            <input name="EMAIL" type="email" class="form-control" id="mce-EMAIL"
-                   title="The domain portion of the email address is invalid (the portion after the @)."
-                   pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
-          </div>
-          <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-custom-red float-right d-none d-lg-block">Send</button>
-        </div>
-        <div class="col-lg-8">
-          <div class="form-group custom-form-box">
-            <label for="mce-MESSAGE">Message</label>
-            <textarea name="MESSAGE" class="form-control" id="mce-MESSAGE" required></textarea>
-          </div>
-          <div id="mce-responses" class="clear">
-            <div class="response mc-status"></div>
-          </div>
-        </div>
-        <div class="col-lg-12 d-block d-lg-none">
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input type="text" name="b_9ff78d57d8046b4bed4a4fa73_d34a79f498" tabindex="-1" value="">
-          </div>
-          <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-custom-red float-right">Send</button>
-        </div>
-      </div>
-    </form>
-  </div> -->
   <div class="container">
     <form class="validate"
           name="contact-form"
+          action="http://127.0.0.1:9000/submission-created"
           method="post"
           data-netlify="true"
           netlify-honeypot="bot-field">
@@ -53,6 +18,9 @@
             <input type="email" class="form-control" id="form-email" name="form-email"
                    title="The domain portion of the email address is invalid (the portion after the @)."
                    pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+          </div>
+          <div class="form-group custom-form-box">
+            <div data-netlify-recaptcha></div>
           </div>
           <button type="submit" class="suscribe btn btn-custom-red float-right d-none d-lg-block" name="form-subscribe">Send</button>
         </div>

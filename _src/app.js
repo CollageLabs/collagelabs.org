@@ -7,5 +7,5 @@ import 'slick-carousel';
 // import './lib/chart.js';
 import 'classlist-polyfill';
 import './lib/validity-polifill';
-import './lib/form-events';
+import './lib/form-functions';
 import './lib/dom';
