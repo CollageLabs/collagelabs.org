@@ -9,6 +9,7 @@
 /vendor
 /.bundle
 /core
-/functions
+/functions/*
+!/functions/.gitkeep
 optimization-fix-this-file-is-ignored.js
 /.env
