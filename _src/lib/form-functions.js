@@ -204,9 +204,9 @@ window.submitContactForm = function (form) {
 
   // Get the Submit URL
   var url = form.getAttribute('action');
-  var email = document.getElementById('form-email').value;
-  var name = document.getElementById('form-name').value;
-  var message = document.getElementById('form-message').value;
+  var email = document.getElementById('contact-email').value;
+  var name = document.getElementById('contact-name').value;
+  var message = document.getElementById('contact-message').value;
 
   // Create a global variable for the status container
   window.mcStatus = form.querySelector('.mc-status');

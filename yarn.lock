@@ -3181,7 +3181,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classlist-polyfill@^1.2.0:
+classlist-polyfill@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/classlist-polyfill/-/classlist-polyfill-1.2.0.tgz#935bc2dfd9458a876b279617514638bcaa964a2e"
   integrity sha1-k1vC39lFiodrJ5YXUUY4vKqWSi4=
@@ -4922,7 +4922,7 @@ encodeurl@~1.0.1, encodeurl@~1.0.2:
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
   integrity sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
 
-encoding@^0.1.12:
+encoding@0.1.12:
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
   integrity sha1-U4tm8+5izRq1HsMjgp0flIDHS+s=
@@ -6407,7 +6407,7 @@ googleapis-common@^3.2.0:
     url-template "^2.0.8"
     uuid "^7.0.0"
 
-googleapis@^48.0.0:
+googleapis@48.0.0:
   version "48.0.0"
   resolved "https://registry.yarnpkg.com/googleapis/-/googleapis-48.0.0.tgz#2c3f7628d414f8cc27c5dd7ca2d9bba6b03c4179"
   integrity sha512-ysp0/GN1BdOC8no1M6Pn/jS445xLL/FiTRa+aYJXD/HhtWFb+NOlNSfHIVnLjlQZsCn6L4qj1EpOaM/979nnEw==
