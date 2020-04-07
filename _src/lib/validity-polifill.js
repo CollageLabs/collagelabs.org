@@ -11,7 +11,7 @@
   var getValidityState = function (field) {
 
     // Variables
-    var type = field.getAttribute('type') || input.nodeName.toLowerCase();
+    var type = field.getAttribute('type') || field.nodeName.toLowerCase();
     var isNum = type === 'number' || type === 'range';
     var length = field.value.length;
     var valid = true;
