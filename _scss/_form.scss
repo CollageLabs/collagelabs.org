@@ -36,7 +36,7 @@
 
 .custom-form-box {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   label {
     position: absolute;
@@ -71,34 +71,6 @@
   }
 }
 
-#mc_embed_signup {
-  .responses {
-    margin: 0 !important;
-
-    @include respond-to(xs) {
-      text-align: center !important;
-      width: 100% !important;
-      margin: 10px !important;
-    }
-  }
-
-  .response {
-    margin: 0;
-    padding: 0;
-    @include respond-to(xs) {
-      width: 100% !important;
-    }
-  }
-
-  .success-message {
-    color: green;
-    font-style: italic;
-    margin-bottom: 1em;
-  }
-  
-  .error-message {
-    color: red;
-    font-style: italic;
-    margin-bottom: 1em;
-  }
+#re-captcha {
+  padding-left: 45px;
 }

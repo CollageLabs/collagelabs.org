@@ -251,14 +251,13 @@ exports.handler = async (event) => {
     GOOGLE_SPREADSHEET_ID,
     GOOGLE_SPREADSHEET_NAME,
   } = process.env;
+  const {
+    'contact-email': CONTACT_EMAIL,
+    'contact-name': CONTACT_NAME,
+    'contact-message': CONTACT_MESSAGE
+  } = querystring.parse(event.body);
 
-  try {
-    body = JSON.parse(event.body)
-  } catch (e) {
-    body = querystring.parse(event.body)
-  }
-
-  if (!(body.email && body.name && body.message)) {
+  if (!(CONTACT_EMAIL && CONTACT_NAME && CONTACT_MESSAGE)) {
     serverErrorMessage = 'Error receiving request: missing email, name or message.';
     console.error(serverErrorMessage)
     return {
@@ -293,7 +292,7 @@ exports.handler = async (event) => {
     SENDGRID_API_BASE_URL,
     SENDGRID_API_KEY,
     SENDGRID_LIST_ID,
-    body.email).catch((error) => {
+    CONTACT_EMAIL).catch((error) => {
       serverErrorMessage = 'Error in server operation: external service communication problem.';
       console.error(serverErrorMessage);
       console.error('[checkUserOnSendgridList] There was an error communicating with Sendgrid API.');
@@ -312,7 +311,7 @@ exports.handler = async (event) => {
     MAILCHIMP_API_BASE_URL,
     MAILCHIMP_API_KEY,
     MAILCHIMP_LIST_ID,
-    body.email).catch((error) => {
+    CONTACT_EMAIL).catch((error) => {
       serverErrorMessage = 'Error in server operation: external service communication problem.';
       console.error(serverErrorMessage);
       console.error('[checkUserOnMailchimpList] There was an error communicating with Mailchimp API.');
@@ -332,8 +331,8 @@ exports.handler = async (event) => {
       SENDGRID_API_BASE_URL,
       SENDGRID_API_KEY,
       SENDGRID_LIST_ID,
-      body.email,
-      body.name).catch((error) => {
+      CONTACT_EMAIL,
+      CONTACT_NAME).catch((error) => {
         serverErrorMessage = 'Error in server operation: external service communication problem.';
         console.error(serverErrorMessage);
         console.error('[addUserSendgrid] There was an error communicating with Sendgrid API.');
@@ -354,8 +353,8 @@ exports.handler = async (event) => {
       MAILCHIMP_API_BASE_URL,
       MAILCHIMP_API_KEY,
       MAILCHIMP_LIST_ID,
-      body.email,
-      body.name).catch((error) => {
+      CONTACT_EMAIL,
+      CONTACT_NAME).catch((error) => {
         serverErrorMessage = 'Error in server operation: external service communication problem.';
         console.error(serverErrorMessage);
         console.error('[addUserMailchimp] There was an error communicating with Mailchimp API.');
@@ -375,7 +374,7 @@ exports.handler = async (event) => {
     await sendWelcomeEmail(
       SENDGRID_API_BASE_URL,
       SENDGRID_API_KEY,
-      body.email,
+      CONTACT_EMAIL,
       SENDGRID_WELCOME_SENDER_EMAIL,
       SENDGRID_WELCOME_SENDER_NAME,
       SENDGRID_WELCOME_TEMPLATE_ID).catch((error) => {
@@ -398,9 +397,9 @@ exports.handler = async (event) => {
     SENDGRID_API_BASE_URL,
     SENDGRID_API_KEY,
     SENDGRID_COMPANY_EMAIL,
-    body.email,
-    body.name,
-    body.message,
+    CONTACT_EMAIL,
+    CONTACT_NAME,
+    CONTACT_MESSAGE,
     SENDGRID_COMPANY_TEMPLATE_ID).catch((error) => {
       serverErrorMessage = 'Error in server operation: external service communication problem.';
       console.error(serverErrorMessage);
@@ -421,9 +420,9 @@ exports.handler = async (event) => {
     GOOGLE_PRIVATE_KEY,
     GOOGLE_SPREADSHEET_ID,
     GOOGLE_SPREADSHEET_NAME,
-    body.email,
-    body.name,
-    body.message).catch((error) => {
+    CONTACT_EMAIL,
+    CONTACT_NAME,
+    CONTACT_MESSAGE).catch((error) => {
       serverErrorMessage = 'Error in server operation: external service communication problem.';
       console.error(serverErrorMessage);
       console.error('[addSpreadsheetRow] There was an error communicating with Google Cloud API.');
