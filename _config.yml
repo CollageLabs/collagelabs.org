@@ -81,3 +81,5 @@ exclude:
   - icon.svg
   - HISTORY.md
   - MAINTAINER.md
+  - functions
+  - lambda

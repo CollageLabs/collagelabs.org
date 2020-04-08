@@ -31,4 +31,4 @@ console:
 
 clean:
 
-	rm -rf node_modules Gemfile.lock yarn.lock vendor .bundle assets _site yarn-error.log
+	rm -rf node_modules vendor .bundle assets _site yarn-error.log

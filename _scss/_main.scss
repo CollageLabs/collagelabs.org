@@ -567,47 +567,6 @@
   }
 }
 
-.contact {
-  padding-bottom: 100px;
-}
-
-.custom-form-box {
-  position: relative;
-  margin-bottom: 40px;
-
-  label {
-    position: absolute;
-    top: -15px;
-    background-color: white;
-    left: 20px;
-    font-weight: 600;
-    font-family: $mont;
-    color: $primary;
-    padding: 0 4px;
-  }
-
-  input {
-    padding: 10px 20px;
-    height: unset;
-    border: 2px solid #d8d7d2 !important;
-
-    &:focus, &:active {
-      box-shadow: none;
-      border-color: $secondary !important;
-    }
-  }
-
-  textarea {
-    resize: none;
-    height: 220px;
-    border: 2px solid #d8d7d2;
-    &:focus, &:active {
-      box-shadow: none;
-      border-color: $secondary;
-    }
-  }
-}
-
 .footer {
   background-image: url('/assets/images/footer-bg.jpg');
   position: relative;
@@ -719,38 +678,6 @@
     &:hover {
       transform: translateY(-50%) translateX(5px);
     }
-  }
-}
-
-#mc_embed_signup {
-  div#mce-responses {
-    margin: 0 !important;
-
-    @include respond-to(xs) {
-      text-align: center !important;
-      width: 100% !important;
-      margin: 10px !important;
-    }
-  }
-
-  div.response {
-    margin: 0;
-    padding: 0;
-    @include respond-to(xs) {
-      width: 100% !important;
-    }
-  }
-
-  .success-message {
-    color: green;
-    font-style: italic;
-    margin-bottom: 1em;
-  }
-  
-  .error-message {
-    color: red;
-    font-style: italic;
-    margin-bottom: 1em;
   }
 }
 

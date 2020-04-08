@@ -5,5 +5,7 @@ import 'bootstrap';
 import 'cookieconsent';
 import 'slick-carousel';
 // import './lib/chart.js';
-import './lib/validate-contact-form';
+import 'classlist-polyfill';
+import './lib/validity-polifill';
+import './lib/form-functions';
 import './lib/dom';

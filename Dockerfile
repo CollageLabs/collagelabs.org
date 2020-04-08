@@ -1,8 +1,10 @@
-FROM dockershelf/node:12
+FROM dockershelf/node:13
 LABEL maintainer "Luis Alejandro Martínez Faneyth <luis@luisalejandro.org>"
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
+
+RUN echo "Set disable_coredump false" >> /etc/sudo.conf
 
 RUN apt-get update && \
     apt-get install net-tools netcat-openbsd

@@ -1,6 +1,7 @@
 [build]
-  publish = "_site/"
-  command = "npm run build:pwa:optim"
+  publish = "_site"
+  functions = "functions"
+  command = "yarn run build:pwa:optim && yarn run build:lambda"
 
 [[headers]]
   for = "/*"
