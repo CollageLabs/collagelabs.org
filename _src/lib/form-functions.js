@@ -56,8 +56,7 @@ window.hasErrorContactForm = function (field) {
   // If all else fails, return a generic catchall error
   return 'The value you entered for this field is invalid.';
 
-};
-
+}
 
 // Show an error message
 window.showErrorContactForm = function (field, error) {
@@ -114,8 +113,7 @@ window.showErrorContactForm = function (field, error) {
   message.style.display = 'block';
   message.style.visibility = 'visible';
 
-};
-
+}
 
 // Remove the error message
 window.removeErrorContactForm = function (field) {
@@ -150,32 +148,13 @@ window.removeErrorContactForm = function (field) {
   message.style.display = 'none';
   message.style.visibility = 'hidden';
 
-};
+}
 
-// Serialize the form data into a query string
-// Forked and modified from https://stackoverflow.com/a/30153391/1293256
-window.serializeContactForm = function (form) {
-  
-  // Setup our serialized data
-  var serialized = '';
-  
-  // Loop through each field in the form
-  for (i = 0; i < form.elements.length; i++) {
-
-    var field = form.elements[i];
-
-    // Don't serialize fields without a name, submits, buttons, file and reset inputs, and disabled fields
-    if (!field.name || field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') continue;
-
-    // Convert field data to a query string
-    if ((field.type !== 'checkbox' && field.type !== 'radio') || field.checked) {
-      serialized += '&' + encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value);
-    }
-  }
-
-  return serialized;
-
-};
+window.serializeObject = function (dictionary) {
+  return Object.keys(dictionary).map((key) => {
+    return encodeURIComponent(key) + '=' + encodeURIComponent(dictionary[key])
+  }).join('&');
+}
 
 // Display the form status
 window.displayContactFormStatus = function (data) {
@@ -197,7 +176,7 @@ window.displayContactFormStatus = function (data) {
   mcStatus.classList.remove('error-message');
   mcStatus.classList.add('success-message');
 
-};
+}
 
 // Submit the form
 window.submitContactForm = function (form) {
@@ -207,7 +186,7 @@ window.submitContactForm = function (form) {
   var email = document.getElementById('contact-email').value;
   var name = document.getElementById('contact-name').value;
   var message = document.getElementById('contact-message').value;
-  var botField = document.getElementsByName('bot-field').value;
+  var botField = document.getElementsByName('bot-field').value || '';
   var formName = document.getElementsByName('form-name').value || 'contact-form';
 
   // Create a global variable for the status container
@@ -215,17 +194,20 @@ window.submitContactForm = function (form) {
 
   fetch(url, {
     method: 'post',
-    body: JSON.stringify({
-      email: email,
-      name: name,
-      message: message,
-      "bot-field": botField,
-      "form-name": formName
-    })
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: serializeObject({
+      'contact-email': email,
+      'contact-name': name,
+      'contact-message': message,
+      'bot-field': botField,
+      'form-name': formName
+    }),
   }).then(function(response) {
     return response.json();
   }).then(function(data) {
     displayContactFormStatus(data);
   });
 
-};
+}
