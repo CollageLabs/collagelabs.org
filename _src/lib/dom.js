@@ -84,6 +84,7 @@
 
       // Get all of the form elements
       var fields = event.target.elements;
+      var recaptchaState = grecaptcha.getResponse();
 
       // Validate each field
       // Store the first field with an error to a variable so we can bring it into focus later
@@ -98,14 +99,17 @@
         }
       }
 
-      // If there are errrors, don't submit form and focus on first element with error
-      if (hasErrors) {
-        hasErrors.focus();
+      if (recaptchaState.length == 0) {
+        showErrorCaptcha();
       }
 
-      // Otherwise, let the form submit normally
-      // You could also bolt in an Ajax form submit process here
-      submitContactForm(event.target);
+      if (hasErrors || recaptchaState.length == 0) {
+        // If there are errrors, don't submit form and focus on first element with error
+        hasErrors.focus();
+      } else {
+        // Otherwise, let the form submit normally
+        submitContactForm(event.target);
+      }
 
     }, false);
 

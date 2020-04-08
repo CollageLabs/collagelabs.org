@@ -1,3 +1,19 @@
+<script src="https://www.google.com/recaptcha/api.js?onload=captchaLoadCallback&render=explicit" async defer></script>
+<script>
+  var captchaLoadCallback = function() {
+    var widget = grecaptcha.render(document.getElementById("re-captcha"), {
+      'sitekey' : "{{ site.recaptcha_key }}",
+      'theme': "light",
+      'callback': captchaSuccessCallback
+    });
+  }
+  var captchaSuccessCallback = function() {
+    var recaptchaState = grecaptcha.getResponse();
+    if (recaptchaState.length != 0) {
+      removeErrorCaptcha();
+    }
+  }
+</script>
 <section id="contact" class="contact section">
   <h1 class="title gray-divider">Contact us</h1>
   <div class="container">
@@ -11,22 +27,24 @@
         <div class="col-lg-4">
           <div class="form-group custom-form-box">
             <label for="contact-name">Name</label>
-            <input type="text" class="form-control" id="contact-name" name="contact-name" required>
+            <input type="text" class="form-control" id="contact-name" name="contact-name" minlength="3" maxlength="256" required>
           </div>
           <div class="form-group custom-form-box">
             <label for="contact-email">Email</label>
             <input type="email" class="form-control" id="contact-email" name="contact-email"
                    title="The domain portion of the email address is invalid (the portion after the @)."
+                   minlength="6" maxlength="256"
                    pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
           </div>
           <div class="form-group custom-form-box">
+            <div id="re-captcha"></div>
           </div>
           <button type="submit" class="suscribe btn btn-custom-red float-right d-none d-lg-block" name="contact-subscribe">Send</button>
         </div>
         <div class="col-lg-8">
           <div class="form-group custom-form-box">
             <label for="contact-message">Message</label>
-            <textarea class="form-control" id="contact-message" name="contact-message" required></textarea>
+            <textarea class="form-control" id="contact-message" name="contact-message" minlength="3" maxlength="1024" required></textarea>
           </div>
           <div class="responses clear">
             <div class="response mc-status"></div>

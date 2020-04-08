@@ -115,6 +115,35 @@ window.showErrorContactForm = function (field, error) {
 
 }
 
+// Show an error message
+window.showErrorCaptcha = function () {
+
+  var id = 're-captcha';
+  var field = document.getElementById(id);
+
+  // Add error class to field
+  field.classList.add('error');
+
+  // Check if error message field already exists
+  // If not, create one
+  var message = document.querySelector('.error-message#error-for-' + id );
+  if (!message) {
+    message = document.createElement('div');
+    message.className = 'error-message';
+    message.id = 'error-for-' + id;
+    field.parentNode.insertBefore(message, field.nextSibling);
+  }
+
+  // Add ARIA role to the field
+  field.setAttribute('aria-describedby', 'error-for-' + id);
+
+  // Update error message
+  message.innerHTML = 'Please validate the captcha.';
+  message.style.display = 'block';
+  message.style.visibility = 'visible';
+
+}
+
 // Remove the error message
 window.removeErrorContactForm = function (field) {
 
@@ -150,10 +179,27 @@ window.removeErrorContactForm = function (field) {
 
 }
 
-window.serializeObject = function (dictionary) {
-  return Object.keys(dictionary).map((key) => {
-    return encodeURIComponent(key) + '=' + encodeURIComponent(dictionary[key])
-  }).join('&');
+// Remove the error message
+window.removeErrorCaptcha = function () {
+
+  var id = 're-captcha';
+  var field = document.getElementById(id);
+
+  // Remove error class to field
+  field.classList.remove('error');
+  
+  // Remove ARIA role from the field
+  field.removeAttribute('aria-describedby');
+
+  // Check if an error message is in the DOM
+  var message = document.querySelector('.error-message#error-for-' + id + '');
+  if (!message) return;
+
+  // If so, hide it
+  message.innerHTML = '';
+  message.style.display = 'none';
+  message.style.visibility = 'hidden';
+
 }
 
 // Display the form status
@@ -176,6 +222,12 @@ window.displayContactFormStatus = function (data) {
   mcStatus.classList.remove('error-message');
   mcStatus.classList.add('success-message');
 
+}
+
+window.serializeObject = function (dictionary) {
+  return Object.keys(dictionary).map((key) => {
+    return encodeURIComponent(key) + '=' + encodeURIComponent(dictionary[key])
+  }).join('&');
 }
 
 // Submit the form
