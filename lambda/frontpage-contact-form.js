@@ -228,12 +228,11 @@ const addSpreadsheetRow = async (clientEmail, privateKey, sheetId, sheetName, em
 }
 
 exports.handler = async (event) => {
-  let body = {}, serverErrorMessage;
-  let headers = {
+  let serverErrorMessage;
+  const headers = {
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
   };
+  const GOOGLE_PRIVATE_KEY = process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/gm, '\n');
   const {
     SENDGRID_API_KEY,
     SENDGRID_WELCOME_SENDER_EMAIL,
@@ -247,7 +246,6 @@ exports.handler = async (event) => {
     MAILCHIMP_LIST_ID,
     MAILCHIMP_API_BASE_URL,
     GOOGLE_CLIENT_EMAIL,
-    GOOGLE_PRIVATE_KEY,
     GOOGLE_SPREADSHEET_ID,
     GOOGLE_SPREADSHEET_NAME,
   } = process.env;
@@ -256,6 +254,11 @@ exports.handler = async (event) => {
     'contact-name': CONTACT_NAME,
     'contact-message': CONTACT_MESSAGE
   } = querystring.parse(event.body);
+
+  if (event.host == 'localhost:9000') {
+    headers['Access-Control-Allow-Origin'] = '*';
+    headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept';
+  }
 
   if (!(CONTACT_EMAIL && CONTACT_NAME && CONTACT_MESSAGE)) {
     serverErrorMessage = 'Error receiving request: missing email, name or message.';
