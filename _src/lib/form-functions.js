@@ -207,6 +207,8 @@ window.submitContactForm = function (form) {
   var email = document.getElementById('contact-email').value;
   var name = document.getElementById('contact-name').value;
   var message = document.getElementById('contact-message').value;
+  var botField = document.getElementsByName('bot-field').value;
+  var formName = document.getElementsByName('form-name').value || 'contact-form';
 
   // Create a global variable for the status container
   window.mcStatus = form.querySelector('.mc-status');
@@ -217,6 +219,8 @@ window.submitContactForm = function (form) {
       email: email,
       name: name,
       message: message,
+      "bot-field": botField,
+      "form-name": formName
     })
   }).then(function(response) {
     return response.json();

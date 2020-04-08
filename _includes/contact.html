@@ -4,6 +4,7 @@
     <form class="validate"
           name="contact-form"
           method="post"
+          action="/"
           data-netlify="true"
           netlify-honeypot="bot-field">
       <div class="row">
@@ -33,7 +34,7 @@
         </div>
         <div class="col-lg-12 d-block d-lg-none">
           <div hidden aria-hidden="true">
-            <input type="hidden" name="bot-field" />
+            <input type="hidden" id="bot-field" name="bot-field">
           </div>
         </div>
       </div>
