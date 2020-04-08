@@ -1,6 +1,19 @@
 # Changelog
 
 
+## 0.2.1 (2020-04-08)
+
+### Changes
+
+* Adding support for captcha. [Luis Alejandro Martínez Faneyth]
+
+* Fixing lambda function. [Luis Alejandro Martínez Faneyth]
+
+### Fix
+
+* Fixing contact form. [Luis Alejandro Martínez Faneyth]
+
+
 ## 0.2.0 (2020-04-08)
 
 ### Changes
