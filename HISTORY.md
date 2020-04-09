@@ -1,6 +1,13 @@
 # Changelog
 
 
+## 0.2.3 (2020-04-09)
+
+### Fix
+
+* Fixing mailchimp requests. [Luis Alejandro Martínez Faneyth]
+
+
 ## 0.2.2 (2020-04-09)
 
 ### Changes
