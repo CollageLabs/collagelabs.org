@@ -34,20 +34,27 @@ async function checkUserOnMailchimpList (apiUrl, apiKey, listId, email) {
   try {
     console.log(`[checkUserOnMailchimpList] Verifying if user ${email} is in list ${listId}`);
     const emailHash = crypto.createHash('md5').update(email).digest("hex");
-    const response = await axios({
-      method: 'GET',
-      url: `${apiUrl}/3.0/lists/${listId}/members/${emailHash}`,
-      auth: {
-        username: 'apikey',
-        password: apiKey
+    try {
+      const response = await axios({
+        method: 'GET',
+        url: `${apiUrl}/3.0/lists/${listId}/members/${emailHash}`,
+        auth: {
+          username: 'apikey',
+          password: apiKey
+        }
+      });
+      if (response.data.email_address == email && response.data.status == 'subscribed') {
+        return true;
       }
-    });
-    if (response.data.email_address == email && response.data.status == 'subscribed') {
-      return true;
+    } catch (error) {
+      if (error.response.data.status == 404) {
+        return false;
+      }
+      throw new Error(error.response.data.detail);
     }
     return false;
   } catch (error) {
-    throw new Error(error.response.data.detail);
+    throw new Error(error);
   }
 }
 
@@ -85,14 +92,11 @@ async function addUserMailchimp (apiUrl, apiKey, listId, email, firstName) {
     console.log(`[addUserMailchimp] Adding user ${email} to list ${listId}`);
     const data = {
       'email_address': email,
-      'status': 'subscribed',
-      'merge_fields': {
-        'FNAME': firstName
-      }
+      'status': 'subscribed'
     };
     const response = await axios({
       method: 'POST',
-      url: `${apiUrl}/3.0/lists/${listId}/members`,
+      url: `${apiUrl}/3.0/lists/${listId}/members?skip_merge_validation=true`,
       auth: {
         username: 'apikey',
         password: apiKey
