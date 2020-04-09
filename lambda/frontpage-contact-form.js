@@ -107,7 +107,8 @@ async function addUserMailchimp (apiUrl, apiKey, listId, email, firstName) {
   }
 }
 
-async function sendWelcomeEmail(apiUrl, apiKey, email, senderEmail, senderName, templateId) {
+async function sendWelcomeEmail(apiUrl, apiKey, toEmail, toName,
+                                senderEmail, senderName, templateId) {
   try {
     console.log(`[sendWelcomeEmail] Sending welcome email to user ${email}`);
     const data = {
@@ -116,12 +117,20 @@ async function sendWelcomeEmail(apiUrl, apiKey, email, senderEmail, senderName, 
         name: senderName
       },
       reply_to: {
-        email: senderEmail
+        email: senderEmail,
+        name: senderName
       },
       personalizations: [{
         to: [{
-          email: email
-        }]
+          email: toEmail,
+          name: toName
+        }],
+        subject: "Let's talk about your ideas!",
+        dynamic_template_data: {
+          senderEmail: senderEmail,
+          senderName: senderName,
+          senderMessage: senderMessage
+        },
       }],
       template_id: templateId
     };
@@ -142,8 +151,9 @@ async function sendWelcomeEmail(apiUrl, apiKey, email, senderEmail, senderName, 
   }
 }
 
-async function sendCompanyEmail(apiUrl, apiKey, email, senderEmail,
-                                senderName, senderMessage, templateId) {
+async function sendCompanyEmail(apiUrl, apiKey, email, replyToEmail, replyToName,
+                                senderEmail, senderName, senderMessage,
+                                templateId) {
   try {
     console.log(`[sendCompanyEmail] Sending message from ${senderEmail} to company list`);
     const data = {
@@ -152,15 +162,19 @@ async function sendCompanyEmail(apiUrl, apiKey, email, senderEmail,
         name: senderName
       },
       reply_to: {
-        email: senderEmail
+        email: replyToEmail,
+        name: replyToName
       },
       personalizations: [{
         to: [{
-          email: email
+          email: email,
+          name: 'Contact'
         }],
         subject: 'New message on collagelabs.org Contact Form',
         dynamic_template_data: {
-          content: senderMessage
+          senderEmail: senderEmail,
+          senderName: senderName,
+          senderMessage: senderMessage
         },
       }],
       template_id: templateId
@@ -238,7 +252,9 @@ exports.handler = async (event) => {
     SENDGRID_WELCOME_SENDER_EMAIL,
     SENDGRID_WELCOME_SENDER_NAME,
     SENDGRID_WELCOME_TEMPLATE_ID,
-    SENDGRID_COMPANY_EMAIL,
+    SENDGRID_COMPANY_LIST_EMAIL,
+    SENDGRID_COMPANY_SENDER_EMAIL,
+    SENDGRID_COMPANY_SENDER_NAME,
     SENDGRID_COMPANY_TEMPLATE_ID,
     SENDGRID_API_BASE_URL,
     SENDGRID_LIST_ID,
@@ -255,7 +271,7 @@ exports.handler = async (event) => {
     'contact-message': CONTACT_MESSAGE
   } = querystring.parse(event.body);
 
-  if (event.host == 'localhost:9000') {
+  if (event.headers.host == 'localhost:9000') {
     headers['Access-Control-Allow-Origin'] = '*';
     headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept';
   }
@@ -275,7 +291,8 @@ exports.handler = async (event) => {
 
   if (!(SENDGRID_API_KEY && SENDGRID_WELCOME_SENDER_EMAIL &&
         SENDGRID_WELCOME_SENDER_NAME && SENDGRID_WELCOME_TEMPLATE_ID &&
-        SENDGRID_COMPANY_EMAIL && SENDGRID_COMPANY_TEMPLATE_ID &&
+        SENDGRID_COMPANY_LIST_EMAIL && SENDGRID_COMPANY_SENDER_EMAIL &&
+        SENDGRID_COMPANY_SENDER_NAME && SENDGRID_COMPANY_TEMPLATE_ID &&
         SENDGRID_API_BASE_URL && SENDGRID_LIST_ID && MAILCHIMP_API_KEY &&
         MAILCHIMP_LIST_ID && MAILCHIMP_API_BASE_URL && GOOGLE_CLIENT_EMAIL &&
         GOOGLE_PRIVATE_KEY && GOOGLE_SPREADSHEET_ID && GOOGLE_SPREADSHEET_NAME)) {
@@ -378,6 +395,7 @@ exports.handler = async (event) => {
       SENDGRID_API_BASE_URL,
       SENDGRID_API_KEY,
       CONTACT_EMAIL,
+      CONTACT_NAME,
       SENDGRID_WELCOME_SENDER_EMAIL,
       SENDGRID_WELCOME_SENDER_NAME,
       SENDGRID_WELCOME_TEMPLATE_ID).catch((error) => {
@@ -399,9 +417,11 @@ exports.handler = async (event) => {
   await sendCompanyEmail(
     SENDGRID_API_BASE_URL,
     SENDGRID_API_KEY,
-    SENDGRID_COMPANY_EMAIL,
+    SENDGRID_COMPANY_LIST_EMAIL,
     CONTACT_EMAIL,
     CONTACT_NAME,
+    SENDGRID_COMPANY_SENDER_EMAIL,
+    SENDGRID_COMPANY_SENDER_NAME,
     CONTACT_MESSAGE,
     SENDGRID_COMPANY_TEMPLATE_ID).catch((error) => {
       serverErrorMessage = 'Error in server operation: external service communication problem.';
