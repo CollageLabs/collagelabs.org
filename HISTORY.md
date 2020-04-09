@@ -1,6 +1,21 @@
 # Changelog
 
 
+## 0.2.2 (2020-04-09)
+
+### Changes
+
+* Improving contact form UX. [REF] Adding extra POST to netlify so the form submission gets registered. [Luis Alejandro Martínez Faneyth]
+
+* Changing behavior of contact form. [Luis Alejandro Martínez Faneyth]
+
+### Fix
+
+* Fixing sendgrid api calls. [Luis Alejandro Martínez Faneyth]
+
+* Fixing Netlify submissions. [Luis Alejandro Martínez Faneyth]
+
+
 ## 0.2.1 (2020-04-08)
 
 ### Changes

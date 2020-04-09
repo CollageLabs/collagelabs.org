@@ -206,6 +206,9 @@ window.removeErrorCaptcha = function () {
 window.displayContactFormStatus = function (data) {
   // Get the status message content area
   var mcStatus = document.querySelector('.mc-status');
+  var spinner = document.querySelector('.waiting .loader');
+  var button = document.querySelector('.suscribe');
+
   if (!mcStatus) return;
 
   // Update our status message
@@ -221,6 +224,12 @@ window.displayContactFormStatus = function (data) {
   // Otherwise, add success class
   mcStatus.classList.remove('error-message');
   mcStatus.classList.add('success-message');
+
+  spinner.style.display = 'none';
+  spinner.style.visibility = 'hidden';
+
+  button.disabled = false;
+  button.innerHTML = 'Send';
 
 }
 
@@ -240,11 +249,9 @@ window.submitContactForm = function (form) {
   var message = document.getElementById('contact-message').value;
   var botField = document.getElementsByName('bot-field').value || '';
   var formName = document.getElementsByName('form-name').value || 'contact-form';
-
-  // Create a global variable for the status container
-  window.mcStatus = form.querySelector('.mc-status');
-
-  fetch(url, {
+  var spinner = document.querySelector('.waiting .loader');
+  var button = document.querySelector('.suscribe');
+  var fetchOptions = {
     method: 'post',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
@@ -256,7 +263,23 @@ window.submitContactForm = function (form) {
       'bot-field': botField,
       'form-name': formName
     }),
-  }).then(function(response) {
+  };
+
+  spinner.style.display = 'block';
+  spinner.style.visibility = 'visible';
+
+  button.disabled = true;
+  button.innerHTML = 'Sending';
+
+  // Create a global variable for the status container
+  window.mcStatus = form.querySelector('.mc-status');
+
+  if (window.location.host != 'localhost:5000' &&
+      window.location.host != '127.0.0.1:5000') {
+    fetch('/', fetchOptions);
+  }
+
+  fetch(url, fetchOptions).then(function(response) {
     return response.json();
   }).then(function(data) {
     displayContactFormStatus(data);

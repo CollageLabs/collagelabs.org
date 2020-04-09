@@ -1,26 +1,14 @@
-<script src="https://www.google.com/recaptcha/api.js?onload=captchaLoadCallback&render=explicit" async defer></script>
-<script>
-  var captchaLoadCallback = function() {
-    var widget = grecaptcha.render(document.getElementById("re-captcha"), {
-      'sitekey' : "{{ site.recaptcha_key }}",
-      'theme': "light",
-      'callback': captchaSuccessCallback
-    });
-  }
-  var captchaSuccessCallback = function() {
-    var recaptchaState = grecaptcha.getResponse();
-    if (recaptchaState.length != 0) {
-      removeErrorCaptcha();
-    }
-  }
-</script>
 <section id="contact" class="contact section">
   <h1 class="title gray-divider">Contact us</h1>
   <div class="container">
     <form class="validate"
           name="contact-form"
+          {%- if jekyll.environment == 'development' -%}
+          action="http://localhost:9000/frontpage-contact-form"
+          {%- else -%}
+          action="/.netlify/functions/frontpage-contact-form"
+          {%- endif -%}
           method="post"
-          action="/"
           data-netlify="true"
           netlify-honeypot="bot-field">
       <div class="row">
@@ -39,7 +27,14 @@
           <div class="form-group custom-form-box">
             <div id="re-captcha"></div>
           </div>
-          <button type="submit" class="suscribe btn btn-custom-red float-right d-none d-lg-block" name="contact-subscribe">Send</button>
+          <div class="row">
+            <div class="col-lg-8 waiting">
+              <div class="loader">Waiting...</div>
+            </div>
+            <div class="col-lg-4">
+              <button type="submit" class="suscribe btn btn-custom-red float-right d-none d-lg-block" name="contact-subscribe">Send</button>
+            </div>
+          </div>
         </div>
         <div class="col-lg-8">
           <div class="form-group custom-form-box">
@@ -59,3 +54,19 @@
     </form>
   </div>
 </section>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=captchaLoadCallback&render=explicit" async defer></script>
+<script type="text/javascript">
+  var captchaLoadCallback = function() {
+    var widget = grecaptcha.render(document.getElementById("re-captcha"), {
+      'sitekey' : "{{ site.recaptcha_key }}",
+      'theme': "light",
+      'callback': captchaSuccessCallback
+    });
+  }
+  var captchaSuccessCallback = function() {
+    var recaptchaState = grecaptcha.getResponse();
+    if (recaptchaState.length != 0) {
+      removeErrorCaptcha();
+    }
+  }
+</script>
