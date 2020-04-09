@@ -110,7 +110,7 @@ async function addUserMailchimp (apiUrl, apiKey, listId, email, firstName) {
 async function sendWelcomeEmail(apiUrl, apiKey, toEmail, toName,
                                 senderEmail, senderName, templateId) {
   try {
-    console.log(`[sendWelcomeEmail] Sending welcome email to user ${email}`);
+    console.log(`[sendWelcomeEmail] Sending welcome email to user ${toEmail}`);
     const data = {
       from: {
         email: senderEmail,
@@ -120,16 +120,21 @@ async function sendWelcomeEmail(apiUrl, apiKey, toEmail, toName,
         email: senderEmail,
         name: senderName
       },
+      to: [{
+        email: toEmail,
+        name: toName
+      }],
+      subject: "Welcome to Collage Labs",
       personalizations: [{
         to: [{
           email: toEmail,
           name: toName
         }],
-        subject: "Let's talk about your ideas!",
+        subject: "Welcome to Collage Labs",
         dynamic_template_data: {
-          senderEmail: senderEmail,
-          senderName: senderName,
-          senderMessage: senderMessage
+          subject: "Welcome to Collage Labs",
+          toEmail: toEmail,
+          toName: toName
         },
       }],
       template_id: templateId
@@ -144,14 +149,14 @@ async function sendWelcomeEmail(apiUrl, apiKey, toEmail, toName,
       data: data
     });
     if (response.status != 202) {
-      throw new Error(`There was an error trying send a welcome email to ${email}.`);
+      throw new Error(`There was an error trying send a welcome email to ${toEmail}.`);
     }
   } catch (error) {
     throw new Error(error.response.data.errors[0].message);
   }
 }
 
-async function sendCompanyEmail(apiUrl, apiKey, email, replyToEmail, replyToName,
+async function sendCompanyEmail(apiUrl, apiKey, toEmail, replyToEmail, replyToName,
                                 senderEmail, senderName, senderMessage,
                                 templateId) {
   try {
@@ -165,15 +170,21 @@ async function sendCompanyEmail(apiUrl, apiKey, email, replyToEmail, replyToName
         email: replyToEmail,
         name: replyToName
       },
+      to: [{
+        email: toEmail,
+        name: 'Contact'
+      }],
+      subject: 'New message on collagelabs.org Contact Form',
       personalizations: [{
         to: [{
-          email: email,
+          email: toEmail,
           name: 'Contact'
         }],
         subject: 'New message on collagelabs.org Contact Form',
         dynamic_template_data: {
-          senderEmail: senderEmail,
-          senderName: senderName,
+          subject: 'New message on collagelabs.org Contact Form',
+          senderEmail: replyToEmail,
+          senderName: replyToName,
           senderMessage: senderMessage
         },
       }],
@@ -401,7 +412,7 @@ exports.handler = async (event) => {
       SENDGRID_WELCOME_TEMPLATE_ID).catch((error) => {
         serverErrorMessage = 'Error in server operation: external service communication problem.';
         console.error(serverErrorMessage);
-        console.error('[sendUserWelcomeEmail] There was an error communicating with Sendgrid API.');
+        console.error('[sendWelcomeEmail] There was an error communicating with Sendgrid API.');
         console.error(error);
         return {
           headers: headers,
