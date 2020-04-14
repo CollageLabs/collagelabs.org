@@ -104,7 +104,7 @@
     "cookieconsent": "3.1.1",
     "d3": "5.15.1",
     "expose-loader": "0.7.5",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "normalize.css": "8.0.1",
     "popper.js": "1.16.1",
     "puppeteer": "2.1.1",
