@@ -28,8 +28,8 @@
     "build:pwa:optim": "yarn run clean:project && yarn run webpack:pwa && yarn run jekyll:pwa && yarn run build:lambda && yarn run webpack:optim && yarn run sw",
     "serve:dist": "yarn run clean:project && yarn run build:pwa:optim && http-server _site",
     "serve:dev": "yarn run clean:project && yarn run webpack:dev && yarn run jekyll:dev",
-    "snyk-protect": "npx snyk protect",
-    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect && yarn run snyk-protect",
     "start:lambda": "netlify-lambda serve lambda",
     "build:lambda": "netlify-lambda build lambda"
   },
@@ -109,7 +109,7 @@
     "popper.js": "1.16.1",
     "puppeteer": "3.0.1",
     "slick-carousel": "1.8.1",
-    "snyk": "1.313.1"
+    "snyk": "^1.319.0"
   },
   "snyk": true
 }
