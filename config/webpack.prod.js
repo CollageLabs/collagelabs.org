@@ -1,6 +1,6 @@
-const Merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
+const { Merge } = require('webpack-merge');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');

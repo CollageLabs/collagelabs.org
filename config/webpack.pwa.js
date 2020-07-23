@@ -1,5 +1,5 @@
 const path = require('path');
-const Merge = require('webpack-merge');
+const { Merge } = require('webpack-merge');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const ProdConfig = require('./webpack.prod.js');
 
