@@ -24,10 +24,12 @@ module.exports = {
       logo: './icon.svg',
       prefix: 'icons/'
     }),
-    new CopyWebpackPlugin([{
-      from: path.resolve('_images'),
-      to: 'images/'
-    }])
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: path.resolve('_images'),
+        to: 'images/'
+      }],
+    })
   ],
   module: {
     rules: [
@@ -44,7 +46,9 @@ module.exports = {
         use: [
           {
             loader: "expose-loader",
-            options: "$"
+            options: {
+              exposes: ['$'],
+            },
           }
         ]
       }, {
