@@ -59,7 +59,8 @@ module.exports = {
           }, {
             loader: 'css-loader',
             options: {
-              importLoaders: 2
+              importLoaders: 2,
+              url: false,
             }
           }, {
             loader: 'postcss-loader',
@@ -73,6 +74,16 @@ module.exports = {
           }
         ]
       }, {
+        test: /\.(woff|woff2)$/,
+        use: [
+          'url-loader'
+        ]
+      }, {
+        test: /\.(jpe?g|png|gif)$/,
+        use: [
+          'file-loader'
+        ]
+      }, {
         test: /\.svg$/,
         use: [
           {
@@ -82,16 +93,6 @@ module.exports = {
           }, {
             loader: 'svgo-loader'
           }
-        ]
-      }, {
-        test: /\.(jpe?g|png|gif)$/,
-        use: [
-          'file-loader'
-        ]
-      }, {
-        test: /\.(woff|woff2)$/,
-        use: [
-          'url-loader'
         ]
       }
     ]
