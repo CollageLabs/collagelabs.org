@@ -77,11 +77,9 @@ module.exports = {
         use: [
           {
             loader: 'svg-sprite-loader'
-          },
-          {
+          }, {
             loader: 'svg-transform-loader'
-          },
-          {
+          }, {
             loader: 'svgo-loader'
           }
         ]
