@@ -2858,9 +2858,9 @@ bmp-js@^0.1.0:
   integrity sha1-4Fpj95amwf8l9Hcex62twUjAcjM=
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
-  version "4.11.8"
-  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
-  integrity sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA==
+  version "4.11.9"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.9.tgz#26d556829458f9d1e81fc48952493d0ba3507828"
+  integrity sha512-E6QoYqCKZfgatHTdHzs1RRKP7ip4vvm+EyRUeE2RF0NblwVvb0p6jSVeNTOFxPn26QXN2o6SMfNxKp6kU8zQaw==
 
 body-parser@1.19.0, body-parser@^1.19.0:
   version "1.19.0"
@@ -5305,9 +5305,9 @@ electron-to-chromium@^1.3.488:
   integrity sha512-yOXnuPaaLAIZUVuXHYDCo3EeaiEfbFgYWCPH1tBMp+jznCq/zQYKnf6HmkKBmLJ0VES81avl18JZO1lx/XAHOw==
 
 elliptic@^6.0.0:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.2.tgz#05c5678d7173c049d8ca433552224a495d0e3762"
-  integrity sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.3.tgz#cb59eb2efdaf73a0bd78ccd7015a62ad6e0f93d6"
+  integrity sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==
   dependencies:
     bn.js "^4.4.0"
     brorand "^1.0.1"
@@ -6060,15 +6060,15 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-favicons-webpack-plugin@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/favicons-webpack-plugin/-/favicons-webpack-plugin-4.0.0.tgz#44b39915cec76754e19b64c44a62fd96f1afd069"
-  integrity sha512-JTwD9YYpN5F6TM7hbkC83FK7JvM056JnuWuyNgOCRTMrZVyJmH1KUAHN4YwMlTK+5qZ6+x4PMAnWh8XaEmMhgA==
+favicons-webpack-plugin@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/favicons-webpack-plugin/-/favicons-webpack-plugin-4.2.0.tgz#7ff66425672f70b36772b3f18c76fd6ae033831a"
+  integrity sha512-rLbQ3yoe7iOJe7rVh8hABwPk1qFj+F68u+7LgZTfpERRFd61Fc0ou4lP09naDvM4eexIsnQGXtsiNaLY97nzDQ==
   dependencies:
     "@types/favicons" "5.5.0"
     cache-loader "^4.1.0"
     camelcase "^5.3.1"
-    favicons "6.2.0"
+    favicons "^6.2.0"
     find-cache-dir "^3.2.0"
     find-root "^1.1.0"
     loader-utils "^1.2.3"
@@ -6078,7 +6078,7 @@ favicons-webpack-plugin@4.0.0:
   optionalDependencies:
     html-webpack-plugin ">=4.0.0 || ^4.0.0-beta.11"
 
-favicons@6.2.0:
+favicons@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/favicons/-/favicons-6.2.0.tgz#835e0c3b0110db89048ef17999c2f4e42a6ff2ff"
   integrity sha512-KshoA1p51g9NcQ8BaqETExA4PVBc69xoUELC28UA0BM6gAuoRx8f4jvVYwclVjTuL5AJk9NlRXAqQWq1qIpzVA==
@@ -13146,10 +13146,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.366.2:
-  version "1.366.2"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.366.2.tgz#b535c51e580be7331c66e00ca8ba848090dedebb"
-  integrity sha512-XkqZK7Q38z65/0B5xDo9pIACC3xu1x08gl32KP6L2U8X8dsbvx8V21fkOB82Br96OYW4reNA9kc+mGsL7dJy7A==
+snyk@^1.367.0:
+  version "1.369.1"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.369.1.tgz#6cfd608c1d36adecd215d0f57d4a562ac346d423"
+  integrity sha512-2cj764CWYxonSfrbhpnzz6AeBFOQnP43EfbcP/DJYSViJuz9kzARAOawLDF73Y5fmTMpFaQSpIpiR7YvGrQOew==
   dependencies:
     "@snyk/cli-interface" "2.8.1"
     "@snyk/dep-graph" "1.18.3"
@@ -13913,7 +13913,7 @@ svg-transform-loader@2.0.13:
     query-string "^6.1.0"
     svg-mixer-utils "^0.3.4"
 
-svg-url-loader@^6.0.0:
+svg-url-loader@6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/svg-url-loader/-/svg-url-loader-6.0.0.tgz#b94861d9f6badfb8ca3e7d3ec4655c1bf732ac5d"
   integrity sha512-Qr5SCKxyxKcRnvnVrO3iQj9EX/v40UiGEMshgegzV7vpo3yc+HexELOdtWcA3MKjL8IyZZ1zOdcILmDEa/8JJQ==
