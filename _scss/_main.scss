@@ -28,11 +28,11 @@
   }
   
   &.gray-divider::before {
-    background-image: url('/assets/images/separadorgris.svg');
+    background-image: url('../_images/separadorgris.svg');
   }
 
   &.white-divider::before {
-    background-image: url('/assets/images/separadorblanco.svg');
+    background-image: url('../_images/separadorblanco.svg');
   }
 }
 
@@ -70,7 +70,7 @@
 
   &::before {
     @include pseudo();
-    background-image: url('/assets/images/flecharoja.svg');
+    background-image: url('../_images/flecharoja.svg');
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
@@ -181,7 +181,7 @@
 
     &::before {
       @include pseudo();
-      background-image: url('/assets/images/subrayadonavbar.svg');
+      background-image: url('../_images/subrayadonavbar.svg');
       background-position: center;
       background-repeat: no-repeat;
       bottom: -15px;
@@ -210,7 +210,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-image: url('/assets/images/bg-frontpage.jpg');
+  background-image: url('../_images/bg-frontpage.jpg');
   
   .banner-content {
     display: flex;
@@ -568,7 +568,7 @@
 }
 
 .footer {
-  background-image: url('/assets/images/footer-bg.jpg');
+  background-image: url('../_images/footer-bg.jpg');
   position: relative;
   height: 430px;
   @include bg(cover, no-repeat, center);
@@ -647,7 +647,7 @@
   position: relative;
 
   .prev, .next {
-    background-image: url('/assets/images/flechablanca.svg');
+    background-image: url('../_images/flechablanca.svg');
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;

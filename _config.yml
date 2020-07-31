@@ -77,8 +77,7 @@ exclude:
   - yarn-error.log
   - yarn.lock
   - config
-  - optimization-fix
-  - optimization-fix-this-file-is-ignored.js
+  - dist
   - icon.svg
   - HISTORY.md
   - MAINTAINER.md

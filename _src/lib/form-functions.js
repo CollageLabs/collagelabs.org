@@ -261,7 +261,8 @@ window.submitContactForm = function (form) {
       'contact-name': name,
       'contact-message': message,
       'bot-field': botField,
-      'form-name': formName
+      'form-name': formName,
+      'recaptcha-state': window.recaptchaState
     }),
   };
 

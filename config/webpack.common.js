@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
@@ -24,12 +23,6 @@ module.exports = {
       logo: './icon.svg',
       prefix: 'icons/'
     }),
-    new CopyWebpackPlugin({
-      patterns: [{
-        from: path.resolve('_images'),
-        to: 'images/'
-      }],
-    })
   ],
   module: {
     rules: [
@@ -60,7 +53,6 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 2,
-              url: false,
             }
           }, {
             loader: 'postcss-loader',
@@ -76,18 +68,35 @@ module.exports = {
       }, {
         test: /\.(woff|woff2)$/,
         use: [
-          'url-loader'
+          {
+            loader: 'url-loader',
+          }
         ]
       }, {
         test: /\.(jpe?g|png|gif)$/,
         use: [
-          'file-loader'
+          {
+            loader: 'file-loader',
+          }
         ]
       }, {
         test: /\.svg$/,
+        exclude: /sprite/,
         use: [
           {
-            loader: 'svg-sprite-loader'
+            loader: 'svg-url-loader',
+          }, {
+            loader: 'svg-transform-loader'
+          }, {
+            loader: 'svgo-loader'
+          }
+        ]
+      }, {
+        test: /\.svg$/,
+        include: /sprite/,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
           }, {
             loader: 'svg-transform-loader'
           }, {
