@@ -10,7 +10,7 @@
 [![Snyk](https://snyk.io/test/github/CollageLabs/collagelabs.org/badge.svg)](https://snyk.io/test/github/CollageLabs/collagelabs.org)
 [![CLA Assistant](https://cla-assistant.io/readme/badge/CollageLabs/collagelabs.org)](https://cla-assistant.io/CollageLabs/collagelabs.org)
 
-Current version: 0.2.3
+Current version: 0.2.4
 
 ## How to start hacking this website?
 
