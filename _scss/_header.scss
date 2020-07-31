@@ -27,117 +27,117 @@ h1 {
   width: 105px;
 }
 
-#socialbar {
-  float: left;
-  width: 25%;
-}
+// #socialbar {
+//   float: left;
+//   width: 25%;
+// }
 
-#socialbar > ul {
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
-}
+// #socialbar > ul {
+//   display: inline-block;
+//   vertical-align: top;
+//   width: 100%;
+// }
 
-#socialbar > ul > li {
-  float: left;
-  width: 16.333%;
-}
+// #socialbar > ul > li {
+//   float: left;
+//   width: 16.333%;
+// }
 
-#socialbar > ul > li.search {
-    margin: 0 0 0 2%;
-}
+// #socialbar > ul > li.search {
+//     margin: 0 0 0 2%;
+// }
 
-#socialbar > ul > li > a {
-    float: left;
-    width: 100%;
-    margin: 5px 0;
-    box-shadow: 0 -6px 0 rgba(255, 255, 255, 0.3) inset,
-                0 -5px 0 rgba(0, 0, 0, 0.3) inset,
-                -1px 0 0 rgba(0, 0, 0, 0.3) inset,
-                1px 1px 0 rgba(0, 0, 0, 0.3) inset;
-    background-color: rgb(171, 183, 183);
-    background-image: radial-gradient(ellipse closest-side at 50% 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.0));
-    transition: background-color 0.4s ease-out;
-}
+// #socialbar > ul > li > a {
+//     float: left;
+//     width: 100%;
+//     margin: 5px 0;
+//     box-shadow: 0 -6px 0 rgba(255, 255, 255, 0.3) inset,
+//                 0 -5px 0 rgba(0, 0, 0, 0.3) inset,
+//                 -1px 0 0 rgba(0, 0, 0, 0.3) inset,
+//                 1px 1px 0 rgba(0, 0, 0, 0.3) inset;
+//     background-color: rgb(171, 183, 183);
+//     background-image: radial-gradient(ellipse closest-side at 50% 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.0));
+//     transition: background-color 0.4s ease-out;
+// }
 
-#socialbar > ul > li.twitter > a,
-#socialbar > ul > li.search > a {
-    border-radius: 5px 0 0 5px;
-}
+// #socialbar > ul > li.twitter > a,
+// #socialbar > ul > li.search > a {
+//     border-radius: 5px 0 0 5px;
+// }
 
-#socialbar > ul > li.googleplus > a,
-#socialbar > ul > li.login > a {
-    border-radius: 0 5px 5px 0;
-}
+// #socialbar > ul > li.googleplus > a,
+// #socialbar > ul > li.login > a {
+//     border-radius: 0 5px 5px 0;
+// }
 
-#socialbar > ul > li > a > .hide {
-    display: none;
-}
+// #socialbar > ul > li > a > .hide {
+//     display: none;
+// }
 
-#socialbar > ul > li > a:active,
-#socialbar > ul > li.search > a.active,
-#socialbar > ul > li.login > a.active {
-    margin: 11px 0 0 0;
-    box-shadow: 0 -44px 0 rgba(0, 0, 0, 0.3) inset;
-    background-color: rgb(141, 158, 158);
-}
+// #socialbar > ul > li > a:active,
+// #socialbar > ul > li.search > a.active,
+// #socialbar > ul > li.login > a.active {
+//     margin: 11px 0 0 0;
+//     box-shadow: 0 -44px 0 rgba(0, 0, 0, 0.3) inset;
+//     background-color: rgb(141, 158, 158);
+// }
 
-#socialbar > ul > li.twitter > a:hover {
-    background-color: rgb(86, 195, 234);
-}
+// #socialbar > ul > li.twitter > a:hover {
+//     background-color: rgb(86, 195, 234);
+// }
 
-#socialbar > ul > li.facebook > a:hover {
-    background-color: rgb(114, 157, 204);
-}
+// #socialbar > ul > li.facebook > a:hover {
+//     background-color: rgb(114, 157, 204);
+// }
 
-#socialbar > ul > li.instagram > a:hover {
-    background-color: rgb(148, 124, 176);
-}
+// #socialbar > ul > li.instagram > a:hover {
+//     background-color: rgb(148, 124, 176);
+// }
 
-#socialbar > ul > li.googleplus > a:hover {
-    background-color: rgb(221, 148, 137);
-}
+// #socialbar > ul > li.googleplus > a:hover {
+//     background-color: rgb(221, 148, 137);
+// }
 
-#socialbar > ul > li.search > a:hover,
-#socialbar > ul > li.login > a:hover {
-    background-color: rgb(141, 158, 158);
-}
+// #socialbar > ul > li.search > a:hover,
+// #socialbar > ul > li.login > a:hover {
+//     background-color: rgb(141, 158, 158);
+// }
 
-#socialbar > ul > li > a > .sprite {
-    display: block;
-    width: 50px;
-    height: 30px;
-    margin: 7px auto 13px auto;
-    background-image: url('/assets/images/sprite.svg');
-    background-repeat: no-repeat;
-}
+// #socialbar > ul > li > a > .sprite {
+//     display: block;
+//     width: 50px;
+//     height: 30px;
+//     margin: 7px auto 13px auto;
+//     background-image: url('/assets/images/sprite.svg');
+//     background-repeat: no-repeat;
+// }
 
-#socialbar > ul > li.twitter > a > .sprite {
-    background-position: -300px 0;
-}
+// #socialbar > ul > li.twitter > a > .sprite {
+//     background-position: -300px 0;
+// }
 
-#socialbar > ul > li.facebook > a > .sprite {
-    background-position: -350px 0;
-}
+// #socialbar > ul > li.facebook > a > .sprite {
+//     background-position: -350px 0;
+// }
 
-#socialbar > ul > li.instagram > a > .sprite {
-    background-position: -400px 0;
-}
+// #socialbar > ul > li.instagram > a > .sprite {
+//     background-position: -400px 0;
+// }
 
-#socialbar > ul > li.googleplus > a > .sprite {
-    background-position: -450px 0;
-}
+// #socialbar > ul > li.googleplus > a > .sprite {
+//     background-position: -450px 0;
+// }
 
-#socialbar > ul > li.search > a > .sprite {
-    background-position: -500px 0;
-}
+// #socialbar > ul > li.search > a > .sprite {
+//     background-position: -500px 0;
+// }
 
-#socialbar > ul > li.login > a > .sprite {
-    background-position: -500px 0;
-}
+// #socialbar > ul > li.login > a > .sprite {
+//     background-position: -500px 0;
+// }
 
-#socialbar > ul > li > a:active > .sprite,
-#socialbar > ul > li.search > a.active > .sprite,
-#socialbar > ul > li.login > a.active > .sprite {
-    margin: 7px auto;
-}
+// #socialbar > ul > li > a:active > .sprite,
+// #socialbar > ul > li.search > a.active > .sprite,
+// #socialbar > ul > li.login > a.active > .sprite {
+//     margin: 7px auto;
+// }

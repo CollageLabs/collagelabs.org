@@ -1,9 +1,9 @@
 const path = require('path');
-const Merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const ProdConfig = require('./webpack.prod.js');
 
-module.exports = Merge(ProdConfig, {
+module.exports = merge(ProdConfig, {
   mode: 'production',
   plugins: [
     new WebpackPwaManifest({

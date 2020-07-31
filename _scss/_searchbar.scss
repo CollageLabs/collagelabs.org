@@ -1,167 +1,167 @@
-#search_dialog {
-    display: none;
-    vertical-align: top;
-    position: absolute;
-    width: 50%;
-    left: 45%;
-    top: 70px;
-    background-color: rgb(230, 230, 230);
-    border-radius: 5px;
-    box-shadow: 0 0 0 1px rgb(190, 190, 190) inset;
-}
+// #search_dialog {
+//     display: none;
+//     vertical-align: top;
+//     position: absolute;
+//     width: 50%;
+//     left: 45%;
+//     top: 70px;
+//     background-color: rgb(230, 230, 230);
+//     border-radius: 5px;
+//     box-shadow: 0 0 0 1px rgb(190, 190, 190) inset;
+// }
 
-#search_dialog > .tip1,
-#search_dialog > .tip2 {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 15px 15px 15px;
-    border-color: transparent transparent rgb(190, 190, 190) transparent;
-    position: absolute;
-    top: -15px;
-    right: 9%;
-}
+// #search_dialog > .tip1,
+// #search_dialog > .tip2 {
+//     width: 0;
+//     height: 0;
+//     border-style: solid;
+//     border-width: 0 15px 15px 15px;
+//     border-color: transparent transparent rgb(190, 190, 190) transparent;
+//     position: absolute;
+//     top: -15px;
+//     right: 9%;
+// }
 
-#search_dialog > .tip2 {
-    border-color: transparent transparent rgb(230, 230, 230) transparent;
-    top: -14px;
-}
+// #search_dialog > .tip2 {
+//     border-color: transparent transparent rgb(230, 230, 230) transparent;
+//     top: -14px;
+// }
 
-#search_dialog.show {
-    display: inline-block;
-}
+// #search_dialog.show {
+//     display: inline-block;
+// }
 
-#search_dialog > h3 {
-    display: inline-block;
-    vertical-align: top;
-    width: 96%;
-    padding: 0;
-    margin: 10px 2% 0 2%;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    letter-spacing: -1px;
+// #search_dialog > h3 {
+//     display: inline-block;
+//     vertical-align: top;
+//     width: 96%;
+//     padding: 0;
+//     margin: 10px 2% 0 2%;
+//     text-transform: uppercase;
+//     font-size: 1.2em;
+//     letter-spacing: -1px;
 
-}
+// }
 
-#search_dialog > h3.info {
-    height: 20px;
-    margin: 10px 2%;
-}
+// #search_dialog > h3.info {
+//     height: 20px;
+//     margin: 10px 2%;
+// }
 
-#search_dialog > label {
-    display: none;
-}
+// #search_dialog > label {
+//     display: none;
+// }
 
-#search_dialog > .search_input {
-    display: inline-block;
-    vertical-align: top;
-    height: 30px;
-    width: 94%;
-    padding: 10px 1%;
-    margin: 15px 2% 10px 2%;
-    font-size: 30px;
-    line-height: 30px;
-    color: rgb(77, 77, 70);
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 0 1px rgb(190, 190, 190) inset;
-}
+// #search_dialog > .search_input {
+//     display: inline-block;
+//     vertical-align: top;
+//     height: 30px;
+//     width: 94%;
+//     padding: 10px 1%;
+//     margin: 15px 2% 10px 2%;
+//     font-size: 30px;
+//     line-height: 30px;
+//     color: rgb(77, 77, 70);
+//     border-radius: 5px;
+//     background-color: rgb(255, 255, 255);
+//     box-shadow: 0 0 0 1px rgb(190, 190, 190) inset;
+// }
 
-#search_dialog > .search_input:focus {
-    box-shadow: 0 0 0 4px rgba(0, 177, 106, 0.3),
-                0 0 0 1px rgb(0, 177, 106) inset;
-}
+// #search_dialog > .search_input:focus {
+//     box-shadow: 0 0 0 4px rgba(0, 177, 106, 0.3),
+//                 0 0 0 1px rgb(0, 177, 106) inset;
+// }
 
-#search_dialog > .search_input:disabled {
-    background-color: rgb(210, 215, 211);
-}
+// #search_dialog > .search_input:disabled {
+//     background-color: rgb(210, 215, 211);
+// }
 
-#search_dialog > .search_results {
-    display: inline-block;
-    vertical-align: top;
-    width: 98%;
-    margin: 5px 1% 20px 1%;
-    overflow: hidden;
-}
+// #search_dialog > .search_results {
+//     display: inline-block;
+//     vertical-align: top;
+//     width: 98%;
+//     margin: 5px 1% 20px 1%;
+//     overflow: hidden;
+// }
 
-#search_dialog > .search_results > .search_results_body {
-    display: inline-block;
-    vertical-align: top;
-    width: 98%;
-    height: 400px;
-    padding: 5px 1%;
-    overflow: auto;
-}
+// #search_dialog > .search_results > .search_results_body {
+//     display: inline-block;
+//     vertical-align: top;
+//     width: 98%;
+//     height: 400px;
+//     padding: 5px 1%;
+//     overflow: auto;
+// }
 
-#search_dialog > .search_results > .search_results_body > li {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
-    margin: 0 0 10px 0;
-}
+// #search_dialog > .search_results > .search_results_body > li {
+//     display: inline-block;
+//     vertical-align: top;
+//     width: 100%;
+//     margin: 0 0 10px 0;
+// }
 
-#search_dialog > .search_results > .search_results_body > li > a {
-    display: inline-block;
-    vertical-align: top;
-    color: rgb(77, 77, 70);
-    width: 100%;
-    padding: 0;
-    border-radius: 5px;
-    box-shadow: 0 0 0 1px rgb(130, 130, 130);
-    background-color: rgb(210, 215, 211);
-    overflow: hidden;
-    transition: background-color 0.2s ease-in, color 0.2s ease-in;
-}
+// #search_dialog > .search_results > .search_results_body > li > a {
+//     display: inline-block;
+//     vertical-align: top;
+//     color: rgb(77, 77, 70);
+//     width: 100%;
+//     padding: 0;
+//     border-radius: 5px;
+//     box-shadow: 0 0 0 1px rgb(130, 130, 130);
+//     background-color: rgb(210, 215, 211);
+//     overflow: hidden;
+//     transition: background-color 0.2s ease-in, color 0.2s ease-in;
+// }
 
-#search_dialog > .search_results > .search_results_body > li > a:hover {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    background-color: rgb(255, 255, 255);
-}
+// #search_dialog > .search_results > .search_results_body > li > a:hover {
+//     color: rgb(0, 0, 0);
+//     text-decoration: none;
+//     background-color: rgb(255, 255, 255);
+// }
 
-#search_dialog > .search_results > .search_results_body > li > a > .image {
-    float: left;
-    width: 8%;
-    margin: 0 1% 0 0;
-    height: 80px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: width 0.2s ease-in;
-}
+// #search_dialog > .search_results > .search_results_body > li > a > .image {
+//     float: left;
+//     width: 8%;
+//     margin: 0 1% 0 0;
+//     height: 80px;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     transition: width 0.2s ease-in;
+// }
 
-#search_dialog > .search_results > .search_results_body > li > a:hover > .image {
-    width: 10%;
-}
+// #search_dialog > .search_results > .search_results_body > li > a:hover > .image {
+//     width: 10%;
+// }
 
-#search_dialog > .search_results > .search_results_body > li > a > .image > .triangle {
-    float: right;
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 80px 0;
-    border-color: transparent rgb(210, 215, 211) transparent transparent;
-    transition: border-color 0.2s ease-in;
-}
+// #search_dialog > .search_results > .search_results_body > li > a > .image > .triangle {
+//     float: right;
+//     width: 0;
+//     border-style: solid;
+//     border-width: 0 10px 80px 0;
+//     border-color: transparent rgb(210, 215, 211) transparent transparent;
+//     transition: border-color 0.2s ease-in;
+// }
 
-#search_dialog > .search_results > .search_results_body > li > a:hover > .image > .triangle {
-    border-color: transparent rgb(255, 255, 255) transparent transparent;
-}
+// #search_dialog > .search_results > .search_results_body > li > a:hover > .image > .triangle {
+//     border-color: transparent rgb(255, 255, 255) transparent transparent;
+// }
 
-#search_dialog > .search_results > .search_results_body > li > a > .title {
-    float: left;
-    width: 89%;
-    font-size: 1.5em;
-    line-height: initial;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
+// #search_dialog > .search_results > .search_results_body > li > a > .title {
+//     float: left;
+//     width: 89%;
+//     font-size: 1.5em;
+//     line-height: initial;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     white-space: nowrap
+// }
 
-#search_dialog > .search_results > .search_results_body > li > a > .description {
-    float: left;
-    width: 89%;
-    font-size: 1em;
-    line-height: initial;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
+// #search_dialog > .search_results > .search_results_body > li > a > .description {
+//     float: left;
+//     width: 89%;
+//     font-size: 1em;
+//     line-height: initial;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     white-space: nowrap
+// }

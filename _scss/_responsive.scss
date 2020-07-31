@@ -1,1653 +1,1653 @@
-/*
-Apple iPad 3GS: 320, 1
-LG Optimus One: 320, 1.5
-*/
-
-@media screen and (max-width: 319px) {
-
-    #container > header {
-        background-color: transparent;
-    }
-
-    #container > header > #logo {
-        width: 30%;
-        background-color: rgb(239, 235, 224);
-        border-radius: 0 0 0 5px;
-    }
-
-    #container > header > #heading {
-        width: 70%;
-        background-color: rgb(239, 235, 224);
-        border-radius: 0 0 5px 0;
-    }
-
-    #container > header > #heading > .title {
-        width: 70%;
-        font-size: 2.3em;
-    }
-
-    #container > header > nav {
-        width: 100%;
-        margin: 5px 0;
-        background-color: rgb(239, 235, 224);
-        border-radius: 5px;
-    }
-
-    #container > header > nav > ul > li.twitter,
-    #container > header > nav > ul > li.facebook,
-    #container > header > nav > ul > li.instagram,
-    #container > header > nav > ul > li.googleplus,
-    #container > header > nav > ul > li.rss,
-    #container > header > nav > ul > li.search {
-        width: 18%;
-        margin: 0 1%;
-    }
-
-    #container > #banner {
-        display: none;
-    }
-
-    #sidebar {
-        width: 100%;
-    }
-
-    #sidebar > ul {
-        display: none;
-    }
-
-    #content {
-        width: 100%;
-    }
-
-    #content > .preview > .data {
-        width: 100%;
-        margin: 0;
-    }
-
-    #content > .preview > .data > .header > h2 {
-        font-size: 1.5em;
-    }
-
-    #content > .preview > .data > .description {
-        font-size: 1em;
-    }
-
-    #content > .preview > .data:hover > .bg {
-        height: 220px;
-    }
-
-    #content > .preview > .social {
-        width: 100%;
-        height: auto;
-        margin: 0 0 30px 0;
-    }
-
-    #content > .preview > .social > .espacio {
-        display: none;
-    }
-
-    #content > .preview > .social > .compartidos {
-        display: none;
-    }
-
-    #content > .preview > .social > .comentarios {
-        width: 40%;
-    }
-
-    #content > .preview > .social > .twitter,
-    #content > .preview > .social > .googleplus,
-    #content > .preview > .social > .facebook {
-        width: 20%;
-    }
-
-    #content > .preview > .social > .twitter > a,
-    #content > .preview > .social > .googleplus > a,
-    #content > .preview > .social > .facebook > a {
-        height: 50px;
-    }
-
-    #content > .preview > .social > .twitter > a > .sprite,
-    #content > .preview > .social > .googleplus > a > .sprite,
-    #content > .preview > .social > .facebook > a > .sprite {
-        margin: 10px auto;
-    }
-
-    // #container > footer > nav {
-    //     width: 90%;
-    //     margin: 0 5% 40px 5%;
-    // }
-
-    // #container > footer > .license,
-    // #container > footer > .info {
-    //     width: 90%;
-    //     margin: 10px 5%;
-    // }
-
-    // #container > footer > .license > .icon,
-    // #container > footer > .info > .icon {
-    //     width: 100%;
-    //     margin: 0 0 20px 0;
-    // }
-
-    // #container > footer > .license > .text,
-    // #container > footer > .info > .text {
-    //     width: 98%;
-    //     font-size: 0.8em;
-    // }
-
-    // #container > footer > nav > ul > li {
-    //     width: 98%;
-    //     margin: 5px 1%;
-    // }
-
-    // #container > footer > nav > ul > li > a {
-    //     border-radius: 5px
-    // }
-
-    #content > .post > .header > h2 {
-        font-size: 2em;
-    }
-
-    #content > .post > .social > .compartidos {
-        display: none;
-    }
-
-    #content > .post > .social > .comentarios {
-        width: 28%;
-    }
-
-    #content > .post > .social > .espacio {
-        display: none;
-    }
-
-    #content > .post > .social > .twitter,
-    #content > .post > .social > .googleplus,
-    #content > .post > .social > .pinterest,
-    #content > .post > .social > .tumblr,
-    #content > .post > .social > .linkedin,
-    #content > .post > .social > .facebook {
-        width: 12%;
-    }
-
-    #github-boxes > .github-box {
-        width: 98%;
-    }
-
-    #behance-boxes > .behance-box {
-        width: 98%;
-    }
-
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .text,
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .text,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
-        display: none;
-    }
-
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .icon,
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .icon,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
-        width: 90%;
-        text-align: center;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-update {
-        display: none;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-download,
-    #github-boxes > .github-box > .github-box-download > .repo-explore {
-        width: 48%;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-download > .text,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
-        width: 90%;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
-        display: none;
-    }
-
-    #sidebar,
-    .ad_post,
-    .ad_header,
-    .ad_sidebar,
-    .ad_links,
-    .ad_frontpage {
-        display: none;
-    }
-
-    #content > .meta > #relatedposts > li {
-        width: 99%;
-    }
-}
-
-/*
-Nokia C5, C6, C7, N97, N8, X7: 360, 1
-*/
-@media screen and (min-width: 320px) and (max-width: 479px) {
-
-    #container > header {
-        background-color: transparent;
-    }
-
-    #container > header > #logo {
-        width: 30%;
-        background-color: rgb(239, 235, 224);
-        border-radius: 0 0 0 5px;
-    }
-
-    #container > header > #heading {
-        width: 70%;
-        background-color: rgb(239, 235, 224);
-        border-radius: 0 0 5px 0;
-    }
-
-    #container > header > #heading > .title {
-        width: 70%;
-        font-size: 2.3em;
-    }
-
-    #container > header > nav {
-        width: 100%;
-        margin: 5px 0;
-        background-color: rgb(239, 235, 224);
-        border-radius: 5px;
-    }
-
-    #container > header > nav > ul > li.twitter,
-    #container > header > nav > ul > li.facebook,
-    #container > header > nav > ul > li.instagram,
-    #container > header > nav > ul > li.googleplus,
-    #container > header > nav > ul > li.rss,
-    #container > header > nav > ul > li.search {
-        width: 18%;
-        margin: 0 1%;
-    }
-
-    #container > #banner {
-        display: none;
-    }
-
-    #sidebar {
-        width: 100%;
-    }
-
-    #sidebar > ul {
-        display: none;
-    }
-
-    #content {
-        width: 100%;
-    }
-
-    #content > .preview > .data {
-        width: 100%;
-        margin: 0;
-    }
-
-    #content > .preview > .data > .header > h2 {
-        font-size: 1.5em;
-    }
-
-    #content > .preview > .data > .description {
-        font-size: 1em;
-    }
-
-    #content > .preview > .data:hover > .bg {
-        height: 220px;
-    }
-
-    #content > .preview > .social {
-        width: 100%;
-        height: auto;
-        margin: 0 0 30px 0;
-    }
-
-    #content > .preview > .social > .espacio {
-        display: none;
-    }
-
-    #content > .preview > .social > .compartidos {
-        display: none;
-    }
-
-    #content > .preview > .social > .comentarios {
-        width: 40%;
-    }
-
-    #content > .preview > .social > .twitter,
-    #content > .preview > .social > .googleplus,
-    #content > .preview > .social > .facebook {
-        width: 20%;
-    }
-
-    #content > .preview > .social > .twitter > a,
-    #content > .preview > .social > .googleplus > a,
-    #content > .preview > .social > .facebook > a {
-        height: 50px;
-    }
-
-    #content > .preview > .social > .twitter > a > .sprite,
-    #content > .preview > .social > .googleplus > a > .sprite,
-    #content > .preview > .social > .facebook > a > .sprite {
-        margin: 10px auto;
-    }
-
-    #container > footer > nav {
-        width: 90%;
-        margin: 0 5% 40px 5%;
-    }
-
-    #container > footer > .license,
-    #container > footer > .info {
-        width: 90%;
-        margin: 10px 5%;
-    }
-
-    #container > footer > .license > .icon,
-    #container > footer > .info > .icon {
-        width: 100%;
-        margin: 0 0 20px 0;
-    }
-
-    #container > footer > .license > .text,
-    #container > footer > .info > .text {
-        width: 98%;
-        font-size: 0.8em;
-    }
-
-    #container > footer > nav > ul > li {
-        width: 98%;
-        margin: 5px 1%;
-    }
-
-    #container > footer > nav > ul > li > a {
-        border-radius: 5px
-    }
-
-    #content > .post > .header > h2 {
-        font-size: 2em;
-    }
-
-    #content > .post > .social > .compartidos {
-        display: none;
-    }
-
-    #content > .post > .social > .comentarios {
-        width: 28%;
-    }
-
-    #content > .post > .social > .espacio {
-        display: none;
-    }
-
-    #content > .post > .social > .twitter,
-    #content > .post > .social > .googleplus,
-    #content > .post > .social > .pinterest,
-    #content > .post > .social > .tumblr,
-    #content > .post > .social > .linkedin,
-    #content > .post > .social > .facebook {
-        width: 12%;
-    }
-
-    #github-boxes > .github-box {
-        width: 98%;
-    }
-
-    #behance-boxes > .behance-box {
-        width: 98%;
-    }
-
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .text,
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .text,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
-        display: none;
-    }
-
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .icon,
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .icon,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
-        width: 90%;
-        text-align: center;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-update {
-        display: none;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-download,
-    #github-boxes > .github-box > .github-box-download > .repo-explore {
-        width: 48%;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-download > .text,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
-        width: 90%;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
-        display: none;
-    }
-
-    #sidebar > .ad_sidebar {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .ad_header > .adsbygoogle,
-    .ad_sidebar > .adsbygoogle,
-    .ad_links > .adsbygoogle,
-    .ad_frontpage > .adsbygoogle {
-        width: 234px !important;
-    }
-
-    .ad_post {
-        width: 100%;
-    }
-
-    .ad_post > .adsbygoogle {
-        width: 250px !important;
-    }
-
-    #content > .meta > #relatedposts > li {
-        width: 49%;
-    }
-}
-
-/*
-Google Nexus S: 480, 1.5
-HTC Sensation / Evo 3D: 480, 1.5
-LG Optimus 2X / Optimus 3D / Optimus Black: 480, 1.5
-Motorola Defy, Droid, Droid X, Milestone: 480, 1.5
-Nokia Lumia 7X0 / Lumia 8XX / Lumia 900 / N800 / N810 / N900: 480, 1.5
-Samsung Galaxy S / S II / W: 480, 1.5
-Sony Xperia Sola / U: 480, 1
-*/
-@media screen and (min-width: 480px) and (max-width: 539px) {
-
-    #container > header {
-        background-color: transparent;
-    }
-
-    #container > header > #logo {
-        width: 20%;
-        background-color: rgb(239, 235, 224);
-        border-radius: 0 0 0 5px;
-    }
-
-    #container > header > #heading {
-        width: 80%;
-        background-color: rgb(239, 235, 224);
-        border-radius: 0 0 5px 0;
-    }
-
-    #container > header > #heading > .title {
-        font-size: 2.3em;
-    }
-
-    #container > header > nav {
-        width: 100%;
-        margin: 5px 0;
-        background-color: rgb(239, 235, 224);
-        border-radius: 5px;
-    }
-
-    #container > header > nav > ul > li.twitter,
-    #container > header > nav > ul > li.facebook,
-    #container > header > nav > ul > li.instagram,
-    #container > header > nav > ul > li.googleplus,
-    #container > header > nav > ul > li.rss,
-    #container > header > nav > ul > li.search {
-        width: 18%;
-        margin: 0 1%;
-    }
-
-    #container > #banner {
-        display: none;
-    }
-
-    #sidebar {
-        width: 100%;
-    }
-
-    #sidebar > ul {
-        display: none;
-    }
-
-    #content {
-        width: 100%;
-    }
-
-    #content > .preview > .data {
-        width: 100%;
-        margin: 0;
-    }
-
-    #content > .preview > .data > .header > h2 {
-        font-size: 1.5em;
-    }
-
-    #content > .preview > .data > .description {
-        font-size: 1em;
-    }
-
-    #content > .preview > .data:hover > .bg {
-        height: 220px;
-    }
-
-    #content > .preview > .social {
-        width: 100%;
-        height: auto;
-        margin: 0 0 30px 0;
-    }
-
-    #content > .preview > .social > .espacio,
-    #content > .preview > .social > .compartidos {
-        display: none;
-    }
-
-    #content > .preview > .social > .comentarios {
-        width: 40%;
-    }
-
-    #content > .preview > .social > .twitter,
-    #content > .preview > .social > .googleplus,
-    #content > .preview > .social > .facebook {
-        width: 20%;
-    }
-
-    #content > .preview > .social > .twitter > a,
-    #content > .preview > .social > .googleplus > a,
-    #content > .preview > .social > .facebook > a {
-        height: 50px;
-    }
-
-    #content > .preview > .social > .twitter > a > .sprite,
-    #content > .preview > .social > .googleplus > a > .sprite,
-    #content > .preview > .social > .facebook > a > .sprite {
-        margin: 10px auto;
-    }
-
-    #container > footer > .license,
-    #container > footer > .info {
-        width: 90%;
-        margin: 10px 5%;
-    }
-
-    #container > footer > .license > .icon,
-    #container > footer > .info > .icon {
-        width: 38%;
-        margin: 0 0 20px 0;
-    }
-
-    #container > footer > .license > .text,
-    #container > footer > .info > .text {
-        width: 60%;
-        font-size: 0.8em;
-    }
-
-    #container > footer > nav {
-        width: 90%;
-        margin: 0 5% 40px 5%;
-    }
-
-    #container > footer > nav > ul > li {
-        width: 48%;
-        margin: 5px 1%;
-    }
-
-    #container > footer > nav > ul > li > a {
-        border-radius: 5px
-    }
-
-    #content > .post > .header > h2 {
-        font-size: 2em;
-    }
-
-    #content > .post > .social > .compartidos {
-        display: none;
-    }
-
-    #content > .post > .social > .comentarios {
-        width: 28%;
-    }
-
-    #content > .post > .social > .espacio {
-        display: none;
-    }
-
-    #content > .post > .social > .twitter,
-    #content > .post > .social > .googleplus,
-    #content > .post > .social > .pinterest,
-    #content > .post > .social > .tumblr,
-    #content > .post > .social > .linkedin,
-    #content > .post > .social > .facebook {
-        width: 12%;
-    }
-
-    #github-boxes > .github-box {
-        width: 98%;
-    }
-
-    #behance-boxes > .behance-box {
-        width: 98%;
-    }
-
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .text,
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .text,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
-        display: none;
-    }
-
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .icon,
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .icon,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
-        width: 90%;
-        text-align: center;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-update {
-        display: none;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-download > .text,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
-        width: 90%;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
-        display: none;
-    }
-
-    #sidebar > .ad_sidebar {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .ad_header > .adsbygoogle,
-    .ad_sidebar > .adsbygoogle,
-    .ad_links > .adsbygoogle,
-    .ad_frontpage > .adsbygoogle {
-        width: 320px !important;
-    }
-
-    .ad_post {
-        width: 100%;
-    }
-
-    .ad_post > .adsbygoogle {
-        width: 336px !important;
-    }
-
-    #content > .meta > #relatedposts > li {
-        width: 49%;
-    }
-}
-
-/*
-HTC Evo / Touch HD / Desire HD / Desire: 540, 1.5
-Motorola Droid 3 / Droid 4 / Droid Razr / Atrix 4G / Atrix 2: 540, 1
-*/
-@media screen and (min-width: 540px) and (max-width: 639px) {
-
-    #container > header {
-        background-color: transparent;
-    }
-
-    #container > header > #logo {
-        width: 20%;
-        background-color: rgb(239, 235, 224);
-        border-radius: 0 0 0 5px;
-    }
-
-    #container > header > #heading {
-        width: 80%;
-        background-color: rgb(239, 235, 224);
-        border-radius: 0 0 5px 0;
-    }
-
-    #container > header > nav {
-        width: 100%;
-        margin: 5px 0;
-        background-color: rgb(239, 235, 224);
-        border-radius: 5px;
-    }
-
-    #container > header > nav > ul > li.twitter,
-    #container > header > nav > ul > li.facebook,
-    #container > header > nav > ul > li.instagram,
-    #container > header > nav > ul > li.googleplus,
-    #container > header > nav > ul > li.rss,
-    #container > header > nav > ul > li.search {
-        width: 18%;
-        margin: 0 1%;
-    }
-
-    #container > #banner {
-        display: none;
-    }
-
-    #sidebar {
-        width: 100%;
-    }
-
-    #sidebar > ul {
-        display: none;
-    }
-
-    #content {
-        width: 100%;
-    }
-
-    #content > .preview > .data {
-        width: 100%;
-        margin: 0;
-    }
-
-    #content > .preview > .data > .header > h2 {
-        font-size: 1.8em;
-    }
-
-    #content > .preview > .data > .description {
-        font-size: 1em;
-    }
-
-    #content > .preview > .data:hover > .bg {
-        height: 220px;
-    }
-
-    #content > .preview > .social {
-        width: 100%;
-        height: auto;
-        margin: 0 0 30px 0;
-    }
-
-    #content > .preview > .social > .espacio {
-        width: 5%;
-        height: 70px;
-    }
-
-    #content > .preview > .social > .compartidos,
-    #content > .preview > .social > .comentarios {
-        width: 25%;
-    }
-
-    #content > .preview > .social > .twitter,
-    #content > .preview > .social > .googleplus,
-    #content > .preview > .social > .facebook {
-        width: 15%;
-    }
-
-    #content > .preview > .social > .twitter > a,
-    #content > .preview > .social > .googleplus > a,
-    #content > .preview > .social > .facebook > a {
-        height: 50px;
-    }
-
-    #content > .preview > .social > .twitter > a > .sprite,
-    #content > .preview > .social > .googleplus > a > .sprite,
-    #content > .preview > .social > .facebook > a > .sprite {
-        margin: 10px auto;
-    }
-
-    #container > footer > .license,
-    #container > footer > .info {
-        width: 90%;
-        margin: 10px 5%;
-    }
-
-    #container > footer > .license > .icon,
-    #container > footer > .info > .icon {
-        width: 38%;
-        margin: 0 0 20px 0;
-    }
-
-    #container > footer > .license > .text,
-    #container > footer > .info > .text {
-        width: 60%;
-        font-size: 0.8em;
-    }
-
-    #container > footer > nav {
-        width: 90%;
-        margin: 0 5% 40px 5%;
-    }
-
-    #container > footer > nav > ul > li {
-        width: 48%;
-        margin: 5px 1%;
-    }
-
-    #container > footer > nav > ul > li > a {
-        border-radius: 5px
-    }
-
-    #content > .post > .header > h2 {
-        font-size: 2.2em;
-    }
-
-    #content > .post > .social > .compartidos {
-        width: 20%;
-    }
-
-    #content > .post > .social > .comentarios {
-        width: 20%;
-    }
-
-    #content > .post > .social > .espacio {
-        display: none;
-    }
-
-    #content > .post > .social > .twitter,
-    #content > .post > .social > .googleplus,
-    #content > .post > .social > .pinterest,
-    #content > .post > .social > .tumblr,
-    #content > .post > .social > .linkedin,
-    #content > .post > .social > .facebook {
-        width: 10%;
-    }
-
-    #github-boxes > .github-box {
-        width: 98%;
-    }
-
-    #behance-boxes > .behance-box {
-        width: 48%;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
-        display: none;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
-        width: 90%;
-        text-align: center;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-download > .text,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
-        width: 90%;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
-        display: none;
-    }
-
-    #sidebar > .ad_sidebar {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .ad_header > .adsbygoogle,
-    .ad_sidebar > .adsbygoogle,
-    .ad_frontpage > .adsbygoogle {
-        width: 468px !important;
-    }
-
-    .ad_post > .adsbygoogle {
-        width: 200px !important;
-    }
-
-    #content > .meta > #relatedposts > li {
-        width: 49%;
-    }
-}
-
-/*
-Apple iPhone 4/5: 640, 2
-*/
-@media screen and (min-width: 640px) and (max-width: 719px) {
-
-    #container > header > #logo {
-        width: 15%;
-    }
-
-    #container > header > #heading {
-        display: none;
-    }
-
-    #container > header > nav {
-        width: 85%;
-    }
-
-    #container > header > nav > ul > li.twitter,
-    #container > header > nav > ul > li.facebook,
-    #container > header > nav > ul > li.instagram,
-    #container > header > nav > ul > li.googleplus,
-    #container > header > nav > ul > li.rss,
-    #container > header > nav > ul > li.search {
-        width: 7%;
-    }
-
-    #sidebar {
-        width: 100%;
-    }
-
-    #sidebar > ul {
-        display: none;
-    }
-
-    #content {
-        width: 100%;
-    }
-
-    #container > footer > .license,
-    #container > footer > .info {
-        width: 90%;
-        margin: 10px 5%;
-    }
-
-    #container > footer > .license > .icon,
-    #container > footer > .info > .icon {
-        width: 28%;
-        margin: 0 0 20px 0;
-    }
-
-    #container > footer > .license > .text,
-    #container > footer > .info > .text {
-        width: 70%;
-        font-size: 0.8em;
-    }
-
-    #container > footer > nav {
-        width: 90%;
-        margin: 0 5% 40px 5%;
-    }
-
-    #container > footer > nav > ul > li {
-        width: 48%;
-        margin: 5px 1%;
-    }
-
-    #container > footer > nav > ul > li > a {
-        border-radius: 5px
-    }
-
-    #content > .post > .header > h2 {
-        font-size: 2.2em;
-    }
-
-    #content > .post > .social > .compartidos,
-    #content > .post > .social > .comentarios {
-        width: 20%;
-    }
-
-    #content > .post > .social > .espacio {
-        display: none;
-    }
-
-    #content > .post > .social > .twitter,
-    #content > .post > .social > .googleplus,
-    #content > .post > .social > .pinterest,
-    #content > .post > .social > .tumblr,
-    #content > .post > .social > .linkedin,
-    #content > .post > .social > .facebook {
-        width: 10%;
-    }
-
-    #github-boxes > .github-box {
-        width: 98%;
-    }
-
-    #behance-boxes > .behance-box {
-        width: 48%;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
-        display: none;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
-        width: 90%;
-        text-align: center;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-download > .project-explore > .text {
-        width: 90%;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-download > .project-explore > .icon {
-        display: none;
-    }
-
-    #sidebar > .ad_sidebar {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .ad_header > .adsbygoogle,
-    .ad_sidebar > .adsbygoogle,
-    .ad_frontpage > .adsbygoogle {
-        width: 468px !important;
-    }
-
-    .ad_post > .adsbygoogle {
-        width: 250px !important;
-    }
-
-    #content > .meta > #relatedposts > li {
-        width: 49%;
-    }
-}
-
-/*
-Motorola Droid Razr HD: 720, 1
-LG Optimus LTE / Optimus 4X ND: 720, 1.7
-BlackBerry Z30: 720, 2
-HTC One X / EVO LTE: 720, 2
-Samsung Galaxy Note II: 720, 2
-Samsung Galaxy S III / Galaxy Nexus: 720, 2
-Sony Xperia / Ion: 720, 2
-*/
-@media screen and (min-width: 720px) and (max-width: 767px) {
-
-    #container > header > #logo {
-        width: 15%;
-    }
-
-    #container > header > #heading {
-        display: none;
-    }
-
-    #container > header > nav {
-        width: 85%;
-    }
-
-    #sidebar {
-        width: 100%;
-    }
-
-    #sidebar > ul {
-        display: none;
-    }
-
-    #content {
-        width: 100%;
-    }
-
-    #container > footer > .license,
-    #container > footer > .info {
-        width: 90%;
-        margin: 10px 5%;
-    }
-
-    #container > footer > .license > .icon,
-    #container > footer > .info > .icon {
-        width: 28%;
-        margin: 0 0 20px 0;
-    }
-
-    #container > footer > .license > .text,
-    #container > footer > .info > .text {
-        width: 70%;
-        font-size: 0.8em;
-    }
-
-    #container > footer > nav {
-        width: 90%;
-        margin: 0 5% 40px 5%;
-    }
-
-    #container > footer > nav > ul > li {
-        width: 48%;
-        margin: 5px 1%;
-    }
-
-    #container > footer > nav > ul > li > a {
-        border-radius: 5px
-    }
-
-    #content > .post > .header > h2 {
-        font-size: 2.2em;
-    }
-
-    #content > .post > .social > .compartidos,
-    #content > .post > .social > .comentarios {
-        width: 20%;
-    }
-
-    #content > .post > .social > .espacio {
-        display: none;
-    }
-
-    #content > .post > .social > .twitter,
-    #content > .post > .social > .googleplus,
-    #content > .post > .social > .pinterest,
-    #content > .post > .social > .tumblr,
-    #content > .post > .social > .linkedin,
-    #content > .post > .social > .facebook {
-        width: 10%;
-    }
-
-    #github-boxes > .github-box {
-        width: 98%;
-    }
-
-    #behance-boxes > .behance-box {
-        width: 48%;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
-        display: none;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
-        width: 90%;
-        text-align: center;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-download > .project-explore > .text {
-        width: 90%;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-download > .project-explore > .icon {
-        display: none;
-    }
-
-    #sidebar > .ad_sidebar {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .ad_header > .adsbygoogle,
-    .ad_sidebar > .adsbygoogle,
-    .ad_frontpage > .adsbygoogle {
-        width: 468px !important;
-    }
-
-    .ad_post > .adsbygoogle {
-        width: 300px !important;
-    }
-
-    #content > .meta > #relatedposts > li {
-        width: 49%;
-    }
-}
-
-/*
-BlackBerry Z10: 768, 2
-Google Nexus 4: 768, 2
-LG Optimus G: 768, 2
-*/
-@media screen and (min-width: 768px) and (max-width: 799px) {
-
-    #container > header > #logo {
-        width: 15%;
-    }
-
-    #container > header > #heading {
-        display: none;
-    }
-
-    #container > header > nav {
-        width: 85%;
-    }
-
-    #sidebar {
-        width: 100%;
-    }
-
-    #sidebar > ul {
-        display: none;
-    }
-
-    #content {
-        width: 100%;
-    }
-
-    #container > footer > .license,
-    #container > footer > .info {
-        width: 90%;
-        margin: 10px 5%;
-    }
-
-    #container > footer > .license > .icon,
-    #container > footer > .info > .icon {
-        width: 28%;
-        margin: 0 0 20px 0;
-    }
-
-    #container > footer > .license > .text,
-    #container > footer > .info > .text {
-        width: 70%;
-        font-size: 0.8em;
-    }
-
-    #container > footer > nav {
-        width: 90%;
-        margin: 0 5% 40px 5%;
-    }
-
-    #container > footer > nav > ul > li {
-        width: 48%;
-        margin: 5px 1%;
-    }
-
-    #container > footer > nav > ul > li > a {
-        border-radius: 5px
-    }
-
-    #content > .post > .header > h2 {
-        font-size: 2.2em;
-    }
-
-    #content > .post > .social > .compartidos,
-    #content > .post > .social > .comentarios {
-        width: 20%;
-    }
-
-    #content > .post > .social > .espacio {
-        display: none;
-    }
-
-    #content > .post > .social > .twitter,
-    #content > .post > .social > .googleplus,
-    #content > .post > .social > .pinterest,
-    #content > .post > .social > .tumblr,
-    #content > .post > .social > .linkedin,
-    #content > .post > .social > .facebook {
-        width: 10%;
-    }
-
-    #github-boxes > .github-box {
-        width: 98%;
-    }
-
-    #behance-boxes > .behance-box {
-        width: 48%;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
-        display: none;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
-        width: 90%;
-        text-align: center;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-download > .project-explore > .text {
-        width: 90%;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-download > .project-explore > .icon {
-        display: none;
-    }
-
-    #sidebar > .ad_sidebar {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .ad_header > .adsbygoogle,
-    .ad_sidebar > .adsbygoogle,
-    .ad_frontpage > .adsbygoogle {
-        width: 468px !important;
-    }
-
-    .ad_post > .adsbygoogle {
-        width: 336px !important;
-    }
-
-    #content > .meta > #relatedposts > li {
-        width: 49%;
-    }
-}
-
-/*
-Samsung Galaxy Note: 800, 2
-*/
-@media screen and (min-width: 800px) and (max-width: 1023px) {
-
-    #container > header > #logo {
-        width: 12%;
-    }
-
-    #container > header > #heading {
-        width: 16%;
-    }
-
-    #container > header > #heading > .title {
-        font-size: 1.8em;
-        line-height: 1.2em;
-    }
-
-    #container > header > #heading > .subtitle,
-    #container > header > #heading > .author {
-        display: none;
-    }
-
-    #container > header > nav {
-        width: 72%;
-    }
-
-    #container > header > nav > ul > li.portafolio {
-        width: 34%;
-    }
-
-    #container > header > nav > ul > li.acerca {
-        width: 24%;
-    }
-
-    #container > header > nav > ul > li.twitter,
-    #container > header > nav > ul > li.facebook,
-    #container > header > nav > ul > li.googleplus,
-    #container > header > nav > ul > li.rss,
-    #container > header > nav > ul > li.search {
-        width: 7%;
-    }
-
-    #sidebar {
-        width: 100%;
-    }
-
-    #sidebar > ul {
-        display: none;
-    }
-
-    #content {
-        width: 100%;
-    }
-
-    #container > footer > .license,
-    #container > footer > .info {
-        width: 90%;
-        margin: 10px 5%;
-    }
-
-    #container > footer > .license > .icon,
-    #container > footer > .info > .icon {
-        width: 28%;
-        margin: 0 0 20px 0;
-    }
-
-    #container > footer > .license > .text,
-    #container > footer > .info > .text {
-        width: 70%;
-        font-size: 0.8em;
-    }
-
-    #container > footer > nav {
-        width: 90%;
-        margin: 0 5% 40px 5%;
-    }
-
-    #container > footer > nav > ul > li {
-        width: 48%;
-        margin: 5px 1%;
-    }
-
-    #container > footer > nav > ul > li > a {
-        border-radius: 5px
-    }
-
-    #behance-boxes > .behance-box {
-        width: 48%;
-    }
-
-    #github-boxes > .github-box > .github-box-header > h3 > a {
-        font-size: .65em;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text,
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .text,
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .text {
-        display: none;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
-    #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon,
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .icon,
-    #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .icon {
-        width: 90%;
-        text-align: center;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-update {
-        display: none;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-download > .project-explore > .text,
-    #github-boxes > .github-box > .github-box-download > .repo-download > .text,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
-        width: 90%;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-download > .project-explore > .icon,
-    #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
-        display: none;
-    }
-
-    #sidebar > .ad_sidebar {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .ad_header > .adsbygoogle,
-    .ad_sidebar > .adsbygoogle,
-    .ad_frontpage > .adsbygoogle {
-        width: 468px !important;
-    }
-
-    .ad_post > .adsbygoogle {
-        width: 336px !important;
-    }
-
-}
-
-/*
-Amazon Kindle Fire: 1024, 1
-Apple iPad 1/2/Mini: 1024, 1
-BlackBerry PlayBook: 1024, 1
-Samsung Galaxy Tab: 1024, 1
-Samsung Galaxy Note 3: 1080, 2
-Google Nexus 5: 1080, 3
-Samsung Galaxy S4: 1080, 3
-Sony Xperia Z, Z1: 1080, 3
-*/
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-
-    #container > header > #logo {
-        width: 9%;
-    }
-
-    #container > header > #heading {
-        width: 35%;
-    }
-
-/*    #container > header > #heading > .subtitle,
-    #container > header > #heading > .author {
-        font-size: 0.8em;
-        line-height: 1.5em;
-    }*/
-
-    #container > header > nav {
-        width: 56%;
-    }
-
-    #container > header > nav > ul > li.portafolio {
-        width: 34%;
-    }
-
-    #container > header > nav > ul > li.acerca {
-        width: 24%;
-    }
-
-    #container > header > nav > ul > li.twitter,
-    #container > header > nav > ul > li.facebook,
-    #container > header > nav > ul > li.googleplus,
-    #container > header > nav > ul > li.rss,
-    #container > header > nav > ul > li.search {
-        width: 7%;
-    }
-
-    #container > footer > .license > .icon,
-    #container > footer > .info > .icon {
-        width: 25%;
-        margin: 0 0 20px 0;
-    }
-
-    #container > footer > .license > .text,
-    #container > footer > .info > .text {
-        width: 73%;
-        font-size: 0.8em;
-    }
-
-    #github-boxes > .github-box > .github-box-download > .repo-update {
-        display: none;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-download > .project-explore > .text,
-    #github-boxes > .github-box > .github-box-download > .repo-download > .text,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
-        width: 90%;
-    }
-
-    #behance-boxes > .behance-box > .behance-box-download > .project-explore > .icon,
-    #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
-    #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
-        display: none;
-    }
-
-    .ad_header > .adsbygoogle {
-        width: 728px !important;
-    }
-
-    .ad_frontpage > .adsbygoogle {
-        width: 468px !important;
-    }
-
-    .ad_sidebar > .adsbygoogle {
-        width: 200px !important;
-    }
-
-    .ad_post > .adsbygoogle {
-        width: 300px !important;
-    }
-
-}
-
-/*
-Motorola Xoom / Xyboard: 1280, 1
-Samsung Galaxy Tab 7.7 / 8.9 / 10.1: 1280, 1
-Google Nexus 7: 1280, 1.325
-Amazon Kindle Fire HD 7": 1280, 1.5
-*/
-@media screen and (min-width: 1280px) and (max-width: 1365px) {
-
-    #container > header > #heading {
-        width: 43%;
-    }
-
-    #container > header > nav {
-        width: 50%;
-    }
-
-    .ad_header > .adsbygoogle {
-        width: 970px !important;
-    }
-
-    .ad_frontpage > .adsbygoogle {
-        width: 728px !important;
-    }
-
-    .ad_sidebar > .adsbygoogle {
-        width: 250px !important;
-    }
-
-    .ad_post > .adsbygoogle {
-        width: 336px !important;
-    }
-
-}
-
-
-@media screen and (min-width: 1366px) and (max-width: 1599px) {
-
-    .ad_header > .adsbygoogle {
-        width: 970px !important;
-    }
-
-    .ad_frontpage > .adsbygoogle {
-        width: 728px !important;
-    }
-
-    .ad_sidebar > .adsbygoogle {
-        width: 250px !important;
-    }
-
-    .ad_post > .adsbygoogle {
-        width: 336px !important;
-    }
-
-}
-
-
-@media screen and (min-width: 1600px) and (max-width: 1919px) {
-
-    .ad_links {
-        width: 48%;
-        margin: 0 1%;
-    }
-
-    .ad_header > .adsbygoogle {
-        width: 970px !important;
-    }
-
-    .ad_frontpage > .adsbygoogle {
-        width: 728px !important;
-    }
-
-    .ad_sidebar > .adsbygoogle {
-        width: 336px !important;
-    }
-
-    .ad_post > .adsbygoogle {
-        width: 336px !important;
-    }
-
-}
-
-/*
-Amazon Kindle Fire HD 7": 1920, 1.5
-Google Nexus 7 2: 1920, 2
-*/
-/*@media screen and (min-width: 1920px) and (max-width: 2047px) {
-
-}*/
-
-/*
-Apple iPad 3/4: 2048, 2
-*/
-/*@media screen and (min-width: 2048px) and (max-width: 2559px) {
-
-}*/
-
-/*
-Google Nexus 10: 2560, 2
-*/
-/*@media screen and (min-width: 2560px) {
-
-}
-*/
+// /*
+// Apple iPad 3GS: 320, 1
+// LG Optimus One: 320, 1.5
+// */
+
+// @media screen and (max-width: 319px) {
+
+//     #container > header {
+//         background-color: transparent;
+//     }
+
+//     #container > header > #logo {
+//         width: 30%;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 0 0 0 5px;
+//     }
+
+//     #container > header > #heading {
+//         width: 70%;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 0 0 5px 0;
+//     }
+
+//     #container > header > #heading > .title {
+//         width: 70%;
+//         font-size: 2.3em;
+//     }
+
+//     #container > header > nav {
+//         width: 100%;
+//         margin: 5px 0;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 5px;
+//     }
+
+//     #container > header > nav > ul > li.twitter,
+//     #container > header > nav > ul > li.facebook,
+//     #container > header > nav > ul > li.instagram,
+//     #container > header > nav > ul > li.googleplus,
+//     #container > header > nav > ul > li.rss,
+//     #container > header > nav > ul > li.search {
+//         width: 18%;
+//         margin: 0 1%;
+//     }
+
+//     #container > #banner {
+//         display: none;
+//     }
+
+//     #sidebar {
+//         width: 100%;
+//     }
+
+//     #sidebar > ul {
+//         display: none;
+//     }
+
+//     #content {
+//         width: 100%;
+//     }
+
+//     #content > .preview > .data {
+//         width: 100%;
+//         margin: 0;
+//     }
+
+//     #content > .preview > .data > .header > h2 {
+//         font-size: 1.5em;
+//     }
+
+//     #content > .preview > .data > .description {
+//         font-size: 1em;
+//     }
+
+//     #content > .preview > .data:hover > .bg {
+//         height: 220px;
+//     }
+
+//     #content > .preview > .social {
+//         width: 100%;
+//         height: auto;
+//         margin: 0 0 30px 0;
+//     }
+
+//     #content > .preview > .social > .espacio {
+//         display: none;
+//     }
+
+//     #content > .preview > .social > .compartidos {
+//         display: none;
+//     }
+
+//     #content > .preview > .social > .comentarios {
+//         width: 40%;
+//     }
+
+//     #content > .preview > .social > .twitter,
+//     #content > .preview > .social > .googleplus,
+//     #content > .preview > .social > .facebook {
+//         width: 20%;
+//     }
+
+//     #content > .preview > .social > .twitter > a,
+//     #content > .preview > .social > .googleplus > a,
+//     #content > .preview > .social > .facebook > a {
+//         height: 50px;
+//     }
+
+//     #content > .preview > .social > .twitter > a > .sprite,
+//     #content > .preview > .social > .googleplus > a > .sprite,
+//     #content > .preview > .social > .facebook > a > .sprite {
+//         margin: 10px auto;
+//     }
+
+//     // #container > footer > nav {
+//     //     width: 90%;
+//     //     margin: 0 5% 40px 5%;
+//     // }
+
+//     // #container > footer > .license,
+//     // #container > footer > .info {
+//     //     width: 90%;
+//     //     margin: 10px 5%;
+//     // }
+
+//     // #container > footer > .license > .icon,
+//     // #container > footer > .info > .icon {
+//     //     width: 100%;
+//     //     margin: 0 0 20px 0;
+//     // }
+
+//     // #container > footer > .license > .text,
+//     // #container > footer > .info > .text {
+//     //     width: 98%;
+//     //     font-size: 0.8em;
+//     // }
+
+//     // #container > footer > nav > ul > li {
+//     //     width: 98%;
+//     //     margin: 5px 1%;
+//     // }
+
+//     // #container > footer > nav > ul > li > a {
+//     //     border-radius: 5px
+//     // }
+
+//     #content > .post > .header > h2 {
+//         font-size: 2em;
+//     }
+
+//     #content > .post > .social > .compartidos {
+//         display: none;
+//     }
+
+//     #content > .post > .social > .comentarios {
+//         width: 28%;
+//     }
+
+//     #content > .post > .social > .espacio {
+//         display: none;
+//     }
+
+//     #content > .post > .social > .twitter,
+//     #content > .post > .social > .googleplus,
+//     #content > .post > .social > .pinterest,
+//     #content > .post > .social > .tumblr,
+//     #content > .post > .social > .linkedin,
+//     #content > .post > .social > .facebook {
+//         width: 12%;
+//     }
+
+//     #github-boxes > .github-box {
+//         width: 98%;
+//     }
+
+//     #behance-boxes > .behance-box {
+//         width: 98%;
+//     }
+
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .text,
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .text,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
+//         display: none;
+//     }
+
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .icon,
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .icon,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
+//         width: 90%;
+//         text-align: center;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-update {
+//         display: none;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-download,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore {
+//         width: 48%;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .text,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
+//         width: 90%;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
+//         display: none;
+//     }
+
+//     #sidebar,
+//     .ad_post,
+//     .ad_header,
+//     .ad_sidebar,
+//     .ad_links,
+//     .ad_frontpage {
+//         display: none;
+//     }
+
+//     #content > .meta > #relatedposts > li {
+//         width: 99%;
+//     }
+// }
+
+// /*
+// Nokia C5, C6, C7, N97, N8, X7: 360, 1
+// */
+// @media screen and (min-width: 320px) and (max-width: 479px) {
+
+//     #container > header {
+//         background-color: transparent;
+//     }
+
+//     #container > header > #logo {
+//         width: 30%;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 0 0 0 5px;
+//     }
+
+//     #container > header > #heading {
+//         width: 70%;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 0 0 5px 0;
+//     }
+
+//     #container > header > #heading > .title {
+//         width: 70%;
+//         font-size: 2.3em;
+//     }
+
+//     #container > header > nav {
+//         width: 100%;
+//         margin: 5px 0;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 5px;
+//     }
+
+//     #container > header > nav > ul > li.twitter,
+//     #container > header > nav > ul > li.facebook,
+//     #container > header > nav > ul > li.instagram,
+//     #container > header > nav > ul > li.googleplus,
+//     #container > header > nav > ul > li.rss,
+//     #container > header > nav > ul > li.search {
+//         width: 18%;
+//         margin: 0 1%;
+//     }
+
+//     #container > #banner {
+//         display: none;
+//     }
+
+//     #sidebar {
+//         width: 100%;
+//     }
+
+//     #sidebar > ul {
+//         display: none;
+//     }
+
+//     #content {
+//         width: 100%;
+//     }
+
+//     #content > .preview > .data {
+//         width: 100%;
+//         margin: 0;
+//     }
+
+//     #content > .preview > .data > .header > h2 {
+//         font-size: 1.5em;
+//     }
+
+//     #content > .preview > .data > .description {
+//         font-size: 1em;
+//     }
+
+//     #content > .preview > .data:hover > .bg {
+//         height: 220px;
+//     }
+
+//     #content > .preview > .social {
+//         width: 100%;
+//         height: auto;
+//         margin: 0 0 30px 0;
+//     }
+
+//     #content > .preview > .social > .espacio {
+//         display: none;
+//     }
+
+//     #content > .preview > .social > .compartidos {
+//         display: none;
+//     }
+
+//     #content > .preview > .social > .comentarios {
+//         width: 40%;
+//     }
+
+//     #content > .preview > .social > .twitter,
+//     #content > .preview > .social > .googleplus,
+//     #content > .preview > .social > .facebook {
+//         width: 20%;
+//     }
+
+//     #content > .preview > .social > .twitter > a,
+//     #content > .preview > .social > .googleplus > a,
+//     #content > .preview > .social > .facebook > a {
+//         height: 50px;
+//     }
+
+//     #content > .preview > .social > .twitter > a > .sprite,
+//     #content > .preview > .social > .googleplus > a > .sprite,
+//     #content > .preview > .social > .facebook > a > .sprite {
+//         margin: 10px auto;
+//     }
+
+//     #container > footer > nav {
+//         width: 90%;
+//         margin: 0 5% 40px 5%;
+//     }
+
+//     #container > footer > .license,
+//     #container > footer > .info {
+//         width: 90%;
+//         margin: 10px 5%;
+//     }
+
+//     #container > footer > .license > .icon,
+//     #container > footer > .info > .icon {
+//         width: 100%;
+//         margin: 0 0 20px 0;
+//     }
+
+//     #container > footer > .license > .text,
+//     #container > footer > .info > .text {
+//         width: 98%;
+//         font-size: 0.8em;
+//     }
+
+//     #container > footer > nav > ul > li {
+//         width: 98%;
+//         margin: 5px 1%;
+//     }
+
+//     #container > footer > nav > ul > li > a {
+//         border-radius: 5px
+//     }
+
+//     #content > .post > .header > h2 {
+//         font-size: 2em;
+//     }
+
+//     #content > .post > .social > .compartidos {
+//         display: none;
+//     }
+
+//     #content > .post > .social > .comentarios {
+//         width: 28%;
+//     }
+
+//     #content > .post > .social > .espacio {
+//         display: none;
+//     }
+
+//     #content > .post > .social > .twitter,
+//     #content > .post > .social > .googleplus,
+//     #content > .post > .social > .pinterest,
+//     #content > .post > .social > .tumblr,
+//     #content > .post > .social > .linkedin,
+//     #content > .post > .social > .facebook {
+//         width: 12%;
+//     }
+
+//     #github-boxes > .github-box {
+//         width: 98%;
+//     }
+
+//     #behance-boxes > .behance-box {
+//         width: 98%;
+//     }
+
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .text,
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .text,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
+//         display: none;
+//     }
+
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .icon,
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .icon,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
+//         width: 90%;
+//         text-align: center;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-update {
+//         display: none;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-download,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore {
+//         width: 48%;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .text,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
+//         width: 90%;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
+//         display: none;
+//     }
+
+//     #sidebar > .ad_sidebar {
+//         width: 100%;
+//         margin: 10px 0;
+//     }
+
+//     .ad_header > .adsbygoogle,
+//     .ad_sidebar > .adsbygoogle,
+//     .ad_links > .adsbygoogle,
+//     .ad_frontpage > .adsbygoogle {
+//         width: 234px !important;
+//     }
+
+//     .ad_post {
+//         width: 100%;
+//     }
+
+//     .ad_post > .adsbygoogle {
+//         width: 250px !important;
+//     }
+
+//     #content > .meta > #relatedposts > li {
+//         width: 49%;
+//     }
+// }
+
+// /*
+// Google Nexus S: 480, 1.5
+// HTC Sensation / Evo 3D: 480, 1.5
+// LG Optimus 2X / Optimus 3D / Optimus Black: 480, 1.5
+// Motorola Defy, Droid, Droid X, Milestone: 480, 1.5
+// Nokia Lumia 7X0 / Lumia 8XX / Lumia 900 / N800 / N810 / N900: 480, 1.5
+// Samsung Galaxy S / S II / W: 480, 1.5
+// Sony Xperia Sola / U: 480, 1
+// */
+// @media screen and (min-width: 480px) and (max-width: 539px) {
+
+//     #container > header {
+//         background-color: transparent;
+//     }
+
+//     #container > header > #logo {
+//         width: 20%;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 0 0 0 5px;
+//     }
+
+//     #container > header > #heading {
+//         width: 80%;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 0 0 5px 0;
+//     }
+
+//     #container > header > #heading > .title {
+//         font-size: 2.3em;
+//     }
+
+//     #container > header > nav {
+//         width: 100%;
+//         margin: 5px 0;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 5px;
+//     }
+
+//     #container > header > nav > ul > li.twitter,
+//     #container > header > nav > ul > li.facebook,
+//     #container > header > nav > ul > li.instagram,
+//     #container > header > nav > ul > li.googleplus,
+//     #container > header > nav > ul > li.rss,
+//     #container > header > nav > ul > li.search {
+//         width: 18%;
+//         margin: 0 1%;
+//     }
+
+//     #container > #banner {
+//         display: none;
+//     }
+
+//     #sidebar {
+//         width: 100%;
+//     }
+
+//     #sidebar > ul {
+//         display: none;
+//     }
+
+//     #content {
+//         width: 100%;
+//     }
+
+//     #content > .preview > .data {
+//         width: 100%;
+//         margin: 0;
+//     }
+
+//     #content > .preview > .data > .header > h2 {
+//         font-size: 1.5em;
+//     }
+
+//     #content > .preview > .data > .description {
+//         font-size: 1em;
+//     }
+
+//     #content > .preview > .data:hover > .bg {
+//         height: 220px;
+//     }
+
+//     #content > .preview > .social {
+//         width: 100%;
+//         height: auto;
+//         margin: 0 0 30px 0;
+//     }
+
+//     #content > .preview > .social > .espacio,
+//     #content > .preview > .social > .compartidos {
+//         display: none;
+//     }
+
+//     #content > .preview > .social > .comentarios {
+//         width: 40%;
+//     }
+
+//     #content > .preview > .social > .twitter,
+//     #content > .preview > .social > .googleplus,
+//     #content > .preview > .social > .facebook {
+//         width: 20%;
+//     }
+
+//     #content > .preview > .social > .twitter > a,
+//     #content > .preview > .social > .googleplus > a,
+//     #content > .preview > .social > .facebook > a {
+//         height: 50px;
+//     }
+
+//     #content > .preview > .social > .twitter > a > .sprite,
+//     #content > .preview > .social > .googleplus > a > .sprite,
+//     #content > .preview > .social > .facebook > a > .sprite {
+//         margin: 10px auto;
+//     }
+
+//     #container > footer > .license,
+//     #container > footer > .info {
+//         width: 90%;
+//         margin: 10px 5%;
+//     }
+
+//     #container > footer > .license > .icon,
+//     #container > footer > .info > .icon {
+//         width: 38%;
+//         margin: 0 0 20px 0;
+//     }
+
+//     #container > footer > .license > .text,
+//     #container > footer > .info > .text {
+//         width: 60%;
+//         font-size: 0.8em;
+//     }
+
+//     #container > footer > nav {
+//         width: 90%;
+//         margin: 0 5% 40px 5%;
+//     }
+
+//     #container > footer > nav > ul > li {
+//         width: 48%;
+//         margin: 5px 1%;
+//     }
+
+//     #container > footer > nav > ul > li > a {
+//         border-radius: 5px
+//     }
+
+//     #content > .post > .header > h2 {
+//         font-size: 2em;
+//     }
+
+//     #content > .post > .social > .compartidos {
+//         display: none;
+//     }
+
+//     #content > .post > .social > .comentarios {
+//         width: 28%;
+//     }
+
+//     #content > .post > .social > .espacio {
+//         display: none;
+//     }
+
+//     #content > .post > .social > .twitter,
+//     #content > .post > .social > .googleplus,
+//     #content > .post > .social > .pinterest,
+//     #content > .post > .social > .tumblr,
+//     #content > .post > .social > .linkedin,
+//     #content > .post > .social > .facebook {
+//         width: 12%;
+//     }
+
+//     #github-boxes > .github-box {
+//         width: 98%;
+//     }
+
+//     #behance-boxes > .behance-box {
+//         width: 98%;
+//     }
+
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .text,
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .text,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
+//         display: none;
+//     }
+
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .icon,
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .icon,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
+//         width: 90%;
+//         text-align: center;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-update {
+//         display: none;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .text,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
+//         width: 90%;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
+//         display: none;
+//     }
+
+//     #sidebar > .ad_sidebar {
+//         width: 100%;
+//         margin: 10px 0;
+//     }
+
+//     .ad_header > .adsbygoogle,
+//     .ad_sidebar > .adsbygoogle,
+//     .ad_links > .adsbygoogle,
+//     .ad_frontpage > .adsbygoogle {
+//         width: 320px !important;
+//     }
+
+//     .ad_post {
+//         width: 100%;
+//     }
+
+//     .ad_post > .adsbygoogle {
+//         width: 336px !important;
+//     }
+
+//     #content > .meta > #relatedposts > li {
+//         width: 49%;
+//     }
+// }
+
+// /*
+// HTC Evo / Touch HD / Desire HD / Desire: 540, 1.5
+// Motorola Droid 3 / Droid 4 / Droid Razr / Atrix 4G / Atrix 2: 540, 1
+// */
+// @media screen and (min-width: 540px) and (max-width: 639px) {
+
+//     #container > header {
+//         background-color: transparent;
+//     }
+
+//     #container > header > #logo {
+//         width: 20%;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 0 0 0 5px;
+//     }
+
+//     #container > header > #heading {
+//         width: 80%;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 0 0 5px 0;
+//     }
+
+//     #container > header > nav {
+//         width: 100%;
+//         margin: 5px 0;
+//         background-color: rgb(239, 235, 224);
+//         border-radius: 5px;
+//     }
+
+//     #container > header > nav > ul > li.twitter,
+//     #container > header > nav > ul > li.facebook,
+//     #container > header > nav > ul > li.instagram,
+//     #container > header > nav > ul > li.googleplus,
+//     #container > header > nav > ul > li.rss,
+//     #container > header > nav > ul > li.search {
+//         width: 18%;
+//         margin: 0 1%;
+//     }
+
+//     #container > #banner {
+//         display: none;
+//     }
+
+//     #sidebar {
+//         width: 100%;
+//     }
+
+//     #sidebar > ul {
+//         display: none;
+//     }
+
+//     #content {
+//         width: 100%;
+//     }
+
+//     #content > .preview > .data {
+//         width: 100%;
+//         margin: 0;
+//     }
+
+//     #content > .preview > .data > .header > h2 {
+//         font-size: 1.8em;
+//     }
+
+//     #content > .preview > .data > .description {
+//         font-size: 1em;
+//     }
+
+//     #content > .preview > .data:hover > .bg {
+//         height: 220px;
+//     }
+
+//     #content > .preview > .social {
+//         width: 100%;
+//         height: auto;
+//         margin: 0 0 30px 0;
+//     }
+
+//     #content > .preview > .social > .espacio {
+//         width: 5%;
+//         height: 70px;
+//     }
+
+//     #content > .preview > .social > .compartidos,
+//     #content > .preview > .social > .comentarios {
+//         width: 25%;
+//     }
+
+//     #content > .preview > .social > .twitter,
+//     #content > .preview > .social > .googleplus,
+//     #content > .preview > .social > .facebook {
+//         width: 15%;
+//     }
+
+//     #content > .preview > .social > .twitter > a,
+//     #content > .preview > .social > .googleplus > a,
+//     #content > .preview > .social > .facebook > a {
+//         height: 50px;
+//     }
+
+//     #content > .preview > .social > .twitter > a > .sprite,
+//     #content > .preview > .social > .googleplus > a > .sprite,
+//     #content > .preview > .social > .facebook > a > .sprite {
+//         margin: 10px auto;
+//     }
+
+//     #container > footer > .license,
+//     #container > footer > .info {
+//         width: 90%;
+//         margin: 10px 5%;
+//     }
+
+//     #container > footer > .license > .icon,
+//     #container > footer > .info > .icon {
+//         width: 38%;
+//         margin: 0 0 20px 0;
+//     }
+
+//     #container > footer > .license > .text,
+//     #container > footer > .info > .text {
+//         width: 60%;
+//         font-size: 0.8em;
+//     }
+
+//     #container > footer > nav {
+//         width: 90%;
+//         margin: 0 5% 40px 5%;
+//     }
+
+//     #container > footer > nav > ul > li {
+//         width: 48%;
+//         margin: 5px 1%;
+//     }
+
+//     #container > footer > nav > ul > li > a {
+//         border-radius: 5px
+//     }
+
+//     #content > .post > .header > h2 {
+//         font-size: 2.2em;
+//     }
+
+//     #content > .post > .social > .compartidos {
+//         width: 20%;
+//     }
+
+//     #content > .post > .social > .comentarios {
+//         width: 20%;
+//     }
+
+//     #content > .post > .social > .espacio {
+//         display: none;
+//     }
+
+//     #content > .post > .social > .twitter,
+//     #content > .post > .social > .googleplus,
+//     #content > .post > .social > .pinterest,
+//     #content > .post > .social > .tumblr,
+//     #content > .post > .social > .linkedin,
+//     #content > .post > .social > .facebook {
+//         width: 10%;
+//     }
+
+//     #github-boxes > .github-box {
+//         width: 98%;
+//     }
+
+//     #behance-boxes > .behance-box {
+//         width: 48%;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
+//         display: none;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
+//         width: 90%;
+//         text-align: center;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .text,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
+//         width: 90%;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
+//         display: none;
+//     }
+
+//     #sidebar > .ad_sidebar {
+//         width: 100%;
+//         margin: 10px 0;
+//     }
+
+//     .ad_header > .adsbygoogle,
+//     .ad_sidebar > .adsbygoogle,
+//     .ad_frontpage > .adsbygoogle {
+//         width: 468px !important;
+//     }
+
+//     .ad_post > .adsbygoogle {
+//         width: 200px !important;
+//     }
+
+//     #content > .meta > #relatedposts > li {
+//         width: 49%;
+//     }
+// }
+
+// /*
+// Apple iPhone 4/5: 640, 2
+// */
+// @media screen and (min-width: 640px) and (max-width: 719px) {
+
+//     #container > header > #logo {
+//         width: 15%;
+//     }
+
+//     #container > header > #heading {
+//         display: none;
+//     }
+
+//     #container > header > nav {
+//         width: 85%;
+//     }
+
+//     #container > header > nav > ul > li.twitter,
+//     #container > header > nav > ul > li.facebook,
+//     #container > header > nav > ul > li.instagram,
+//     #container > header > nav > ul > li.googleplus,
+//     #container > header > nav > ul > li.rss,
+//     #container > header > nav > ul > li.search {
+//         width: 7%;
+//     }
+
+//     #sidebar {
+//         width: 100%;
+//     }
+
+//     #sidebar > ul {
+//         display: none;
+//     }
+
+//     #content {
+//         width: 100%;
+//     }
+
+//     #container > footer > .license,
+//     #container > footer > .info {
+//         width: 90%;
+//         margin: 10px 5%;
+//     }
+
+//     #container > footer > .license > .icon,
+//     #container > footer > .info > .icon {
+//         width: 28%;
+//         margin: 0 0 20px 0;
+//     }
+
+//     #container > footer > .license > .text,
+//     #container > footer > .info > .text {
+//         width: 70%;
+//         font-size: 0.8em;
+//     }
+
+//     #container > footer > nav {
+//         width: 90%;
+//         margin: 0 5% 40px 5%;
+//     }
+
+//     #container > footer > nav > ul > li {
+//         width: 48%;
+//         margin: 5px 1%;
+//     }
+
+//     #container > footer > nav > ul > li > a {
+//         border-radius: 5px
+//     }
+
+//     #content > .post > .header > h2 {
+//         font-size: 2.2em;
+//     }
+
+//     #content > .post > .social > .compartidos,
+//     #content > .post > .social > .comentarios {
+//         width: 20%;
+//     }
+
+//     #content > .post > .social > .espacio {
+//         display: none;
+//     }
+
+//     #content > .post > .social > .twitter,
+//     #content > .post > .social > .googleplus,
+//     #content > .post > .social > .pinterest,
+//     #content > .post > .social > .tumblr,
+//     #content > .post > .social > .linkedin,
+//     #content > .post > .social > .facebook {
+//         width: 10%;
+//     }
+
+//     #github-boxes > .github-box {
+//         width: 98%;
+//     }
+
+//     #behance-boxes > .behance-box {
+//         width: 48%;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
+//         display: none;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
+//         width: 90%;
+//         text-align: center;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-download > .project-explore > .text {
+//         width: 90%;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-download > .project-explore > .icon {
+//         display: none;
+//     }
+
+//     #sidebar > .ad_sidebar {
+//         width: 100%;
+//         margin: 10px 0;
+//     }
+
+//     .ad_header > .adsbygoogle,
+//     .ad_sidebar > .adsbygoogle,
+//     .ad_frontpage > .adsbygoogle {
+//         width: 468px !important;
+//     }
+
+//     .ad_post > .adsbygoogle {
+//         width: 250px !important;
+//     }
+
+//     #content > .meta > #relatedposts > li {
+//         width: 49%;
+//     }
+// }
+
+// /*
+// Motorola Droid Razr HD: 720, 1
+// LG Optimus LTE / Optimus 4X ND: 720, 1.7
+// BlackBerry Z30: 720, 2
+// HTC One X / EVO LTE: 720, 2
+// Samsung Galaxy Note II: 720, 2
+// Samsung Galaxy S III / Galaxy Nexus: 720, 2
+// Sony Xperia / Ion: 720, 2
+// */
+// @media screen and (min-width: 720px) and (max-width: 767px) {
+
+//     #container > header > #logo {
+//         width: 15%;
+//     }
+
+//     #container > header > #heading {
+//         display: none;
+//     }
+
+//     #container > header > nav {
+//         width: 85%;
+//     }
+
+//     #sidebar {
+//         width: 100%;
+//     }
+
+//     #sidebar > ul {
+//         display: none;
+//     }
+
+//     #content {
+//         width: 100%;
+//     }
+
+//     #container > footer > .license,
+//     #container > footer > .info {
+//         width: 90%;
+//         margin: 10px 5%;
+//     }
+
+//     #container > footer > .license > .icon,
+//     #container > footer > .info > .icon {
+//         width: 28%;
+//         margin: 0 0 20px 0;
+//     }
+
+//     #container > footer > .license > .text,
+//     #container > footer > .info > .text {
+//         width: 70%;
+//         font-size: 0.8em;
+//     }
+
+//     #container > footer > nav {
+//         width: 90%;
+//         margin: 0 5% 40px 5%;
+//     }
+
+//     #container > footer > nav > ul > li {
+//         width: 48%;
+//         margin: 5px 1%;
+//     }
+
+//     #container > footer > nav > ul > li > a {
+//         border-radius: 5px
+//     }
+
+//     #content > .post > .header > h2 {
+//         font-size: 2.2em;
+//     }
+
+//     #content > .post > .social > .compartidos,
+//     #content > .post > .social > .comentarios {
+//         width: 20%;
+//     }
+
+//     #content > .post > .social > .espacio {
+//         display: none;
+//     }
+
+//     #content > .post > .social > .twitter,
+//     #content > .post > .social > .googleplus,
+//     #content > .post > .social > .pinterest,
+//     #content > .post > .social > .tumblr,
+//     #content > .post > .social > .linkedin,
+//     #content > .post > .social > .facebook {
+//         width: 10%;
+//     }
+
+//     #github-boxes > .github-box {
+//         width: 98%;
+//     }
+
+//     #behance-boxes > .behance-box {
+//         width: 48%;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
+//         display: none;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
+//         width: 90%;
+//         text-align: center;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-download > .project-explore > .text {
+//         width: 90%;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-download > .project-explore > .icon {
+//         display: none;
+//     }
+
+//     #sidebar > .ad_sidebar {
+//         width: 100%;
+//         margin: 10px 0;
+//     }
+
+//     .ad_header > .adsbygoogle,
+//     .ad_sidebar > .adsbygoogle,
+//     .ad_frontpage > .adsbygoogle {
+//         width: 468px !important;
+//     }
+
+//     .ad_post > .adsbygoogle {
+//         width: 300px !important;
+//     }
+
+//     #content > .meta > #relatedposts > li {
+//         width: 49%;
+//     }
+// }
+
+// /*
+// BlackBerry Z10: 768, 2
+// Google Nexus 4: 768, 2
+// LG Optimus G: 768, 2
+// */
+// @media screen and (min-width: 768px) and (max-width: 799px) {
+
+//     #container > header > #logo {
+//         width: 15%;
+//     }
+
+//     #container > header > #heading {
+//         display: none;
+//     }
+
+//     #container > header > nav {
+//         width: 85%;
+//     }
+
+//     #sidebar {
+//         width: 100%;
+//     }
+
+//     #sidebar > ul {
+//         display: none;
+//     }
+
+//     #content {
+//         width: 100%;
+//     }
+
+//     #container > footer > .license,
+//     #container > footer > .info {
+//         width: 90%;
+//         margin: 10px 5%;
+//     }
+
+//     #container > footer > .license > .icon,
+//     #container > footer > .info > .icon {
+//         width: 28%;
+//         margin: 0 0 20px 0;
+//     }
+
+//     #container > footer > .license > .text,
+//     #container > footer > .info > .text {
+//         width: 70%;
+//         font-size: 0.8em;
+//     }
+
+//     #container > footer > nav {
+//         width: 90%;
+//         margin: 0 5% 40px 5%;
+//     }
+
+//     #container > footer > nav > ul > li {
+//         width: 48%;
+//         margin: 5px 1%;
+//     }
+
+//     #container > footer > nav > ul > li > a {
+//         border-radius: 5px
+//     }
+
+//     #content > .post > .header > h2 {
+//         font-size: 2.2em;
+//     }
+
+//     #content > .post > .social > .compartidos,
+//     #content > .post > .social > .comentarios {
+//         width: 20%;
+//     }
+
+//     #content > .post > .social > .espacio {
+//         display: none;
+//     }
+
+//     #content > .post > .social > .twitter,
+//     #content > .post > .social > .googleplus,
+//     #content > .post > .social > .pinterest,
+//     #content > .post > .social > .tumblr,
+//     #content > .post > .social > .linkedin,
+//     #content > .post > .social > .facebook {
+//         width: 10%;
+//     }
+
+//     #github-boxes > .github-box {
+//         width: 98%;
+//     }
+
+//     #behance-boxes > .behance-box {
+//         width: 48%;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text {
+//         display: none;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon {
+//         width: 90%;
+//         text-align: center;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-download > .project-explore > .text {
+//         width: 90%;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-download > .project-explore > .icon {
+//         display: none;
+//     }
+
+//     #sidebar > .ad_sidebar {
+//         width: 100%;
+//         margin: 10px 0;
+//     }
+
+//     .ad_header > .adsbygoogle,
+//     .ad_sidebar > .adsbygoogle,
+//     .ad_frontpage > .adsbygoogle {
+//         width: 468px !important;
+//     }
+
+//     .ad_post > .adsbygoogle {
+//         width: 336px !important;
+//     }
+
+//     #content > .meta > #relatedposts > li {
+//         width: 49%;
+//     }
+// }
+
+// /*
+// Samsung Galaxy Note: 800, 2
+// */
+// @media screen and (min-width: 800px) and (max-width: 1023px) {
+
+//     #container > header > #logo {
+//         width: 12%;
+//     }
+
+//     #container > header > #heading {
+//         width: 16%;
+//     }
+
+//     #container > header > #heading > .title {
+//         font-size: 1.8em;
+//         line-height: 1.2em;
+//     }
+
+//     #container > header > #heading > .subtitle,
+//     #container > header > #heading > .author {
+//         display: none;
+//     }
+
+//     #container > header > nav {
+//         width: 72%;
+//     }
+
+//     #container > header > nav > ul > li.portafolio {
+//         width: 34%;
+//     }
+
+//     #container > header > nav > ul > li.acerca {
+//         width: 24%;
+//     }
+
+//     #container > header > nav > ul > li.twitter,
+//     #container > header > nav > ul > li.facebook,
+//     #container > header > nav > ul > li.googleplus,
+//     #container > header > nav > ul > li.rss,
+//     #container > header > nav > ul > li.search {
+//         width: 7%;
+//     }
+
+//     #sidebar {
+//         width: 100%;
+//     }
+
+//     #sidebar > ul {
+//         display: none;
+//     }
+
+//     #content {
+//         width: 100%;
+//     }
+
+//     #container > footer > .license,
+//     #container > footer > .info {
+//         width: 90%;
+//         margin: 10px 5%;
+//     }
+
+//     #container > footer > .license > .icon,
+//     #container > footer > .info > .icon {
+//         width: 28%;
+//         margin: 0 0 20px 0;
+//     }
+
+//     #container > footer > .license > .text,
+//     #container > footer > .info > .text {
+//         width: 70%;
+//         font-size: 0.8em;
+//     }
+
+//     #container > footer > nav {
+//         width: 90%;
+//         margin: 0 5% 40px 5%;
+//     }
+
+//     #container > footer > nav > ul > li {
+//         width: 48%;
+//         margin: 5px 1%;
+//     }
+
+//     #container > footer > nav > ul > li > a {
+//         border-radius: 5px
+//     }
+
+//     #behance-boxes > .behance-box {
+//         width: 48%;
+//     }
+
+//     #github-boxes > .github-box > .github-box-header > h3 > a {
+//         font-size: .65em;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .text,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .text,
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .text,
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .text {
+//         display: none;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-appreciations > .icon,
+//     #behance-boxes > .behance-box > .behance-box-header > .behance-stats > .project-views > .icon,
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-stars > .icon,
+//     #github-boxes > .github-box > .github-box-header > .github-stats > .repo-forks > .icon {
+//         width: 90%;
+//         text-align: center;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-update {
+//         display: none;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-download > .project-explore > .text,
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .text,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
+//         width: 90%;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-download > .project-explore > .icon,
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
+//         display: none;
+//     }
+
+//     #sidebar > .ad_sidebar {
+//         width: 100%;
+//         margin: 10px 0;
+//     }
+
+//     .ad_header > .adsbygoogle,
+//     .ad_sidebar > .adsbygoogle,
+//     .ad_frontpage > .adsbygoogle {
+//         width: 468px !important;
+//     }
+
+//     .ad_post > .adsbygoogle {
+//         width: 336px !important;
+//     }
+
+// }
+
+// /*
+// Amazon Kindle Fire: 1024, 1
+// Apple iPad 1/2/Mini: 1024, 1
+// BlackBerry PlayBook: 1024, 1
+// Samsung Galaxy Tab: 1024, 1
+// Samsung Galaxy Note 3: 1080, 2
+// Google Nexus 5: 1080, 3
+// Samsung Galaxy S4: 1080, 3
+// Sony Xperia Z, Z1: 1080, 3
+// */
+// @media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+//     #container > header > #logo {
+//         width: 9%;
+//     }
+
+//     #container > header > #heading {
+//         width: 35%;
+//     }
+
+// /*    #container > header > #heading > .subtitle,
+//     #container > header > #heading > .author {
+//         font-size: 0.8em;
+//         line-height: 1.5em;
+//     }*/
+
+//     #container > header > nav {
+//         width: 56%;
+//     }
+
+//     #container > header > nav > ul > li.portafolio {
+//         width: 34%;
+//     }
+
+//     #container > header > nav > ul > li.acerca {
+//         width: 24%;
+//     }
+
+//     #container > header > nav > ul > li.twitter,
+//     #container > header > nav > ul > li.facebook,
+//     #container > header > nav > ul > li.googleplus,
+//     #container > header > nav > ul > li.rss,
+//     #container > header > nav > ul > li.search {
+//         width: 7%;
+//     }
+
+//     #container > footer > .license > .icon,
+//     #container > footer > .info > .icon {
+//         width: 25%;
+//         margin: 0 0 20px 0;
+//     }
+
+//     #container > footer > .license > .text,
+//     #container > footer > .info > .text {
+//         width: 73%;
+//         font-size: 0.8em;
+//     }
+
+//     #github-boxes > .github-box > .github-box-download > .repo-update {
+//         display: none;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-download > .project-explore > .text,
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .text,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .text {
+//         width: 90%;
+//     }
+
+//     #behance-boxes > .behance-box > .behance-box-download > .project-explore > .icon,
+//     #github-boxes > .github-box > .github-box-download > .repo-download > .icon,
+//     #github-boxes > .github-box > .github-box-download > .repo-explore > .icon {
+//         display: none;
+//     }
+
+//     .ad_header > .adsbygoogle {
+//         width: 728px !important;
+//     }
+
+//     .ad_frontpage > .adsbygoogle {
+//         width: 468px !important;
+//     }
+
+//     .ad_sidebar > .adsbygoogle {
+//         width: 200px !important;
+//     }
+
+//     .ad_post > .adsbygoogle {
+//         width: 300px !important;
+//     }
+
+// }
+
+// /*
+// Motorola Xoom / Xyboard: 1280, 1
+// Samsung Galaxy Tab 7.7 / 8.9 / 10.1: 1280, 1
+// Google Nexus 7: 1280, 1.325
+// Amazon Kindle Fire HD 7": 1280, 1.5
+// */
+// @media screen and (min-width: 1280px) and (max-width: 1365px) {
+
+//     #container > header > #heading {
+//         width: 43%;
+//     }
+
+//     #container > header > nav {
+//         width: 50%;
+//     }
+
+//     .ad_header > .adsbygoogle {
+//         width: 970px !important;
+//     }
+
+//     .ad_frontpage > .adsbygoogle {
+//         width: 728px !important;
+//     }
+
+//     .ad_sidebar > .adsbygoogle {
+//         width: 250px !important;
+//     }
+
+//     .ad_post > .adsbygoogle {
+//         width: 336px !important;
+//     }
+
+// }
+
+
+// @media screen and (min-width: 1366px) and (max-width: 1599px) {
+
+//     .ad_header > .adsbygoogle {
+//         width: 970px !important;
+//     }
+
+//     .ad_frontpage > .adsbygoogle {
+//         width: 728px !important;
+//     }
+
+//     .ad_sidebar > .adsbygoogle {
+//         width: 250px !important;
+//     }
+
+//     .ad_post > .adsbygoogle {
+//         width: 336px !important;
+//     }
+
+// }
+
+
+// @media screen and (min-width: 1600px) and (max-width: 1919px) {
+
+//     .ad_links {
+//         width: 48%;
+//         margin: 0 1%;
+//     }
+
+//     .ad_header > .adsbygoogle {
+//         width: 970px !important;
+//     }
+
+//     .ad_frontpage > .adsbygoogle {
+//         width: 728px !important;
+//     }
+
+//     .ad_sidebar > .adsbygoogle {
+//         width: 336px !important;
+//     }
+
+//     .ad_post > .adsbygoogle {
+//         width: 336px !important;
+//     }
+
+// }
+
+// /*
+// Amazon Kindle Fire HD 7": 1920, 1.5
+// Google Nexus 7 2: 1920, 2
+// */
+// /*@media screen and (min-width: 1920px) and (max-width: 2047px) {
+
+// }*/
+
+// /*
+// Apple iPad 3/4: 2048, 2
+// */
+// /*@media screen and (min-width: 2048px) and (max-width: 2559px) {
+
+// }*/
+
+// /*
+// Google Nexus 10: 2560, 2
+// */
+// /*@media screen and (min-width: 2560px) {
+
+// }
+// */

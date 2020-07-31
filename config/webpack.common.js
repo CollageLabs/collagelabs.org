@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
@@ -24,10 +23,6 @@ module.exports = {
       logo: './icon.svg',
       prefix: 'icons/'
     }),
-    new CopyWebpackPlugin([{
-      from: path.resolve('_images'),
-      to: 'images/'
-    }])
   ],
   module: {
     rules: [
@@ -44,7 +39,9 @@ module.exports = {
         use: [
           {
             loader: "expose-loader",
-            options: "$"
+            options: {
+              exposes: ['$'],
+            },
           }
         ]
       }, {
@@ -55,7 +52,7 @@ module.exports = {
           }, {
             loader: 'css-loader',
             options: {
-              importLoaders: 2
+              importLoaders: 2,
             }
           }, {
             loader: 'postcss-loader',
@@ -69,27 +66,42 @@ module.exports = {
           }
         ]
       }, {
-        test: /\.svg$/,
+        test: /\.(woff|woff2)$/,
         use: [
           {
-            loader: 'svg-sprite-loader'
-          },
-          {
-            loader: 'svg-transform-loader'
-          },
-          {
-            loader: 'svgo-loader'
+            loader: 'url-loader',
           }
         ]
       }, {
         test: /\.(jpe?g|png|gif)$/,
         use: [
-          'file-loader'
+          {
+            loader: 'file-loader',
+          }
         ]
       }, {
-        test: /\.(woff|woff2)$/,
+        test: /\.svg$/,
+        exclude: /sprite/,
         use: [
-          'url-loader'
+          {
+            loader: 'svg-url-loader',
+          }, {
+            loader: 'svg-transform-loader'
+          }, {
+            loader: 'svgo-loader'
+          }
+        ]
+      }, {
+        test: /\.svg$/,
+        include: /sprite/,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+          }, {
+            loader: 'svg-transform-loader'
+          }, {
+            loader: 'svgo-loader'
+          }
         ]
       }
     ]

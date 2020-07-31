@@ -256,6 +256,26 @@ const addSpreadsheetRow = async (clientEmail, privateKey, sheetId, sheetName, em
   }
 }
 
+async function checkRecaptchaState(recaptchaApiSecret, recaptchaState) {
+  try {
+
+    console.log(`[checkRecaptchaState] Validating recaptcha state`);
+    const response = await axios({
+      method: 'POST',
+      url: `https://www.google.com/recaptcha/api/siteverify?response=${recaptchaState}&secret=${recaptchaApiSecret}`
+    });
+    if (response.status != 200) {
+      throw new Error(`There was an error trying to validate captcha.`);
+    }
+    if (response.data.success) {
+      return true;
+    }
+    return false;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
 exports.handler = async (event) => {
   let serverErrorMessage;
   const headers = {
@@ -279,11 +299,13 @@ exports.handler = async (event) => {
     GOOGLE_CLIENT_EMAIL,
     GOOGLE_SPREADSHEET_ID,
     GOOGLE_SPREADSHEET_NAME,
+    RECAPTCHA_API_SECRET
   } = process.env;
   const {
     'contact-email': CONTACT_EMAIL,
     'contact-name': CONTACT_NAME,
-    'contact-message': CONTACT_MESSAGE
+    'contact-message': CONTACT_MESSAGE,
+    'recaptcha-state': RECAPTCHA_STATE
   } = querystring.parse(event.body);
 
   if (event.headers.host == 'localhost:9000') {
@@ -291,8 +313,8 @@ exports.handler = async (event) => {
     headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept';
   }
 
-  if (!(CONTACT_EMAIL && CONTACT_NAME && CONTACT_MESSAGE)) {
-    serverErrorMessage = 'Error receiving request: missing email, name or message.';
+  if (!(CONTACT_EMAIL && CONTACT_NAME && CONTACT_MESSAGE && RECAPTCHA_STATE)) {
+    serverErrorMessage = 'Error receiving request: missing email, name, message or recaptcha state.';
     console.error(serverErrorMessage)
     return {
       headers: headers,
@@ -310,7 +332,8 @@ exports.handler = async (event) => {
         SENDGRID_COMPANY_SENDER_NAME && SENDGRID_COMPANY_TEMPLATE_ID &&
         SENDGRID_API_BASE_URL && SENDGRID_LIST_ID && MAILCHIMP_API_KEY &&
         MAILCHIMP_LIST_ID && MAILCHIMP_API_BASE_URL && GOOGLE_CLIENT_EMAIL &&
-        GOOGLE_PRIVATE_KEY && GOOGLE_SPREADSHEET_ID && GOOGLE_SPREADSHEET_NAME)) {
+        GOOGLE_PRIVATE_KEY && GOOGLE_SPREADSHEET_ID &&
+        GOOGLE_SPREADSHEET_NAME && RECAPTCHA_API_SECRET)) {
     serverErrorMessage = 'Error in server configuration: one or more secret keys missing.';
     console.error(serverErrorMessage)
     return {
@@ -319,6 +342,34 @@ exports.handler = async (event) => {
       body: JSON.stringify({
         result: 'error',
         msg: serverErrorMessage
+      })
+    };
+  }
+
+  const isHuman = await checkRecaptchaState(
+    RECAPTCHA_API_SECRET,
+    RECAPTCHA_STATE).catch((error) => {
+      recaptchaErrorMessage = 'Error validating captcha: an error ocurred.';
+      console.error(recaptchaErrorMessage);
+      console.error('[checkRecaptchaState] There was an error validating the captcha state.');
+      console.error(error);
+      return {
+        headers: headers,
+        statusCode: 400,
+        body: JSON.stringify({
+          result: 'error',
+          msg: recaptchaErrorMessage
+        })
+      };
+    });
+
+  if (!isHuman) {
+    return {
+      headers: headers,
+      statusCode: 400,
+      body: JSON.stringify({
+        result: 'error',
+        msg: 'Error validating captcha: captcha state is invalid.'
       })
     };
   }

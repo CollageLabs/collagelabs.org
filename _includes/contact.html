@@ -64,8 +64,8 @@
     });
   }
   var captchaSuccessCallback = function() {
-    var recaptchaState = grecaptcha.getResponse();
-    if (recaptchaState.length != 0) {
+    window.recaptchaState = grecaptcha.getResponse();
+    if (window.recaptchaState.length != 0) {
       removeErrorCaptcha();
     }
   }

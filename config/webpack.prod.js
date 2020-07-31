@@ -1,6 +1,6 @@
-const Merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
+const { merge } = require('webpack-merge');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -8,7 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CommonConfig = require('./webpack.common.js');
 
-module.exports = Merge(CommonConfig, {
+module.exports = merge(CommonConfig, {
   mode: 'production',
   output: {
     filename: '[name]-[hash].js',
