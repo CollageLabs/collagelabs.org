@@ -15,8 +15,13 @@ cache:
         - "$HOME/.cache/yarn"
         - "$HOME/.cache/bundler"
 before_script:
-    - curl -sLO https://github.com/lando/lando/releases/download/v3.0.7/lando-v3.0.7.deb && sudo dpkg -i lando-v3.0.7.deb
-    - rm lando-v3.0.7.deb
+    - |
+        curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/docker-ce-cli_19.03.12~3-0~debian-buster_amd64.deb
+        curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/docker-ce_19.03.12~3-0~debian-buster_amd64.deb
+        curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/containerd.io_1.2.13-2_amd64.deb
+        curl -sLO https://github.com/lando/lando/releases/download/v3.0.9/lando-v3.0.9.deb
+        sudo dpkg -i *.deb
+        rm *.deb
 script:
     - lando start
     - lando yarn run build:pwa
