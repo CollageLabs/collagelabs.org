@@ -10,8 +10,6 @@ branches:
         - /^dependabot.*$/
 cache:
     directories:
-        - node_modules
-        - vendor
         - "$HOME/.cache/yarn"
         - "$HOME/.cache/bundler"
 before_script:
