@@ -91,11 +91,11 @@
     "sw-precache": "5.2.1",
     "uglifyjs-webpack-plugin": "2.2.0",
     "url-loader": "4.1.0",
-    "webpack": "4.44.1",
-    "webpack-cli": "3.3.12",
+    "webpack": "5.1.1",
+    "webpack-cli": "4.0.0",
     "webpack-dev-server": "3.11.0",
     "webpack-merge": "5.1.4",
-    "webpack-pwa-manifest": "4.2.0",
+    "webpack-pwa-manifest": "4.3.0",
     "yarn": "1.22.5"
   },
   "dependencies": {
