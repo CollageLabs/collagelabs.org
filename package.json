@@ -109,7 +109,7 @@
     "popper.js": "1.16.1",
     "puppeteer": "5.3.0",
     "slick-carousel": "1.8.1",
-    "snyk": "^1.398.1"
+    "snyk": "^1.430.1"
   },
   "snyk": true
 }
