@@ -64,7 +64,7 @@
     "eslint-loader": "4.0.2",
     "eslint-plugin-import": "2.22.1",
     "favicons-webpack-plugin": "4.2.0",
-    "file-loader": "6.1.0",
+    "file-loader": "6.2.0",
     "googleapis": "59.0.0",
     "html-critical-webpack-plugin": "2.1.0",
     "html-webpack-plugin": "4.5.0",
