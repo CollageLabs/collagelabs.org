@@ -102,7 +102,7 @@
     "@fortawesome/fontawesome-free": "5.15.1",
     "bootstrap": "4.5.3",
     "cookieconsent": "3.1.1",
-    "d3": "6.3.0",
+    "d3": "6.3.1",
     "expose-loader": "1.0.3",
     "jquery": "3.5.1",
     "normalize.css": "8.0.1",
