@@ -60,7 +60,7 @@
     "dotenv": "8.2.0",
     "encoding": "0.1.13",
     "eslint": "7.14.0",
-    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-config-airbnb-base": "14.2.1",
     "eslint-loader": "4.0.2",
     "eslint-plugin-import": "2.22.1",
     "favicons-webpack-plugin": "4.2.0",
