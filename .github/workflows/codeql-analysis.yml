@@ -1,36 +1,55 @@
-name: CI
+name: "CodeQL"
+
 on:
   push:
     branches:
-      - master
       - develop
+  pull_request:
+    branches:
+      - develop
+  schedule:
+    - cron: '42 14 * * 5'
+
 jobs:
-  build:
-    name: Build
+  analyze:
+    name: Analyze
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - run: |-
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: javascript
+      - name: Installing dependencies
+        run: |
           curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/docker-ce-cli_19.03.12~3-0~debian-buster_amd64.deb
           curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/docker-ce_19.03.12~3-0~debian-buster_amd64.deb
           curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/containerd.io_1.2.13-2_amd64.deb
           curl -sLO https://github.com/lando/lando/releases/download/v3.0.9/lando-v3.0.9.deb
           sudo dpkg -i *.deb
           rm *.deb
-      - uses: actions/cache@v2
+      - name: Caching ruby gems
+        uses: actions/cache@v2
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      - id: yarn-cache-dir-path
+      - name: Getting yarn cache path
+        id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(lando yarn cache dir)"
-      - uses: actions/cache@v2
+      - name: Caching node packages
+        uses: actions/cache@v2
         id: yarn-cache
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - run: lando start
-      - run: lando yarn run build:pwa
+      - name: Building project
+        run: |
+          lando start
+          lando yarn run build:pwa
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1

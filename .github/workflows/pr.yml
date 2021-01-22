@@ -13,19 +13,34 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14.x
-
-      - name: NPM install, build, and test
-        run: |-
+      - name: Installing dependencies
+        run: |
           curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/docker-ce-cli_19.03.12~3-0~debian-buster_amd64.deb
           curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/docker-ce_19.03.12~3-0~debian-buster_amd64.deb
           curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/containerd.io_1.2.13-2_amd64.deb
           curl -sLO https://github.com/lando/lando/releases/download/v3.0.9/lando-v3.0.9.deb
           sudo dpkg -i *.deb
           rm *.deb
+      - name: Caching ruby gems
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - name: Getting yarn cache path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(lando yarn cache dir)"
+      - name: Caching node packages
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Building project
+        run: |
           lando start
           lando yarn run build:pwa
 
@@ -33,9 +48,10 @@ jobs:
     name: Approve pull request
     runs-on: ubuntu-20.04
     needs: build
+    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     steps:
-      - uses: hmarr/auto-approve-action@v2.0.0
-        if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+      - name: Approve
+        uses: hmarr/auto-approve-action@v2.0.0
         with:
           github-token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
 
@@ -48,10 +64,10 @@ jobs:
       - name: Merge
         uses: actions/github-script@v3
         with:
+          github-token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
           script: |
             await github.pulls.merge({
               owner: context.payload.repository.owner.login,
               repo: context.payload.repository.name,
               pull_number: context.payload.pull_request.number
             })
-          github-token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
