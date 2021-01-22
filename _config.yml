@@ -1,33 +1,33 @@
-name: 'Collage Labs'
-app_name: 'Collage Labs'
+name: Collage Labs
+app_name: Collage Labs
 title: Web, Mobile, ERP & IT Solutions
 description: Collage Labs is building software for multiple digital agencies across the globe. Our team provides personal, professional and friendly service which carefully considers your business goals and requirements.
 author:
-  name: 'Collage Labs'
-  email: 'contact@collagelabs.org'
-  github: 'CollageLabs'
-  twitter: 'CollageLabs'
-  facebook: 'CollageLabs'
-  paypal: 'martinezfaneyth'
+  name: Collage Labs
+  email: contact@collagelabs.org
+  github: CollageLabs
+  twitter: CollageLabs
+  facebook: CollageLabs
+  paypal: martinezfaneyth
 blog:
-  twitter: 'CollageLabs'
-  facebook: 'CollageLabs'
-  instagram: 'collagelabsco'
+  twitter: CollageLabs
+  facebook: CollageLabs
+  instagram: collagelabsco
 
 google_analytics: UA-157866327-1
 recaptcha_key: 6LcLwucUAAAAAAUDH-45a3mAVJEu9UhKfQx5xoBP
 webmaster_verifications:
-  google: ""
-  bing: ""
-  alexa: ""
-  yandex: ""
-  baidu: ""
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:
 
 facebook:
-  - app_id: ""
-  - admins: ""
-  - profile_id: ""
-  - publisher: ""
+  - app_id:
+  - admins:
+  - profile_id:
+  - publisher:
 
 ampdir: amp
 port: 3000
@@ -38,24 +38,25 @@ lang_locale: en_US
 collections_dir: collections
 collections:
   posts:
+    title: Posts
     output: true
     permalink: /blog/:categories/:year/:month/:day/:title/
 
 pagination:
   per_page: 20
-  permalink: '/page/:num/'
+  permalink: /page/:num/
 
 autopages:
   categories:
     layouts:
-      - 'category.html'
-    title: 'Posts in category :cat'
-    permalink: '/blog/category/:cat'
+      - category.html
+    title: Posts in category :cat
+    permalink: /blog/category/:cat
   tags:
     layouts:
-      - 'tag.html'
-    title: 'Posts tagged with :tag'
-    permalink: '/blog/tag/:tag'
+      - tag.html
+    title: Posts tagged with :tag
+    permalink: /blog/tag/:tag
 
 markdown: kramdown
 plugins:

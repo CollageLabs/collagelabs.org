@@ -136,7 +136,8 @@
 }
 
 .navbar {
-  background-color: $white;
+  // background-color: $white;
+  padding: 1rem 0;
 
   .navbar-toggler {
     border-color: transparent;
@@ -148,87 +149,122 @@
   }
 
   .nav-item {
-    padding: 0 20px;
-
-    &.active {
-      .nav-link::before {
-        opacity: 1;
-        bottom: -5px;
-        transition: all ease-in-out .3s;
-      }
-    }
+    padding: 0 1.3rem 0 0;
   }
 
   .nav-link {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     position: relative;
-    color: $primary;
-    font-size: 18px;
+    color: $banner-primary-color;
+    font-family: $banner-h5-font;
+    font-weight: $banner-h5-weight;
+    font-size: 1.3rem;
+    text-shadow: 0 0 20px rgba(0,0,0,.5), 0 0 5px rgba(0,0,0,.4);
+    overflow: hidden;
 
     @include respond-to(xs) {
       text-align: center;
     }
 
     &.active {
-      color: $primary;
+      color: $banner-secondary-color;
 
       &::before {
-        opacity: 1;
-        bottom: -5px;
-        transition: all ease-in-out .3s;
+        left: 0.5rem;
       }
     }
 
     &::before {
       @include pseudo();
-      background-image: url('../_images/subrayadonavbar.svg');
-      background-position: center;
+      background-image: url('../_images/underline.svg');
+      background-position: left;
       background-repeat: no-repeat;
-      bottom: -15px;
-      height: 8px;
-      left: 50%;
-      opacity: 0;
-      transform: translateX(-50%);
-      transition: all ease-in-out .3s;
-      width: 110%;
+      left: -2.5rem;
+      bottom: 0;
+      transition: left ease-in-out .6s;
+      height: 10px;
+      width: 40px;
     }
 
     &:hover {
+      color: $banner-secondary-color;
+
       &::before {
-        opacity: 1;
-        bottom: -5px;
-        transition: all ease-in-out .3s;
+        left: 0.5rem;
       }
     }
   }
 }
 
+.separator-clouds {
+  display: block;
+  width: 100%;
+  margin-top: -530px;
+  z-index: 11;
+  .separator-clouds-1 {
+    width: 100%;
+    height: 400px;
+  }
+}
+
 .banner-home {
-  @include bg(cover, no-repeat, right);
   width: 100%;
   height: 90vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
-  background-image: url('../_images/bg-frontpage.jpg');
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .banner-bg {
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  .banner-image {
+    width: 1000px;
+    height: 800px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
   
   .banner-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 50%;
-    padding: 0 30px;
+    padding-top: 30px;
     @include respond-to(xs) {
       width: 100%;
     }
 
+    .banner-left-arrow {
+      width: 15%;
+      height: 80px;
+    }
+
     h1 {
-      color: $primary;
-      font-size: 45px;
-      margin-bottom: 40px;
+      font-family: $banner-h1-font;
+      font-weight: $banner-h1-weight;
+      color: $banner-secondary-color;
+      font-size: 5.5rem;
+      margin: 0;
+      width: 85%;
+      text-shadow: 0 0 20px rgba(0,0,0,.7), 0 0 5px rgba(0,0,0,.4);
+      text-align: right;
 
       span {
-        font-weight: 600;
+        width: 100%;
+        display: block;
       }
 
       @include respond-to(xs) {
@@ -238,9 +274,15 @@
     }
 
     p {
-      font-size: 20px;
-      color: $primary;
+      font-size: 30px;
+      color: $banner-primary-color;
+      font-family: $banner-p-font;
+      font-weight: $banner-p-weight;
       margin-bottom: 40px;
+      margin-left: 60px;
+      text-align: right;
+      text-shadow: 0 0 20px rgba(0,0,0,.9), 0 0 5px rgba(0,0,0,.4);
+
       @include respond-to(xs) {
         font-size: 15px;
         margin-bottom: 20px;

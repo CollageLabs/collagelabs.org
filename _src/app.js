@@ -1,5 +1,9 @@
 // Javascript
-// import * as d3 from 'd3';
+// import 'd3';
+// import 'd3-delaunay';
+// import 'three';
+// import 'vanta/src/vanta.waves';
+import 'thpace';
 import 'jquery/src/jquery';
 import 'bootstrap';
 import 'cookieconsent';
@@ -9,3 +13,4 @@ import 'classlist-polyfill';
 import './lib/validity-polyfill';
 import './lib/form-functions';
 import './lib/dom';
+import './lib/canvas';

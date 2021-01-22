@@ -2,7 +2,7 @@
   "name": "collagelabs.org",
   "version": "0.2.4",
   "description": "Collage Labs website",
-  "author": "Luis Alejandro Martínez Faneyth <luis@luisalejandro.org>",
+  "author": "Luis Alejandro Martínez Faneyth <luis@collagelabs.org>",
   "license": "GPL-3.0-or-later",
   "repository": {
     "type": "git",
@@ -14,11 +14,11 @@
   "homepage": "https://github.com/CollageLabs/collagelabs.org#readme",
   "scripts": {
     "clean:project": "rimraf ./_site ./assets ./functions/*.js",
-    "webpack:dev": "webpack --env=dev --progress --profile --colors",
+    "webpack:dev": "cross-env NODE_ENV=development nodemon --watch config --exec \"webpack-dev-server --env=dev\"",
     "webpack:prod": "cross-env NODE_ENV=production webpack --env=prod --progress --profile --colors",
     "webpack:pwa": "cross-env NODE_ENV=production webpack --env=pwa --progress --profile --colors",
     "webpack:optim": "cross-env NODE_ENV=production webpack --env=optim --progress --profile --colors",
-    "jekyll:dev": "cross-env JEKYLL_ENV=development concurrently \"webpack-dev-server --env=dev\" \"bundle exec jekyll serve --config=_config.yml,_config.development.yml\"",
+    "jekyll:dev": "cross-env JEKYLL_ENV=development bundle exec jekyll serve --config=_config.yml,_config.development.yml",
     "jekyll:prod": "cross-env JEKYLL_ENV=production bundle exec jekyll build --config=_config.yml,_config.production.yml",
     "jekyll:pwa": "cross-env JEKYLL_ENV=pwa bundle exec jekyll build --config=_config.yml,_config.production.yml",
     "sw": "sw-precache --config=config/sw.config.js --verbose",
@@ -27,9 +27,9 @@
     "build:pwa": "yarn run clean:project && yarn run webpack:pwa && yarn run jekyll:pwa && yarn run build:lambda && yarn run sw",
     "build:pwa:optim": "yarn run clean:project && yarn run webpack:pwa && yarn run jekyll:pwa && yarn run build:lambda && yarn run webpack:optim && yarn run sw",
     "serve:dist": "yarn run clean:project && yarn run build:pwa:optim && http-server _site",
-    "serve:dev": "yarn run clean:project && yarn run webpack:dev && yarn run jekyll:dev",
+    "serve:dev": "yarn run clean:project && concurrently \"yarn run webpack:dev\" \"yarn run jekyll:dev\"",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect && yarn run snyk-protect",
+    "prepare": "yarn run snyk-protect",
     "start:lambda": "netlify-lambda serve lambda",
     "build:lambda": "netlify-lambda build lambda"
   },
@@ -74,6 +74,7 @@
     "mini-css-extract-plugin": "0.11.2",
     "netlify-lambda": "2.0.1",
     "node-sass": "4.14.1",
+    "nodemon": "2.0.4",
     "postcss-advanced-variables": "3.0.1",
     "postcss-import": "12.0.1",
     "postcss-loader": "3.0.0",
@@ -102,14 +103,14 @@
     "@fortawesome/fontawesome-free": "5.14.0",
     "bootstrap": "4.5.2",
     "cookieconsent": "3.1.1",
-    "d3": "6.1.1",
     "expose-loader": "1.0.0",
     "jquery": "3.5.1",
     "normalize.css": "8.0.1",
     "popper.js": "1.16.1",
     "puppeteer": "5.3.0",
     "slick-carousel": "1.8.1",
-    "snyk": "^1.398.1"
+    "snyk": "^1.398.1",
+    "thpace": "1.2.0"
   },
   "snyk": true
 }
