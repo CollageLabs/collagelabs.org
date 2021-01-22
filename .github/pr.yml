@@ -1,0 +1,57 @@
+name: CI
+on:
+  pull_request:
+    types:
+      - opened
+      - ready_for_review
+    branches:
+      - develop
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+
+      - name: NPM install, build, and test
+        run: |-
+          curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/docker-ce-cli_19.03.12~3-0~debian-buster_amd64.deb
+          curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/docker-ce_19.03.12~3-0~debian-buster_amd64.deb
+          curl -sLO https://download.docker.com/linux/debian/dists/buster/pool/stable/amd64/containerd.io_1.2.13-2_amd64.deb
+          curl -sLO https://github.com/lando/lando/releases/download/v3.0.9/lando-v3.0.9.deb
+          sudo dpkg -i *.deb
+          rm *.deb
+          lando start
+          lando yarn run build:pwa
+
+  approve:
+    name: Approve pull request
+    runs-on: ubuntu-20.04
+    needs: build
+    steps:
+      - uses: hmarr/auto-approve-action@v2.0.0
+        if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+        with:
+          github-token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
+
+  merge:
+    name: Merge pull request
+    runs-on: ubuntu-20.04
+    needs: approve
+    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+    steps:
+      - name: Merge
+        uses: actions/github-script@v3
+        with:
+          script: |
+            await github.pulls.merge({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              pull_number: context.payload.pull_request.number
+            })
+          github-token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
