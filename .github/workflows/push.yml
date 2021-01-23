@@ -1,9 +1,11 @@
-name: CI
+name: Push
+
 on:
   push:
     branches:
       - master
       - develop
+
 jobs:
   build:
     name: Build
@@ -18,18 +20,14 @@ jobs:
       - name: Caching ruby gems
         uses: actions/cache@v2
         with:
-          path: vendor/bundle
+          path: ~/.cache/bundler
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      - name: Getting yarn cache path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(lando yarn cache dir)"
       - name: Caching node packages
         uses: actions/cache@v2
-        id: yarn-cache
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          path: ~/.cache/yarn
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
