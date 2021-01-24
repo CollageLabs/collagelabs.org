@@ -47,9 +47,11 @@ module.exports = merge(CommonConfig, {
         target: 'http://localhost:3000'
       }
     },
-    disableHostCheck: true,
+    firewall: false,
     port: 4000,
     hot: true,
-    sockPort: 5000
+    client: {
+      port: 5000
+    },
   }
 });
