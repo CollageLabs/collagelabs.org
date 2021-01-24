@@ -4,7 +4,6 @@ services:
   server:
     type: node
     run:
-      - ln -s /user/.cache /home/node/.cache
       - bundle config path vendor/bundle
       - bundle config cache_path /home/node/.cache/bundler
       - bundle update
