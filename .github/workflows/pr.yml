@@ -25,6 +25,7 @@ jobs:
           sudo dpkg -i --ignore-depends=docker-ce *.deb
       - name: Building project
         run: |
+          ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
           lando start
           lando yarn run build:pwa
       - name: Perform Code Analysis
