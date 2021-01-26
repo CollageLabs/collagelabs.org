@@ -22,5 +22,13 @@ RUN apt-get update && \
 
 RUN gem install bundler
 
-RUN useradd -ms /bin/bash node
-RUN echo "node ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/node
+RUN echo "collagelabs ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/collagelabs
+RUN useradd -ms /bin/bash collagelabs
+
+USER collagelabs
+
+RUN mkdir -p /home/collagelabs/app
+
+WORKDIR /home/collagelabs/app
+
+CMD tail -f /dev/null

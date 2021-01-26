@@ -1,5 +1,4 @@
 module.exports = function getWebpackConfig (env) {
-  console.log(env);
   if (env.dev) {
     return require(`./config/webpack.dev.js`);
   } else if (env.prod) {
