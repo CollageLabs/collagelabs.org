@@ -18,7 +18,7 @@ dependencies: start
 
 build_production: start
 	@docker-compose -p collagelabs -f docker-compose.yml exec \
-		-T --user collagelabs collagelabs yarn run build:pwa:optim
+		-T --user collagelabs collagelabs yarn run build:pwa
 
 console: start
 	@docker-compose -p luisalejandro -f docker-compose.yml exec \
