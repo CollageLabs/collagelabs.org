@@ -31,9 +31,11 @@ jobs:
           languages: javascript
       - name: Building project
         run: |
+          sudo chown -R 1000:1000 .
           make start
           make dependencies
           make build_production
+          sudo chown -R runner:docker .
       - name: Perform Code Analysis
         uses: github/codeql-action/analyze@v1
 

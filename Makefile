@@ -12,12 +12,25 @@ start:
 
 dependencies: start
 	@docker-compose -p collagelabs -f docker-compose.yml exec \
-		-T --user collagelabs collagelabs bundle config path vendor/bundle
-	@docker-compose -p collagelabs -f docker-compose.yml exec \
-		-T --user collagelabs collagelabs bundle install
+		-T --user collagelabs collagelabs bundle install --path=vendor/bundle
 	@docker-compose -p collagelabs -f docker-compose.yml exec \
 		-T --user collagelabs collagelabs yarn install
 
 build_production: start
 	@docker-compose -p collagelabs -f docker-compose.yml exec \
 		-T --user collagelabs collagelabs yarn run build:pwa:optim
+
+console: start
+	@docker-compose -p luisalejandro -f docker-compose.yml exec \
+		--user luisalejandro luisalejandro bash
+
+stop:
+	@docker-compose -p luisalejandro -f docker-compose.yml stop luisalejandro
+
+down:
+	@docker-compose -p luisalejandro -f docker-compose.yml down \
+		--remove-orphans
+
+destroy:
+	@docker-compose -p luisalejandro -f docker-compose.yml down \
+		--rmi all --remove-orphans -v
