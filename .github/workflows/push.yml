@@ -23,10 +23,12 @@ jobs:
         with:
           path: 'vendor/bundle'
           key: ${{ runner.os }}-vendor-bundle-${{ hashFiles('Gemfile.lock') }}
-      - name: Initialize Code Analysis
-        uses: github/codeql-action/init@v1
-        with:
-          languages: javascript
+      - name: Login to Github Docker Registry
+        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
+      - name: Pulling docker cache
+        run: docker pull ghcr.io/$GITHUB_REPOSITORY/collagelabs-build-cache || true
+      - name: Building image with cache
+        run: docker build . -t collagelabs/collagelabs.github.io:latest --cache-from=ghcr.io/$GITHUB_REPOSITORY/collagelabs-build-cache
       - name: Building project
         run: |
           sudo chown -R 1000:1000 .
@@ -34,5 +36,5 @@ jobs:
           make dependencies
           make build_production
           sudo chown -R runner:docker .
-      - name: Perform Code Analysis
-        uses: github/codeql-action/analyze@v1
+      - name: Pushing docker image
+        run: docker tag collagelabs/collagelabs.github.io:latest ghcr.io/$GITHUB_REPOSITORY/collagelabs-build-cache && docker push ghcr.io/$GITHUB_REPOSITORY/collagelabs-build-cache || true
