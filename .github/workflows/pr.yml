@@ -57,7 +57,7 @@ jobs:
       - name: Approve
         uses: hmarr/auto-approve-action@v2.0.0
         with:
-          github-token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
 
   merge:
     name: Merge pull request
@@ -68,7 +68,7 @@ jobs:
       - name: Merge
         uses: actions/github-script@v3
         with:
-          github-token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
           script: |
             await github.pulls.merge({
               owner: context.payload.repository.owner.login,

@@ -6,6 +6,7 @@
 [![Github issues](https://img.shields.io/github/issues/CollageLabs/collagelabs.org)](https://github.com/CollageLabs/collagelabs.org/issues?q=is%3Aopen)
 [![Push](https://github.com/CollageLabs/collagelabs.org/workflows/Push/badge.svg)](https://github.com/CollageLabs/collagelabs.org/actions?query=workflow%3APush)
 [![Pull Request](https://github.com/CollageLabs/collagelabs.org/workflows/Pull%20Request/badge.svg)](https://github.com/CollageLabs/collagelabs.org/actions?query=workflow%3A%22Pull+Request%22)
+[![Code Quality](https://github.com/CollageLabs/collagelabs.org/workflows/Code%20Quality/badge.svg)](https://github.com/CollageLabs/collagelabs.org/actions?query=workflow%3A%22Code+Quality%22)
 [![Codeclimate](https://codeclimate.com/github/CollageLabs/collagelabs.org/badges/gpa.svg)](https://codeclimate.com/github/CollageLabs/collagelabs.org)
 [![David](https://david-dm.org/CollageLabs/collagelabs.org/dev-status.svg)](https://david-dm.org/CollageLabs/collagelabs.org)
 [![Snyk](https://snyk.io/test/github/CollageLabs/collagelabs.org/badge.svg)](https://snyk.io/test/github/CollageLabs/collagelabs.org)
