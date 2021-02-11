@@ -14,12 +14,8 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
         with:
-          languages:
-            - javascript
-          paths-ignore:
-            - node_modules
-            - vendor
-            - build
+          languages: javascript
+          config-file: ./.github/codeql-config.yml
       - name: Restoring node_modules cache
         uses: actions/cache@v2
         with:
