@@ -3,18 +3,18 @@ updates:
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: monthly
+    interval: weekly
     time: "01:00"
   open-pull-requests-limit: 99
 - package-ecosystem: docker
   directory: "/"
   schedule:
-    interval: monthly
+    interval: weekly
     time: "01:00"
   open-pull-requests-limit: 99
 - package-ecosystem: bundler
   directory: "/"
   schedule:
-    interval: monthly
+    interval: weekly
     time: "01:00"
   open-pull-requests-limit: 99

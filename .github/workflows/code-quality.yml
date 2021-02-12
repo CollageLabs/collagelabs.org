@@ -27,7 +27,7 @@ jobs:
           path: 'vendor/bundle'
           key: ${{ runner.os }}-vendor-bundle-${{ hashFiles('Gemfile.lock') }}
       - name: Login to Github Docker Registry
-        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u $GITHUB_ACTOR --password-stdin
+        run: echo ${{ secrets.PERSONAL_ACCESS_TOKEN }} | docker login docker.pkg.github.com -u $GITHUB_ACTOR --password-stdin
       - name: Pulling docker cache
         run: |
           GITHUB_REPOSITORY=$(echo $GITHUB_REPOSITORY | tr '[A-Z]' '[a-z]')
