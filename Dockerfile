@@ -1,4 +1,4 @@
-FROM dockershelf/node:14
+FROM dockershelf/node:15
 LABEL maintainer "Luis Alejandro Martínez Faneyth <luis@luisalejandro.org>"
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
