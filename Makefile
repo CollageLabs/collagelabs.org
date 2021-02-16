@@ -21,16 +21,16 @@ build_production: start
 		-T --user collagelabs collagelabs yarn run build:pwa
 
 console: start
-	@docker-compose -p luisalejandro -f docker-compose.yml exec \
-		--user luisalejandro luisalejandro bash
+	@docker-compose -p collagelabs -f docker-compose.yml exec \
+		--user collagelabs collagelabs bash
 
 stop:
-	@docker-compose -p luisalejandro -f docker-compose.yml stop luisalejandro
+	@docker-compose -p collagelabs -f docker-compose.yml stop collagelabs
 
 down:
-	@docker-compose -p luisalejandro -f docker-compose.yml down \
+	@docker-compose -p collagelabs -f docker-compose.yml down \
 		--remove-orphans
 
 destroy:
-	@docker-compose -p luisalejandro -f docker-compose.yml down \
+	@docker-compose -p collagelabs -f docker-compose.yml down \
 		--rmi all --remove-orphans -v
