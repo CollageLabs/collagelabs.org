@@ -43,7 +43,7 @@
     "compact": false
   },
   "devDependencies": {
-    "@babel/core": "7.13.8",
+    "@babel/core": "7.13.10",
     "@babel/preset-env": "7.13.9",
     "autoprefixer": "9.8.6",
     "axios": "0.21.1",
