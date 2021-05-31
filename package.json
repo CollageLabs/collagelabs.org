@@ -84,7 +84,7 @@
     "rimraf": "3.0.2",
     "sass-loader": "11.1.1",
     "style-loader": "2.0.0",
-    "svg-sprite-loader": "6.0.6",
+    "svg-sprite-loader": "6.0.7",
     "svg-transform-loader": "2.0.13",
     "svg-url-loader": "7.1.1",
     "svgo": "2.3.0",
