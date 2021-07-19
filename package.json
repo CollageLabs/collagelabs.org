@@ -83,7 +83,7 @@
     "postcss-scss": "3.0.5",
     "rimraf": "3.0.2",
     "sass-loader": "12.1.0",
-    "style-loader": "3.0.0",
+    "style-loader": "3.1.0",
     "svg-sprite-loader": "6.0.9",
     "svg-transform-loader": "2.0.13",
     "svg-url-loader": "7.1.1",
