@@ -100,7 +100,7 @@
     "yarn": "1.22.11"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.15.3",
+    "@fortawesome/fontawesome-free": "5.15.4",
     "bootstrap": "4.6.0",
     "cookieconsent": "3.1.1",
     "d3": "7.0.0",
