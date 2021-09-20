@@ -68,7 +68,7 @@
     "googleapis": "85.0.0",
     "html-critical-webpack-plugin": "2.1.0",
     "html-webpack-plugin": "5.3.2",
-    "http-server": "13.0.1",
+    "http-server": "13.0.2",
     "imagemin-mozjpeg": "9.0.0",
     "imagemin-webpack-plugin": "2.4.2",
     "mini-css-extract-plugin": "2.3.0",
