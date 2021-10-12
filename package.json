@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.15.8",
-    "@babel/preset-env": "7.15.6",
+    "@babel/preset-env": "7.15.8",
     "autoprefixer": "9.8.8",
     "axios": "0.22.0",
     "babel-loader": "8.2.2",
