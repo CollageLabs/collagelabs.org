@@ -82,7 +82,7 @@
     "postcss-preset-env": "6.7.0",
     "postcss-scss": "3.0.5",
     "rimraf": "3.0.2",
-    "sass-loader": "12.1.0",
+    "sass-loader": "12.2.0",
     "style-loader": "3.3.0",
     "svg-sprite-loader": "6.0.10",
     "svg-transform-loader": "2.0.13",
