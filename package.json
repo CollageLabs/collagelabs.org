@@ -52,7 +52,7 @@
     "browser-sync-webpack-plugin": "2.3.0",
     "classlist-polyfill": "1.2.0",
     "clean-webpack-plugin": "4.0.0",
-    "concurrently": "6.4.0",
+    "concurrently": "6.5.1",
     "cross-env": "7.0.3",
     "css-loader": "6.5.1",
     "css-mqpacker": "7.0.0",
