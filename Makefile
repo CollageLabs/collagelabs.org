@@ -12,7 +12,9 @@ start:
 
 dependencies: start
 	@docker-compose -p collagelabs -f docker-compose.yml exec \
-		-T --user collagelabs collagelabs bundle install --path=vendor/bundle
+		-T --user collagelabs collagelabs bundle config set --local path 'vendor/bundle'
+	@docker-compose -p collagelabs -f docker-compose.yml exec \
+		-T --user collagelabs collagelabs bundle install
 	@docker-compose -p collagelabs -f docker-compose.yml exec \
 		-T --user collagelabs collagelabs yarn install
 
