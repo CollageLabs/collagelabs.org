@@ -7,7 +7,7 @@ ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
 RUN apt-get update && \
     apt-get install gnupg dirmngr git sudo libpng-dev \
                     build-essential autoconf automake gcc \
-                    ruby2.7 ruby2.7-dev python2.7-dev
+                    ruby3.0 ruby3.0-dev python3.10-dev
 
 RUN dirmngr --debug-level guru
 
