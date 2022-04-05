@@ -108,7 +108,7 @@
     "jquery": "3.6.0",
     "normalize.css": "8.0.1",
     "popper.js": "1.16.1",
-    "puppeteer": "13.5.1",
+    "puppeteer": "13.5.2",
     "slick-carousel": "1.8.1",
     "snyk": "^1.894.0"
   },
