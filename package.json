@@ -16,9 +16,9 @@
   "scripts": {
     "clean:project": "rimraf ./_site ./assets ./functions/*.js",
     "webpack:dev": "cross-env NODE_ENV=development nodemon --watch config --exec \"webpack-dev-server --env=dev\"",
-    "webpack:prod": "cross-env NODE_ENV=production webpack --env=prod --progress --profile",
-    "webpack:pwa": "cross-env NODE_ENV=production webpack --env=pwa --progress --profile",
-    "webpack:optim": "cross-env NODE_ENV=production webpack --env=optim --progress --profile",
+    "webpack:prod": "cross-env NODE_ENV=production node --trace-deprecation node_modules/webpack/bin/webpack.js --env=prod --progress --profile",
+    "webpack:pwa": "cross-env NODE_ENV=production node --trace-deprecation node_modules/webpack/bin/webpack.js --env=pwa --progress --profile",
+    "webpack:optim": "cross-env NODE_ENV=production node --trace-deprecation node_modules/webpack/bin/webpack.js --env=optim --progress --profile",
     "jekyll:dev": "cross-env JEKYLL_ENV=development bundle exec jekyll serve --trace --config=_config.yml,_config.development.yml",
     "jekyll:prod": "cross-env JEKYLL_ENV=production bundle exec jekyll build --config=_config.yml,_config.production.yml",
     "jekyll:pwa": "cross-env JEKYLL_ENV=pwa bundle exec jekyll build --config=_config.yml,_config.production.yml",
@@ -29,8 +29,6 @@
     "build:pwa:optim": "yarn run clean:project && yarn run webpack:pwa && yarn run jekyll:pwa && yarn run build:lambda && yarn run webpack:optim && yarn run sw",
     "serve:dist": "yarn run clean:project && yarn run build:pwa:optim && http-server _site",
     "serve:dev": "yarn run clean:project && concurrently \"yarn run webpack:dev\" \"yarn run jekyll:dev\"",
-    "snyk-protect": "snyk protect",
-    "prepare": "yarn run snyk-protect",
     "start:lambda": "netlify-lambda serve lambda",
     "build:lambda": "netlify-lambda build lambda"
   },
@@ -46,6 +44,7 @@
   "devDependencies": {
     "@babel/core": "7.17.2",
     "@babel/preset-env": "7.16.11",
+    "@squoosh/lib": "^0.4.0",
     "autoprefixer": "9.8.8",
     "axios": "0.26.0",
     "babel-loader": "8.2.3",
@@ -64,18 +63,18 @@
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-loader": "4.0.2",
     "eslint-plugin-import": "2.25.4",
-    "favicons-webpack-plugin": "4.2.0",
+    "favicons": "6.2.2",
+    "favicons-webpack-plugin": "5.0.2",
     "file-loader": "6.2.0",
     "googleapis": "95.0.0",
     "html-critical-webpack-plugin": "2.1.0",
     "html-webpack-plugin": "5.5.0",
     "http-server": "14.1.0",
-    "imagemin-mozjpeg": "8.0.0",
-    "imagemin-webpack-plugin": "2.4.2",
+    "image-minimizer-webpack-plugin": "^3.2.3",
     "mini-css-extract-plugin": "2.5.3",
     "netlify-lambda": "2.0.15",
-    "nodemon": "2.0.15",
     "node-sass": "7.0.1",
+    "nodemon": "2.0.15",
     "postcss-advanced-variables": "3.0.1",
     "postcss-import": "12.0.1",
     "postcss-loader": "3.0.0",
@@ -91,7 +90,7 @@
     "svgo": "2.8.0",
     "svgo-loader": "3.0.0",
     "sw-precache": "5.2.1",
-    "uglifyjs-webpack-plugin": "2.2.0",
+    "terser-webpack-plugin": "5.3.1",
     "url-loader": "4.1.1",
     "webpack": "5.68.0",
     "webpack-cli": "4.9.2",
@@ -110,8 +109,6 @@
     "normalize.css": "8.0.1",
     "popper.js": "1.16.1",
     "puppeteer": "13.3.2",
-    "slick-carousel": "1.8.1",
-    "snyk": "^1.852.0"
-  },
-  "snyk": true
+    "slick-carousel": "1.8.1"
+  }
 }

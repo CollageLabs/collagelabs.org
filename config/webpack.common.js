@@ -18,10 +18,10 @@ module.exports = {
       template: './_src/template/default.html',
       filename: '../_layouts/default.html'
     }),
-    new FaviconsWebpackPlugin({
-      logo: './icon.svg',
-      prefix: 'icons/'
-    }),
+    // new FaviconsWebpackPlugin({
+    //   logo: './icon.svg',
+    //   prefix: 'icons/'
+    // }),
   ],
   module: {
     rules: [

@@ -7,10 +7,6 @@ updates:
     day: tuesday
     time: "01:00"
   open-pull-requests-limit: 99
-  ignore:
-  - dependency-name: imagemin-mozjpeg
-    versions:
-    - ">= 8.0.0"
 - package-ecosystem: docker
   directory: "/"
   schedule:
