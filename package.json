@@ -46,7 +46,7 @@
     "@babel/preset-env": "7.16.11",
     "@squoosh/lib": "^0.4.0",
     "autoprefixer": "9.8.8",
-    "axios": "0.26.0",
+    "axios": "0.27.2",
     "babel-loader": "8.2.3",
     "browser-sync": "2.27.7",
     "browser-sync-webpack-plugin": "2.3.0",
