@@ -1,9 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const ImageminMozjpeg = require('imagemin-mozjpeg');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CommonConfig = require('./webpack.common.js');
@@ -11,13 +10,13 @@ const CommonConfig = require('./webpack.common.js');
 module.exports = merge(CommonConfig, {
   mode: 'production',
   output: {
-    filename: '[name]-[hash].js',
+    filename: '[name]-[fullhash].js',
     path: path.resolve('assets'),
     publicPath: '/assets/'
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name]-[hash].css'
+      filename: '[name]-[fullhash].css'
     }),
     new CleanWebpackPlugin({
       verbose: true
@@ -26,29 +25,23 @@ module.exports = merge(CommonConfig, {
       minimize: true,
       debug: false
     }),
-    new ImageminPlugin({
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      plugins: [
-        ImageminMozjpeg({
-          quality: 80,
-          progressive: true
-        })
-      ]
-    })
   ],
   optimization: {
+    minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          output: {
-            comments: false
+      new TerserPlugin(),
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.squooshMinify,
+          options: {
+            encodeOptions: {
+              mozjpeg: {
+                quality: 80,
+              },
+            },
           },
-          mangle: {
-            keep_fnames: true
-          },
-          ie8: false
-        }
-      })
+        },
+      }),
     ]
   }
 });
