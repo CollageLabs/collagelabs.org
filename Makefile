@@ -22,6 +22,10 @@ build_production: start
 	@docker-compose -p collagelabs -f docker-compose.yml exec \
 		-T --user collagelabs collagelabs yarn run build:pwa
 
+serve: start
+	@docker-compose -p collagelabs -f docker-compose.yml exec \
+		-T --user collagelabs collagelabs yarn run serve:dev
+
 console: start
 	@docker-compose -p collagelabs -f docker-compose.yml exec \
 		--user collagelabs collagelabs bash

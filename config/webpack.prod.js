@@ -15,6 +15,10 @@ module.exports = merge(CommonConfig, {
     publicPath: '/assets/'
   },
   plugins: [
+    new FaviconsWebpackPlugin({
+      logo: './icon.svg',
+      prefix: 'icons/'
+    }),
     new MiniCssExtractPlugin({
       filename: '[name]-[fullhash].css'
     }),

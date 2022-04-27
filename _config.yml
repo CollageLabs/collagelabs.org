@@ -67,6 +67,7 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - docker-compose.yml
   - Dockerfile
   - Makefile
   - node_modules

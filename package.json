@@ -16,9 +16,9 @@
   "scripts": {
     "clean:project": "rimraf ./_site ./assets ./functions/*.js",
     "webpack:dev": "cross-env NODE_ENV=development nodemon --watch config --exec \"webpack-dev-server --env=dev\"",
-    "webpack:prod": "cross-env NODE_ENV=production node --trace-deprecation node_modules/webpack/bin/webpack.js --env=prod --progress --profile",
-    "webpack:pwa": "cross-env NODE_ENV=production node --trace-deprecation node_modules/webpack/bin/webpack.js --env=pwa --progress --profile",
-    "webpack:optim": "cross-env NODE_ENV=production node --trace-deprecation node_modules/webpack/bin/webpack.js --env=optim --progress --profile",
+    "webpack:prod": "cross-env NODE_ENV=production webpack --env=prod --progress --profile",
+    "webpack:pwa": "cross-env NODE_ENV=production webpack --env=pwa --progress --profile",
+    "webpack:optim": "cross-env NODE_ENV=production webpack --env=optim --progress --profile",
     "jekyll:dev": "cross-env JEKYLL_ENV=development bundle exec jekyll serve --trace --config=_config.yml,_config.development.yml",
     "jekyll:prod": "cross-env JEKYLL_ENV=production bundle exec jekyll build --config=_config.yml,_config.production.yml",
     "jekyll:pwa": "cross-env JEKYLL_ENV=pwa bundle exec jekyll build --config=_config.yml,_config.production.yml",

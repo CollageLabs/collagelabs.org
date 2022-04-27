@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
@@ -29,7 +28,6 @@ module.exports = merge(CommonConfig, {
     new MiniCssExtractPlugin({
       filename: '[name].css'
     }),
-    new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
     proxy: {

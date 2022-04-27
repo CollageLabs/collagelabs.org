@@ -1,41 +1,32 @@
-![](https://rawcdn.githack.com/CollageLabs/collagelabs.org/57557046050b6515823f6c4ac819debcee40b346/_images/banner.svg)
-
----
-
-[![Github releases](https://img.shields.io/github/release/CollageLabs/collagelabs.org.svg)](https://github.com/CollageLabs/collagelabs.org/releases)
-[![Github issues](https://img.shields.io/github/issues/CollageLabs/collagelabs.org)](https://github.com/CollageLabs/collagelabs.org/issues?q=is%3Aopen)
-[![Push](https://github.com/CollageLabs/collagelabs.org/workflows/Push/badge.svg)](https://github.com/CollageLabs/collagelabs.org/actions?query=workflow%3APush)
-[![Pull Request](https://github.com/CollageLabs/collagelabs.org/workflows/Pull%20Request/badge.svg)](https://github.com/CollageLabs/collagelabs.org/actions?query=workflow%3A%22Pull+Request%22)
-[![Code Quality](https://github.com/CollageLabs/collagelabs.org/workflows/Code%20Quality/badge.svg)](https://github.com/CollageLabs/collagelabs.org/actions?query=workflow%3A%22Code+Quality%22)
-[![Codeclimate](https://codeclimate.com/github/CollageLabs/collagelabs.org/badges/gpa.svg)](https://codeclimate.com/github/CollageLabs/collagelabs.org)
-[![David](https://david-dm.org/CollageLabs/collagelabs.org/dev-status.svg)](https://david-dm.org/CollageLabs/collagelabs.org)
-[![Snyk](https://snyk.io/test/github/CollageLabs/collagelabs.org/badge.svg)](https://snyk.io/test/github/CollageLabs/collagelabs.org)
-[![CLA Assistant](https://cla-assistant.io/readme/badge/CollageLabs/collagelabs.org)](https://cla-assistant.io/CollageLabs/collagelabs.org)
 
 Current version: 0.2.5
 
 ## How to start hacking this website?
 
-* Install [Docker Community Edition](https://docs.docker.com/install/#supported-platforms) according with your operating system
-* Install [Lando](https://docs.devwithlando.io/installation/system-requirements.html) according with your operating system.
+  * Install [Docker Community Edition](https://docs.docker.com/install/#supported-platforms) according with your operating system
+  * Install [Docker Compose](https://docs.docker.com/compose/install/) according with your operating system.
 
-    - [Linux](https://docs.devwithlando.io/installation/linux.html)
-    - [Mac](https://docs.devwithlando.io/installation/macos.html)
-    - [Windows](https://docs.devwithlando.io/installation/windows.html)
+      - [Linux](https://docs.docker.com/compose/install/#install-compose-on-linux-systems)
+      - [Mac](https://docs.docker.com/compose/install/#install-compose-on-macos)
+      - [Windows](https://docs.docker.com/compose/install/#install-compose-on-windows-desktop-systems)
 
 * Install a git client.
-* Clone the repository at `https://gitlab.com/CollageLabs/internal/collagelabs.org.git`.
+* Clone the repository at `https://github.com/CollageLabs/collagelabs.org`.
 
-        git clone https://gitlab.com/CollageLabs/internal/collagelabs.org.git
+        git clone https://github.com/CollageLabs/collagelabs.org
 
 * Open a terminal and navigate to the newly created folder.
 * Change to the `develop` branch.
 
-        git branch develop
+        git checkout develop
 
 * Execute the following command to create the docker image (first time only):
 
         make image
+
+* Execute the following command to install dependencies:
+
+        make dependencies
 
 * Execute the following command to start the project:
 
@@ -47,6 +38,6 @@ Current version: 0.2.5
 
 ## Made with 💖 and 🍔
 
-![Banner](https://rawcdn.githack.com/CollageLabs/collagelabs.org/57557046050b6515823f6c4ac819debcee40b346/_images/promo-open-source.svg)
+![Banner](https://raw.githubusercontent.com/CollageLabs/collagelabs.org/develop/_images/promo-open-source.svg)
 
 > Web [collagelabs.org](http://collagelabs.org/) · GitHub [@CollageLabs](https://github.com/CollageLabs) · Twitter [@CollageLabs](https://twitter.com/CollageLabs)
