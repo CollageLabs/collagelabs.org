@@ -4,6 +4,7 @@
   "description": "Collage Labs website",
   "author": "Luis Alejandro Martínez Faneyth <luis@collagelabs.org>",
   "license": "GPL-3.0-or-later",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CollageLabs/collagelabs.org.git"

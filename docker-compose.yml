@@ -1,7 +1,7 @@
 version: "3"
 services:
   collagelabs:
-    image: collagelabs/collagelabs.github.io:latest
+    image: collagelabs/collagelabs.org:latest
     build:
       context: .
       dockerfile: Dockerfile

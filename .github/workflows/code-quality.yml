@@ -8,9 +8,12 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-20.04
+    if: github.repository == 'CollageLabs/collagelabs.org'
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+        with:
+          ref: develop
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
         with:
