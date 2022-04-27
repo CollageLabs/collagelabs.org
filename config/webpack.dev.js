@@ -31,25 +31,17 @@ module.exports = merge(CommonConfig, {
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.js$/,
-  //       enforce: 'pre',
-  //       exclude: /node_modules/,
-  //       loader: 'eslint-loader'
-  //     }
-  //   ]
-  // },
   devServer: {
     proxy: {
       '/': {
         target: 'http://localhost:3000'
       }
     },
-    disableHostCheck: true,
+    allowedHosts: 'all',
     port: 4000,
     hot: true,
-    sockPort: 5000
+    client: {
+      webSocketURL: 'ws://0.0.0.0:5000/ws',
+    },
   }
 });

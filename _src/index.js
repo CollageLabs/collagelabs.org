@@ -6,10 +6,6 @@ import './app.scss';
 
 // Images
 import '../_images/sprite/brand.svg';
-import '../_images/sprite/dockershelf.svg';
-import '../_images/sprite/pypicontents.svg';
-import '../_images/sprite/pipsalabim.svg';
-import '../_images/sprite/candyshop.svg';
 import '../_images/sprite/services-web.svg';
 import '../_images/sprite/services-mobile.svg';
 

@@ -1,34 +1,38 @@
+#!/usr/bin/env make -f
+# -*- makefile -*-
 
 SHELL = bash -e
 
-image:
 
-	docker build --rm -t collagelabs/collagelabs.github.io:latest .
+image:
+	@docker-compose -p collagelabs -f docker-compose.yml build --force-rm --pull
 
 start:
+	@docker-compose -p collagelabs -f docker-compose.yml up --remove-orphans -d
 
-	lando start
-	lando yarn run serve:dev
+dependencies: start
+	@docker-compose -p collagelabs -f docker-compose.yml exec \
+		-T --user collagelabs collagelabs bundle config set --local path 'vendor/bundle'
+	@docker-compose -p collagelabs -f docker-compose.yml exec \
+		-T --user collagelabs collagelabs bundle install
+	@docker-compose -p collagelabs -f docker-compose.yml exec \
+		-T --user collagelabs collagelabs yarn install
+
+build_production: start
+	@docker-compose -p collagelabs -f docker-compose.yml exec \
+		-T --user collagelabs collagelabs yarn run build:pwa
+
+console: start
+	@docker-compose -p collagelabs -f docker-compose.yml exec \
+		--user collagelabs collagelabs bash
 
 stop:
+	@docker-compose -p collagelabs -f docker-compose.yml stop collagelabs
 
-	lando stop
+down:
+	@docker-compose -p collagelabs -f docker-compose.yml down \
+		--remove-orphans
 
 destroy:
-
-	lando stop
-	lando destroy -y
-	lando poweroff
-	docker container prune -f
-	docker image prune -f
-	docker network prune -f
-	docker volume prune -f
-	lando --clear
-
-console:
-
-	lando bash
-
-clean:
-
-	rm -rf node_modules vendor .bundle assets _site yarn-error.log
+	@docker-compose -p collagelabs -f docker-compose.yml down \
+		--rmi all --remove-orphans -v

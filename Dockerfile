@@ -1,34 +1,40 @@
-FROM dockershelf/node:13
+FROM dockershelf/node:14
 LABEL maintainer "Luis Alejandro Martínez Faneyth <luis@luisalejandro.org>"
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
 
-RUN echo "Set disable_coredump false" >> /etc/sudo.conf
-
 RUN apt-get update && \
-    apt-get install net-tools netcat-openbsd
-
-RUN route -n | awk '/^0.0.0.0/ {print $2}' > /tmp/host_ip.txt
-RUN echo "HEAD /" | nc `cat /tmp/host_ip.txt` 8000 | grep squid-deb-proxy \
-    && (echo "Acquire::http::Proxy \"http://$(cat /tmp/host_ip.txt):8000\";" > /etc/apt/apt.conf.d/30proxy) \
-    || echo "No squid-deb-proxy detected on docker host"
-
-RUN apt-get update && \
-    apt-get install gnupg git sudo libpng-dev libpng-dev build-essential \
+    apt-get install gnupg dirmngr git sudo libpng-dev \
                     build-essential autoconf automake gcc \
-                    ruby2.7 ruby2.7-dev python2.7-dev
+                    ruby3.0 ruby3.0-dev python3.10-dev
 
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN dirmngr --debug-level guru
 
-RUN curl -sS https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-RUN echo "deb [arch=amd64] https://dl-ssl.google.com/linux/chrome/deb/ stable main" | tee /etc/apt/sources.list.d/google.list
+RUN gpg --lock-never --no-default-keyring \
+        --keyring /usr/share/keyrings/yarn.gpg \
+        --keyserver hkp://keyserver.ubuntu.com:80 \
+        --recv-keys 23E7166788B63E1E
+RUN echo "deb [arch=amd64 signed-by=/usr/share/keyrings/yarn.gpg] https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+
+RUN gpg --lock-never --no-default-keyring \
+        --keyring /usr/share/keyrings/google-chrome.gpg \
+        --keyserver hkp://keyserver.ubuntu.com:80 \
+        --recv-keys 78BD65473CB3BD13
+RUN echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] https://dl-ssl.google.com/linux/chrome/deb/ stable main" | tee /etc/apt/sources.list.d/google-chrome.list
 
 RUN apt-get update && \
     apt-get install yarn google-chrome-stable
 
 RUN gem install bundler
 
-RUN useradd -ms /bin/bash node
-RUN echo "node ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/node
+RUN echo "collagelabs ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/collagelabs
+RUN useradd -ms /bin/bash collagelabs
+
+USER collagelabs
+
+RUN mkdir -p /home/collagelabs/app
+
+WORKDIR /home/collagelabs/app
+
+CMD tail -f /dev/null

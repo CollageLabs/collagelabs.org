@@ -1,0 +1,38 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: tuesday
+    time: "01:00"
+  open-pull-requests-limit: 99
+  ignore:
+  - dependency-name: imagemin-mozjpeg
+    versions:
+    - ">= 8.0.0"
+- package-ecosystem: docker
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: tuesday
+    time: "01:00"
+  open-pull-requests-limit: 99
+  ignore:
+  - dependency-name: dockershelf/node
+    versions:
+    - "> 14"
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: tuesday
+    time: "01:00"
+  open-pull-requests-limit: 99
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: tuesday
+    time: "01:00"
+  open-pull-requests-limit: 99

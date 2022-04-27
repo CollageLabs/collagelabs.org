@@ -15,7 +15,7 @@ existing bugs to your new milestone.
 
         git flow feature start <feature name>
 
-4. Code, code and code. More coding. Fuck it up several times. Push to feature
+4. Code, code and code. More coding. Mess it up several times. Push to feature
 branch. Watch Travis go red. Write unit tests. Watch Travis go red again. Don't
 leave uncommitted changes.
 5. Finish your feature:
@@ -29,7 +29,7 @@ leave uncommitted changes.
 
 8. Bump your version:
 
-        bumpversion --no-commit --new-version <release number> patch
+        bumpversion --no-commit <major, minor or patch>
 
 9. Update your changelog:
 
@@ -46,10 +46,6 @@ leave uncommitted changes.
 12. Finish your release:
 
         git flow release finish -s -p <release number>
-
-13. Push your tags:
-
-        git push --tags
 
 14. Draft a new release in GitHub (based on the new version tag) and include
 a description. Also pick a codename because it makes you cool.
@@ -83,10 +79,6 @@ a description. Also pick a codename because it makes you cool.
 8. Finish your hotfix:
 
         git flow hotfix finish -s -p <new version>
-
-9. Push your tags:
-
-        git push --tags
 
 10. Draft a new release in GitHub (based on the new version tag) and include
 a description. Don't change the codename if it is a hotfix.
