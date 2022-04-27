@@ -27,7 +27,7 @@
     "build:optim": "yarn run clean:project && yarn run webpack:prod && yarn run jekyll:prod && yarn run build:lambda && yarn run webpack:optim",
     "build:pwa": "yarn run clean:project && yarn run webpack:pwa && yarn run jekyll:pwa && yarn run build:lambda && yarn run sw",
     "build:pwa:optim": "yarn run clean:project && yarn run webpack:pwa && yarn run jekyll:pwa && yarn run build:lambda && yarn run webpack:optim && yarn run sw",
-    "serve:dist": "yarn run clean:project && yarn run build:pwa:optim && http-server _site",
+    "serve:dist": "yarn run clean:project && yarn run build:pwa:optim && http-server -p 5000 _site",
     "serve:dev": "yarn run clean:project && concurrently \"yarn run webpack:dev\" \"yarn run jekyll:dev\"",
     "start:lambda": "netlify-lambda serve lambda",
     "build:lambda": "netlify-lambda build lambda"
@@ -44,7 +44,6 @@
   "devDependencies": {
     "@babel/core": "7.17.2",
     "@babel/preset-env": "7.16.11",
-    "@squoosh/lib": "^0.4.0",
     "autoprefixer": "9.8.8",
     "axios": "0.27.2",
     "babel-loader": "8.2.3",
@@ -71,6 +70,8 @@
     "html-webpack-plugin": "5.5.0",
     "http-server": "14.1.0",
     "image-minimizer-webpack-plugin": "^3.2.3",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
     "mini-css-extract-plugin": "2.5.3",
     "netlify-lambda": "2.0.15",
     "node-sass": "7.0.1",

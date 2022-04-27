@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+// const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -30,18 +30,18 @@ module.exports = merge(CommonConfig, {
     minimize: true,
     minimizer: [
       new TerserPlugin(),
-      new ImageMinimizerPlugin({
-        minimizer: {
-          implementation: ImageMinimizerPlugin.squooshMinify,
-          options: {
-            encodeOptions: {
-              mozjpeg: {
-                quality: 80,
-              },
-            },
-          },
-        },
-      }),
+    //   new ImageMinimizerPlugin({
+    //     minimizer: {
+    //       implementation: ImageMinimizerPlugin.imageminMinify,
+    //       options: {
+    //         plugins: [
+    //           "imagemin-mozjpeg",
+    //         ],
+    //       },
+    //     },
+    //     // Disable `loader`
+    //     loader: false,
+    //   }),
     ]
   }
 });

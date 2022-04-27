@@ -18,10 +18,10 @@ module.exports = {
       template: './_src/template/default.html',
       filename: '../_layouts/default.html'
     }),
-    // new FaviconsWebpackPlugin({
-    //   logo: './icon.svg',
-    //   prefix: 'icons/'
-    // }),
+    new FaviconsWebpackPlugin({
+      logo: './icon.svg',
+      prefix: 'icons/'
+    }),
   ],
   module: {
     rules: [
@@ -66,30 +66,10 @@ module.exports = {
         ]
       }, {
         test: /\.(woff|woff2)$/,
-        use: [
-          {
-            loader: 'url-loader',
-          }
-        ]
+        type: 'asset/inline'
       }, {
         test: /\.(jpe?g|png|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-          }
-        ]
-      }, {
-        test: /\.svg$/,
-        exclude: /sprite/,
-        use: [
-          {
-            loader: 'svg-url-loader',
-          }, {
-            loader: 'svg-transform-loader'
-          }, {
-            loader: 'svgo-loader'
-          }
-        ]
+        type: 'asset/resource'
       }, {
         test: /\.svg$/,
         include: /sprite/,
