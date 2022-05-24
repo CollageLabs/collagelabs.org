@@ -105,7 +105,7 @@
     "bootstrap": "4.6.1",
     "cookieconsent": "3.1.1",
     "d3": "7.4.4",
-    "expose-loader": "3.1.0",
+    "expose-loader": "4.0.0",
     "jquery": "3.6.0",
     "normalize.css": "8.0.1",
     "popper.js": "1.16.1",
