@@ -72,7 +72,7 @@
     "image-minimizer-webpack-plugin": "^3.2.3",
     "imagemin": "^8.0.1",
     "imagemin-mozjpeg": "^10.0.0",
-    "mini-css-extract-plugin": "2.6.0",
+    "mini-css-extract-plugin": "2.6.1",
     "netlify-lambda": "2.0.15",
     "node-sass": "7.0.1",
     "nodemon": "2.0.16",
