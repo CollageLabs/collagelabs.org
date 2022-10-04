@@ -5565,10 +5565,10 @@ favicons-webpack-plugin@5.0.2:
   optionalDependencies:
     html-webpack-plugin ">=5.0.0"
 
-favicons@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/favicons/-/favicons-7.0.0.tgz#9317b95e78a491b50cdba7465ad4718720273d34"
-  integrity sha512-G922WcQLwHcXG7f8P5iFt0tALs6Ymzu8ETFRzCnoamKsFUZ2yVA2UVkMrSUjOuFQy4KO8mYC2BrL8SgYI7LUKw==
+favicons@7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/favicons/-/favicons-7.0.1.tgz#a68d75a47a38ad1f5567580b50b3d8d6ebc3b4f4"
+  integrity sha512-JPFon4zQL8XfuA2Nzq5ExGNnn9UBEf6yqpQDwtcAcEvLU+chBwKEoFd1EWSOSdRFSM7NilmmnSACXBHN64OEvQ==
   dependencies:
     escape-html "^1.0.3"
     sharp "^0.30.7"
