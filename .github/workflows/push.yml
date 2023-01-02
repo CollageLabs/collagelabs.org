@@ -9,40 +9,46 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-20.04
-    if: github.repository == 'CollageLabs/collagelabs.org'
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+
       - name: Restoring node_modules cache
         uses: actions/cache@v3
         with:
           path: 'node_modules'
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+
       - name: Restoring vendor/bundle cache
         uses: actions/cache@v3
         with:
           path: 'vendor/bundle'
           key: ${{ runner.os }}-vendor-bundle-${{ hashFiles('Gemfile.lock') }}
-      - name: Login to Github Docker Registry
-        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u $GITHUB_ACTOR --password-stdin
-      - name: Pulling docker cache
+
+      - name: Set environment variable
         run: |
-          GITHUB_REPOSITORY=$(echo $GITHUB_REPOSITORY | tr '[A-Z]' '[a-z]')
-          docker pull docker.pkg.github.com/$GITHUB_REPOSITORY/collagelabs-build-cache || true
-      - name: Building image with cache
-        run: |
-          GITHUB_REPOSITORY=$(echo $GITHUB_REPOSITORY | tr '[A-Z]' '[a-z]')
-          docker build . -t collagelabs/collagelabs.github.io:latest --cache-from=docker.pkg.github.com/$GITHUB_REPOSITORY/collagelabs-build-cache
+          echo "UID=$(id -u)" >> $GITHUB_ENV
+          echo "GID=$(id -g)" >> $GITHUB_ENV
+          touch .env
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Building docker image
+        uses: docker/build-push-action@v3
+        with:
+            tags: collagelabs/collagelabs.org:latest
+            file: Dockerfile
+            context: .
+            build-args: |
+                UID=${{ env.UID }}
+                GID=${{ env.GID }}
+            cache-from: type=gha
+            cache-to: type=gha,mode=max
+            push: false
+            load: true
+        
       - name: Building project
         run: |
-          sudo chown -R 1000:1000 .
-          make start
-          make dependencies
-          make build_production
-          sudo chown -R runner:docker .
-      - name: Pushing docker image
-        run: |
-          GITHUB_REPOSITORY=$(echo $GITHUB_REPOSITORY | tr '[A-Z]' '[a-z]')
-          docker tag collagelabs/collagelabs.github.io:latest docker.pkg.github.com/$GITHUB_REPOSITORY/collagelabs-build-cache
-          docker push docker.pkg.github.com/$GITHUB_REPOSITORY/collagelabs-build-cache || true
+          make dependencies build_production

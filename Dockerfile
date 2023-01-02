@@ -1,5 +1,8 @@
-FROM dockershelf/node:14
+FROM dockershelf/node:16
 LABEL maintainer "Luis Alejandro Martínez Faneyth <luis@luisalejandro.org>"
+
+ARG UID=1000
+ARG GID=1000
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
@@ -7,7 +10,7 @@ ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
 RUN apt-get update && \
     apt-get install gnupg dirmngr git sudo libpng-dev \
                     build-essential autoconf automake gcc \
-                    ruby3.0 ruby3.0-dev python3.10-dev
+                    ruby3.1 ruby3.1-dev python3.10-dev
 
 RUN dirmngr --debug-level guru
 
@@ -28,8 +31,16 @@ RUN apt-get update && \
 
 RUN gem install bundler
 
+RUN EXISTUSER=$(getent passwd | awk -F':' '$3 == '$UID' {print $1}') && \
+    [ -n "${EXISTUSER}" ] && deluser ${EXISTUSER} || true
+
+RUN EXISTGROUP=$(getent group | awk -F':' '$3 == '$GID' {print $1}') && \
+    [ -n "${EXISTGROUP}" ] && delgroup ${EXISTGROUP} || true
+
+RUN groupadd -g "${GID}" collagelabs || true
+RUN useradd -u "${UID}" -g "${GID}" -ms /bin/bash collagelabs
+
 RUN echo "collagelabs ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/collagelabs
-RUN useradd -ms /bin/bash collagelabs
 
 USER collagelabs
 
