@@ -66,7 +66,7 @@ GEM
       css_press
     multi_js (0.1.0)
       uglifier (~> 2)
-    nokogiri (1.13.6-x86_64-linux)
+    nokogiri (1.13.10-x86_64-linux)
       racc (~> 1.4)
     octopress-hooks (2.6.2)
       jekyll (>= 2.0)
@@ -77,7 +77,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (5.0.1)
-    racc (1.6.0)
+    racc (1.6.2)
     rake (13.0.6)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
