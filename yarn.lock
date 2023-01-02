@@ -7843,10 +7843,10 @@ loader-utils@^1.1.0, loader-utils@^1.2.3, loader-utils@^1.4.0:
     emojis-list "^3.0.0"
     json5 "^1.0.1"
 
-loader-utils@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-2.0.2.tgz#d6e3b4fb81870721ae4e0868ab11dd638368c129"
-  integrity sha512-TM57VeHptv569d/GKh6TAYdzKblwDNiumOdkFnejjD0XwTH87K90w3O7AiJRqdQoXygvi1VQTJTLGhJl7WqA7A==
+loader-utils@^2.0.0, loader-utils@^2.0.3:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-2.0.4.tgz#8b5cb38b5c34a9a018ee1fc0e6a066d1dfcc528c"
+  integrity sha512-xXqpXoINfFhgua9xiqD8fPFHgkoq1mmmpE92WlDbm9rNRd/EbRb+Gqf908T2DMfuHjjJlksiK2RbHVOdD/MqSw==
   dependencies:
     big.js "^5.2.2"
     emojis-list "^3.0.0"
@@ -12272,12 +12272,12 @@ svg-url-loader@8.0.0:
   dependencies:
     file-loader "~6.2.0"
 
-svgo-loader@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/svgo-loader/-/svgo-loader-3.0.1.tgz#15ae51fe0b8a4e183482bc3c3de844026bade1a4"
-  integrity sha512-4DsyqtJy/vMzL2QTXfvUfpcojceQMjaQeJcX9gfUBZAVPm9zA2jjDAqFrvegRbFyffHWvXHPf4+dzO5MZRcC8Q==
+svgo-loader@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/svgo-loader/-/svgo-loader-3.0.3.tgz#ee193c53610adf32825fa5861ba444dfc9ad0294"
+  integrity sha512-6YdWYge3h0aCb8xHvPhGP4hofIU1OWfZm0I8bteab7hddeRN4fl3aIkN8Z/ZB/ji9QrMOd6C8wT8F1p31GUwuQ==
   dependencies:
-    loader-utils "^1.4.0"
+    loader-utils "^2.0.3"
     svgo "^2.8.0"
 
 svgo@3.0.2:
