@@ -65,7 +65,7 @@
     "favicons": "7.0.2",
     "favicons-webpack-plugin": "6.0.0",
     "file-loader": "6.2.0",
-    "googleapis": "107.0.0",
+    "googleapis": "110.0.0",
     "html-critical-webpack-plugin": "2.1.0",
     "html-webpack-plugin": "5.5.0",
     "http-server": "14.1.1",
