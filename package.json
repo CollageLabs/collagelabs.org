@@ -45,7 +45,7 @@
     "@babel/core": "7.22.10",
     "@babel/preset-env": "7.22.10",
     "autoprefixer": "9.8.8",
-    "axios": "1.4.0",
+    "axios": "1.6.0",
     "babel-loader": "9.1.3",
     "browser-sync": "2.29.3",
     "browser-sync-webpack-plugin": "2.3.0",
