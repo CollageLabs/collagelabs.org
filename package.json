@@ -19,7 +19,8 @@
     "webpack:prod": "cross-env NODE_ENV=production webpack --env=prod --progress --profile",
     "webpack:pwa": "cross-env NODE_ENV=production webpack --env=pwa --progress --profile",
     "webpack:optim": "cross-env NODE_ENV=production webpack --env=optim --progress --profile",
-    "jekyll:dev": "cross-env JEKYLL_ENV=development bundle exec jekyll serve --trace --config=_config.yml,_config.development.yml",
+    "jekyll:dev": "cross-env JEKYLL_ENV=development bundle exec jekyll serve --trace --watch --config=_config.yml,_config.development.yml",
+    "jekyll:build": "cross-env JEKYLL_ENV=development bundle exec jekyll build --config=_config.yml,_config.development.yml",
     "jekyll:prod": "cross-env JEKYLL_ENV=production bundle exec jekyll build --config=_config.yml,_config.production.yml",
     "jekyll:pwa": "cross-env JEKYLL_ENV=pwa bundle exec jekyll build --config=_config.yml,_config.production.yml",
     "sw": "sw-precache --config=config/sw.config.js --verbose",
@@ -28,9 +29,8 @@
     "build:pwa": "yarn run clean:project && yarn run webpack:pwa && yarn run jekyll:pwa && yarn run build:lambda && yarn run sw",
     "build:pwa:optim": "yarn run clean:project && yarn run webpack:pwa && yarn run jekyll:pwa && yarn run build:lambda && yarn run webpack:optim && yarn run sw",
     "serve:dist": "yarn run clean:project && yarn run build:pwa:optim && http-server -p 5000 _site",
-    "serve:dev": "yarn run clean:project && concurrently \"yarn run webpack:dev\" \"yarn run jekyll:dev\"",
-    "start:lambda": "netlify-lambda serve lambda",
-    "build:lambda": "netlify-lambda build lambda"
+    "serve:dev": "yarn run clean:project && yarn run jekyll:build && concurrently \"yarn run webpack:dev\" \"yarn run jekyll:dev\"",
+    "build:lambda": "webpack --config ./webpack.lambda.config.js"
   },
   "browserslist": [
     "last 2 versions"
@@ -73,7 +73,7 @@
     "imagemin": "^8.0.1",
     "imagemin-mozjpeg": "^10.0.0",
     "mini-css-extract-plugin": "2.7.6",
-    "netlify-lambda": "2.0.16",
+    "netlify-cli": "^17.10.2",
     "node-sass": "9.0.0",
     "nodemon": "3.0.1",
     "postcss-advanced-variables": "3.0.1",

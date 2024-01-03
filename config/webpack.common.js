@@ -8,6 +8,7 @@ module.exports = {
     app: './_src/index.js'
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

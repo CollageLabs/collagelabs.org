@@ -28,9 +28,9 @@ Current version: 0.2.5
 
         make dependencies
 
-* Execute the following command to start the project:
+* Execute the following command to start the project, which you can see in `localhost:5000`:
 
-        make start
+        make serve
 
 * Execute the following command to stop the project (you can also hit ctrl+C):
 

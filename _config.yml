@@ -46,6 +46,8 @@ pagination:
   per_page: 20
   permalink: /page/:num/
 
+incremental: true
+
 autopages:
   categories:
     layouts:

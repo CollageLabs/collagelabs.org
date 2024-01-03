@@ -4,11 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CommonConfig = require('./webpack.common.js');
 
-module.exports = merge(CommonConfig, {
+const x = merge(CommonConfig, {
   mode: 'development',
   output: {
     filename: '[name].js',
-    path: path.resolve('assets'),
+    path: path.resolve(__dirname, '..', 'assets/'),
     publicPath: '/assets/'
   },
   devtool: 'inline-source-map',
@@ -41,5 +41,12 @@ module.exports = merge(CommonConfig, {
     client: {
       webSocketURL: 'ws://0.0.0.0:5000/ws',
     },
+    devMiddleware: {
+      writeToDisk: true,
+    },
   }
 });
+
+console.log(x);
+
+module.exports = x;

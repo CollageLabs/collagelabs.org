@@ -12,7 +12,7 @@ module.exports = merge(CommonConfig, {
   mode: 'production',
   output: {
     filename: '[name]-[fullhash].js',
-    path: path.resolve('assets'),
+    path: path.resolve(__dirname, '..', 'assets/'),
     publicPath: '/assets/'
   },
   plugins: [

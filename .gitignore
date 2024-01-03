@@ -13,3 +13,5 @@
 !/functions/.gitkeep
 optimization-fix-this-file-is-ignored.js
 /.env
+# Local Netlify folder
+.netlify
