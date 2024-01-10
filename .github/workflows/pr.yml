@@ -73,7 +73,7 @@ jobs:
     needs: approve
     steps:
       - name: Merge
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           github-token: "${{ github.actor == 'LuisAlejandro' && secrets.GITHUB_TOKEN || secrets.REPO_PERSONAL_ACCESS_TOKEN }}"
           script: |
