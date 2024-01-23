@@ -19,13 +19,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Restoring node_modules cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: 'node_modules'
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: Restoring vendor/bundle cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: 'vendor/bundle'
           key: ${{ runner.os }}-vendor-bundle-${{ hashFiles('Gemfile.lock') }}
