@@ -9269,10 +9269,10 @@ googleapis-common@^7.0.0:
     url-template "^2.0.8"
     uuid "^9.0.0"
 
-googleapis@130.0.0:
-  version "130.0.0"
-  resolved "https://registry.yarnpkg.com/googleapis/-/googleapis-130.0.0.tgz#bfa8f0cd8a9fc441981ee52077d1fdb2e046dcd1"
-  integrity sha512-+ZSOowVv+vGBTueu1Ot9O7EqC0U4PS9l7fUjzc0ThCT4w4g+r78Vgn17q7eGBB5JMu4hxYC1hbbm1U/MCnYFdg==
+googleapis@132.0.0:
+  version "132.0.0"
+  resolved "https://registry.yarnpkg.com/googleapis/-/googleapis-132.0.0.tgz#561c8b0a62d5c9b90280c4d6ae25a267a83d0ae3"
+  integrity sha512-3TvliWpfcpxqIOxAKyxUtS13VbwVM62BLfjxFhDjSSRmNLI3jh+4zfj2hcL2UvzU5yfHZJUfb8tXmumx2e+ruQ==
   dependencies:
     google-auth-library "^9.0.0"
     googleapis-common "^7.0.0"
