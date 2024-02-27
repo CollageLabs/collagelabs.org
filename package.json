@@ -73,7 +73,7 @@
     "imagemin": "^8.0.1",
     "imagemin-mozjpeg": "^10.0.0",
     "mini-css-extract-plugin": "2.7.6",
-    "netlify-cli": "^17.10.2",
+    "netlify-cli": "^17.17.1",
     "node-sass": "9.0.0",
     "nodemon": "3.0.2",
     "postcss-advanced-variables": "3.0.1",
